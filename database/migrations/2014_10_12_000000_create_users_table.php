@@ -18,6 +18,15 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->string('password', 60);
             $table->rememberToken();
+
+            $table->tinyInteger('activated')->default(1);
+            $table->tinyInteger('banned')->default(0);
+            $table->string('banned_reason');
+
+            $table->string('avatar');
+            $table->text('description');
+            $table->tinyInteger('is_admin')->default(0);
+
             $table->timestamps();
         });
     }
