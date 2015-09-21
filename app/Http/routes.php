@@ -13,6 +13,7 @@
 
 Route::get('/', 'PageController@home');
 
+
 Route::group(['middleware' => 'UserCheck'], function()
 {
 	//AdminController
@@ -61,3 +62,7 @@ Route::get('logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('register', 'Auth\AuthController@getRegister');
 Route::post('register', 'Auth\AuthController@postRegister');
+
+//Single BLog
+Route::get('{category}','PageController@category');
+Route::get('{category}/{slug?}','PageController@single');

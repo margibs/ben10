@@ -1,5 +1,5 @@
 @foreach ($posts as $post)
-	{{ $post->title }}
+	<a href="{{ $post->category_slug }}/{{ $post->slug }}"> {{ $post->title }} </a>
 	<br>
 	<img src="{{ url('uploads') }}/{{ $post->feat_image_url }}" alt="" width="200px" height="200px">
 	<br>
