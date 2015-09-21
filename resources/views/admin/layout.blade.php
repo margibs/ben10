@@ -11,20 +11,20 @@
     <link href='http://fonts.googleapis.com/css?family=Roboto:400,500,700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
 
-    <link rel="stylesheet" href="{{ asset('css/bootstrap.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/bootstrap.css') }}" type="text/css" />
      
-    <link rel="stylesheet" href="{{ asset('nexuspress/canvasStyle.css') }}" type="text/css" /> 
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/canvasStyle.css') }}" type="text/css" /> 
     <link rel="stylesheet" href="{{ asset('nexuspress/nexuspress.css') }}" type="text/css" />   
-    <link rel="stylesheet" href="{{ asset('css/font-icons.css') }}" type="text/css" /> 
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/font-icons.css') }}" type="text/css" /> 
 
-    <link rel="stylesheet" href="{{ asset('css/dark.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/font-icons.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/animate.css') }}" type="text/css" />
-    <link rel="stylesheet" href="{{ asset('css/magnific-popup.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/dark.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/font-icons.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/animate.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/magnific-popup.css') }}" type="text/css" />
 
-    <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/responsive.css') }}" type="text/css" />
 
-    <link rel="stylesheet" href="{{ asset('css/typeahead.tagging.css') }}" type="text/css" />
+    <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/typeahead.tagging.css') }}" type="text/css" />
 
     @yield('header_links')
     
@@ -35,17 +35,15 @@
 
     <!-- External JavaScripts
     ============================================= -->
-    <script type="text/javascript" src="{{ asset('nexuspress/js/jquery.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/jquery.uploadfile.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('nexuspress/js/plugins.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/typeahead.bundle.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/typeahead.tagging.js') }}"></script>    
+    <script type="text/javascript" src="{{ asset('nexuspress/dist/js/jquery.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('nexuspress/dist/js/jquery.uploadfile.min.js') }}"></script>
+    <script type="text/javascript" src="{{ asset('nexuspress/dist/js/plugins.js') }}"></script>    
 
     <script src="{{asset('ckeditor/ckeditor.js')}}"></script>
 
     <!-- Document Title
     ============================================= -->
-    <title> ALLLAD </title>
+    <title> Nexuspress </title>
 
 </head>
 
@@ -209,7 +207,7 @@ font-family: Oswald;
 
 <!-- Footer Scripts
 ============================================= -->
-<script type="text/javascript" src="{{ asset('nexuspress/js/functions.js') }}"></script>
+<script type="text/javascript" src="{{ asset('nexuspress/dist/js/functions.js') }}"></script>
 @yield('footer_scripts')
 </body>
 </html>
