@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,700,500);
-@import url(https://fonts.googleapis.com/css?family=Oswald:400,700,300);
+
 
 html {
    overflow-y: scroll;
@@ -83,6 +82,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
  #primary-menu ul li a{
     line-height: 50px;
     color: #fff;
+    font-family: Montserrat, Roboto;
  }
  #primary-menu ul li i{
     line-height: 49px;
@@ -105,7 +105,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
  .center .contentWrapper{
     width: 80%;
     float: right;
-    border-radius: 2px;
+    border-radius: 3px;
     position: relative;
     overflow: hidden;
     background-color: #fff;
@@ -132,6 +132,9 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
       font-weight: 400;
       display: block;
  }
+  .center #commentform{
+    margin-bottom: 0;
+  }
  .center .commentCount{
     width: 20%;
     margin-top: 5px;
@@ -165,6 +168,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     font-size: 14px!important;
     text-align: left;
     line-height: 23px!important;
+    margin-bottom: 10px;
 }
 
 /* ============== COMMENTS ================ */
@@ -217,11 +221,24 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     font-weight: 500;
 }
 .commentWrapper .commentContent{
-  font-family: Roboto;
+   font-family: Roboto;
     font-size: 13px;
     color: #000;
     margin-left: 50px;
     margin-bottom: 0;
+}
+.commentWrapper input[type=submit]{
+    margin: 0;
+    margin-bottom: 20px;
+    font-family: Roboto;
+    font-weight: 500;
+    background-color: transparent;
+    border: 0;
+    background-color: rgb(239, 66, 109);
+    color: #fff;
+    padding: 7px 15px;
+    font-size: 15px;
+    border-radius: 20px;
 }
 
 /* ============ LEFT SIDE ============= */
@@ -267,7 +284,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
   margin-left: 65px;
 }
 .left .coinTotal h3{
-  font-family: Oswald;
+  font-family: Montserrat;
   font-size: 35px;
   letter-spacing: -1px;
   margin-top: -10px;
@@ -333,7 +350,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
 }
 
 .progress2 {
-  background: #f45793 url('../../thermoterBG.jpg') no-repeat center;
+  background: #f45793 url('thermoterBG.jpg') no-repeat center;
   -webkit-animation: progressBar 1s ease-in-out;
   -webkit-animation-fill-mode:both; 
   -moz-animation: progressBar 1s ease-in-out;
@@ -509,9 +526,9 @@ font-weight: 700;
 color: #F36198;
 }
 
-#addLinkModal{
-position: relative;
-z-index: -1;
+.modal{
+  position: relative;
+  z-index: -1;
 }
 
 .modal-shade {
@@ -535,7 +552,11 @@ max-width: 600px;
     -ms-transform: translateX(-50%);
         transform: translateX(-50%);
 box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
-z-index: 20;
+}
+.modal label{
+  color: #FBD3E2;
+  font-size: 13px;
+  font-family: Roboto;
 }
 .modal .modal-header {
 padding: 10px 20px;
@@ -928,4 +949,66 @@ color: #F36198;
   font-size: 25px!important;
   padding-top: 10px;
   color: #F1CBD9;
+}
+
+
+/* ================ DASHBOARD ================= */
+.dashLink ul{
+  margin-bottom: 0;
+  text-align: center;
+  margin-top: 5px;
+}
+.dashLink ul li i{
+  display: block;
+  font-size: 30px;
+  text-align: center;
+  color: #F4669C;
+}
+.dashLink ul li{
+    margin: 0 4px;
+}
+.dashLink ul li a{
+  font-size: 13px;
+  color: #525252;
+  font-weight: 500;
+}
+.dashLink ul li a:active{
+  background-color: #F3F3F3;
+}
+.referralContainer{
+  border-top: 1px solid #F2F2F2;
+  padding: 10px 0;
+}
+.referralContainer ul{
+  margin-bottom: 0;
+}
+.referralContainer li a{
+  font-size: 30px;
+   margin: 0 2px;
+}
+.referralContainer li .fb{
+  color: #3c5a99;
+}
+.referralContainer li .mail{
+  color: #F692B8;
+}
+.referralContainer li .twitter{
+  color: #16c5ff;
+}
+.referralContainer li .fb, .referralContainer li .mail{
+  font-size: 35px;
+  position: relative;
+  top: 2px;
+}
+.referralContainer p{
+    font-size: 14px;
+    margin-bottom: 0!important;
+}
+.referralContainer a{
+    font-family: Roboto;
+    color: #F3639A;
+    font-weight: 500;
+}
+.tabs.tabs-bb ul.tab-nav li.ui-tabs-active a{
+      border-bottom: 2px solid #F45793;
 }

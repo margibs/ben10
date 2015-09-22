@@ -106,103 +106,8 @@
                     <div class="row">
                         
                         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-push-2 col-lg-push-2"> 
-                            <div class="wrappers">
+
                                 @yield('content')
-                            </div>
-                       
-                                <div class="center">
-                                  <div class="commentCount">
-                                      <div class="triangle"></div>
-                                      <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
-                                      <span class="total"> <a href=""> 4 comments </a> </span>                                      
-                                  </div>  
-                                  <div class="contentWrapper">
-                                      <div class="topBlack">
-                                        <h2> Blue Savana
-                                          <span><a href="#"> by Emily Pooter </a></span>
-                                        </h2>
-                                      </div>
-                                      <img src="http://vps184562.ovh.net/uploads/39641_image3.jpg" alt="">
-                                      <div id="commentSection17">
-                                              <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis enim tenetur ea adipisci illum nisi quas totam earum natus. </p>
-                                              <div id="commentArea" style="padding:0;">
-                                                  <div class="commentWrapper" style="margin-top: 20px;">
-
-
-                                                      <h3> Comments  
-                                                          <span> · 
-                                                              <span class="comment_counter">
-                                                                  4 
-                                                              </span>
-                                                          </span> 
-                                                      </h3>
-
-                                                      <ul class="put_comments_here">
-                                                                                                                  <li>
-                                                              <img src="
-                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                                   
-
-                                                                " alt="">
-                                                              <span class="name"> 
-                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
-                                                                  <span class="commentDate"> · 2015-09-18 12:23:29 </span> 
-                                                              </span>
-                                                              <p class="commentContent"> water </p>
-                                                              </li>
-                                                                                                                  <li>
-                                                              <img src="
-                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                                   
-
-                                                                " alt="">
-                                                              <span class="name"> 
-                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
-                                                                  <span class="commentDate"> · 2015-09-21 12:39:32 </span> 
-                                                              </span>
-                                                              <p class="commentContent">  </p>
-                                                              </li>
-                                                                                                                  <li>
-                                                              <img src="
-                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                                   
-
-                                                                " alt="">
-                                                              <span class="name"> 
-                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
-                                                                  <span class="commentDate"> · 2015-09-21 12:39:33 </span> 
-                                                              </span>
-                                                              <p class="commentContent"> HALLO </p>
-                                                              </li>
-                                                                                                                  <li>
-                                                              <img src="
-                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                                   
-
-                                                                " alt="">
-                                                              <span class="name"> 
-                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
-                                                                  <span class="commentDate"> · 2015-09-21 14:30:13 </span> 
-                                                              </span>
-                                                              <p class="commentContent"> tttttt </p>
-                                                              </li>
-                                                                             
-                                                      </ul>
-
-                                                      <div class="clearfix"></div>
-
-                                                      <form class="clearfix" action="#" method="post" id="commentform">
-                                                          <textarea class="comment_yeah" name="comment" cols="30" rows="10" get-this-id="17"></textarea>
-                                                          <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style=" margin-bottom: 20px; margin-top: 10px;">
-                                                      </form>
-
-                                                  </div>
-                                              </div>
-                                          </div>
-                                  </div>
-                                </div>
-                          
->>>>>>> bf94b3277bd3c302a0756a66e0b393d9e3a64e33
                         </div>
 
                         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-pull-7 col-lg-pull-7">
@@ -633,7 +538,7 @@
                 
                 <div id="dd" class="wrapper-dropdown-3" tabindex="1">
                     <span>Sub-Category</span>
-                    <ul class="dropdown">
+                    <ul id="subDropdown" class="dropdown">
                         <li><a href="#">Outfit</a></li>                        
                     </ul>
                 </div>
@@ -642,7 +547,7 @@
 
                 <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
                     <span>Category</span>
-                    <ul class="dropdown">
+                    <ul id="parentDropdown" class="dropdown">
                         <li><a href="#">Outfit</a></li>
                         <li><a href="#">Recipe</a></li>
                         <li><a href="#">Shoes</a></li>
@@ -686,7 +591,31 @@
                 <div>
                   <input type="url" id="urlURL" name="urlURLValue">
                   <label for="urlURL"> Description </label>
+                </div>           
+               <!--  <div>
+                  <input type="url" id="urlURL" name="urlURLValue">
+                  <label for="urlURL"> Intended application </label>
                 </div>
+                <div>
+                  <input type="url" id="urlURL" name="urlURLValue">
+                  <label for="urlURL"> Animal Tested </label>
+                </div>
+                <div>
+                  <input type="url" id="urlURL" name="urlURLValue">
+                  <label for="urlURL"> Eco Friendly </label>
+                </div>
+                <div>
+                  <input type="url" id="urlURL" name="urlURLValue">
+                  <label for="urlURL"> Alternative Products </label>
+                </div>
+                <div>
+                  <input type="url" id="urlURL" name="urlURLValue">
+                  <label for="urlURL"> Price Range </label>
+                </div>
+                <div>
+                  <input type="url" id="urlURL" name="urlURLValue">
+                  <label for="urlURL"> Available From </label>
+                </div> -->
               </div>
             
             </div>
@@ -723,6 +652,7 @@
     <script>
        $(document).ready(function() {
            
+
             $(":file").change(function () {
                 if (this.files && this.files[0]) {
                     var reader = new FileReader();
@@ -829,7 +759,7 @@
           
           // When user clicks on add link button in top left corner
           $("#addLinkBtn").on("click", function() {
-            $("#addLinkModal").css({'z-index':'9999'});
+            $(".modal").css({'z-index':'9999'});
             TweenMax.to($(".modal"), .3, { // Drop down modal
               top: "10%",             
               onComplete: function() { // When modal drops, lengthen modal body height 
@@ -885,9 +815,10 @@
           
           // When the user clicks on the close modal button
           $(".closeModalBtn").on("click", function() {
-
+      
             TweenMax.to($(".modal"), .3, {
               top: "-100%",
+              zIndex: "-1",
               ease: Back.easeIn
             });
             TweenMax.to($(".modal-shade"), .6, {
@@ -896,6 +827,7 @@
             });
 
             
+
             // Change Modal Container Height back to auto
             $(".modal-body-container").css("height", "auto");
             
@@ -912,8 +844,11 @@
             $("#file").css({
               "display": "none",
               "opacity": 0
-            });    
-            $("#addLinkModal").css({'z-index':'-1'});
+            });  
+
+
+            
+           
 
           });
           
