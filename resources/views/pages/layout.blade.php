@@ -4,6 +4,7 @@
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="upmire" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- Stylesheets
     ============================================= -->    
@@ -105,6 +106,9 @@
                     <div class="row">
                         
                         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-push-2 col-lg-push-2"> 
+                            <div class="wrappers">
+                                @yield('content')
+                            </div>
                        
                                 <div class="center">
                                   <div class="commentCount">
@@ -198,6 +202,7 @@
                                   </div>
                                 </div>
                           
+>>>>>>> bf94b3277bd3c302a0756a66e0b393d9e3a64e33
                         </div>
 
                         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-pull-7 col-lg-pull-7">

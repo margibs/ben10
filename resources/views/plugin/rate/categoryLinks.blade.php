@@ -6,7 +6,7 @@
 
 @section('content')
 	<h2 class="adminTitle"> <i class="icon-line-head"></i>  Rate Categories </h2>
-
+	
 	<div class="col_two_third" style="margin-right: 10px;">
 		<div id="contentMainWrapper">
 		<div class="table-responsive adminPosts">
