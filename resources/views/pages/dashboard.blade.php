@@ -105,7 +105,7 @@
                 <div style="margin-bottom: 25px;">
 	            	<div class="outer" style="height: 150px; float: right; width: 250px; margin-left: 15px; border-radius: 2px; overflow: hidden;">
                         <div class="inner" style="overflow: hidden;">
-                            <img id="myImg" style="width:100%;">                              
+                            <img id="myImg1" style="width:100%;">                              
                         </div>
 	                </div>
 	                <div class="fileUpload fileUpload1">
@@ -130,7 +130,7 @@
 			<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-34" aria-labelledby="ui-id-18" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
 
 			<form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
-				{!! csrf_field() !!}
+			{!! csrf_field() !!}
 			
                 <div style="margin-bottom: 25px;">
 	            	<div class="outer" style="height: 150px; float: right; width: 250px; margin-left: 15px; border-radius: 2px; overflow: hidden;">
@@ -141,38 +141,38 @@
 	                <div class="fileUpload fileUpload2">
 	                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
 	                    <span>Upload Image</span>
-	                    <input type="file" name="file2" class="upload" style="width:auto;">
+	                    <input type="file" name="file" class="upload" style="width:auto;">
 	                </div>
                 </div>
 
 				<span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Product Name </span>
-                <input type="text" name="name" style="margin-top: 0;" required>
+                <input type="text" style="margin-top: 0;">
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Intended application </span>
-                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
+                <input type="text" style="margin-top: 0;">
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Animal Tested </span>
-	             <input type="radio" name="animal_tested" value="yes" checked> Yes
-				 <input type="radio" name="animal_tested" value="no"> No
+	             <input type="radio" name="animal_tested_yes" value="yes" checked> Yes
+				 <input type="radio" name="animal_tested_no" value="No"> No
 				 <br />
 				 <br />
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Eco Friendly </span>
-                <input type="radio" name="eco_friendly" value="yes" checked> Yes
-				 <input type="radio" name="eco_friendly" value="no"> No
+                <input type="radio" name="animal_tested_yes" value="yes" checked> Yes
+				 <input type="radio" name="animal_tested_no" value="No"> No
 				 <br />
 				 <br />
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Alternative Products </span>
-                <input type="text" name="alt_products" style="margin-top: 0;" required>
+                <input type="text" style="margin-top: 0;">
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Price Range </span>
-                <input type="text" name="price_range" style="margin-top: 0;" required>
+                <input type="text" style="margin-top: 0;">
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Available From </span>
-                <input type="text" name="available_from" style="margin-top: 0;" required>
+                <input type="text" style="margin-top: 0;">
 
-                <input type="submit"  value="Submit">
+                <input type="submit" value="Submit">
 			</form>
 			</div>
 		
@@ -185,31 +185,31 @@
 <script>
        $(document).ready(function() {
            
-
-            $(".fileUpload1 :file").change(function () {
+       		$(".fileUpload1 :file").change(function () {
                 if (this.files && this.files[0]) {
                     var reader = new FileReader();
-                    reader.onload = imageIsLoaded;
+                    reader.onload = imageIsLoaded1;
                     reader.readAsDataURL(this.files[0]);
                 }
             });
 
-            function imageIsLoaded(e) {
-                $('#myImg').attr('src', e.target.result);           
+            function imageIsLoaded1(e) {
+                $('#myImg1').attr('src', e.target.result);           
             };
 
             $(".fileUpload2 :file").change(function () {
                 if (this.files && this.files[0]) {
                     var reader = new FileReader();
-                    reader.onload = imageIsLoaded;
+                    reader.onload = imageIsLoaded2;
                     reader.readAsDataURL(this.files[0]);
                 }
             });
 
-            function imageIsLoaded(e) {
+            function imageIsLoaded2(e) {
                 $('#myImg2').attr('src', e.target.result);           
             };
 
+		});
 </script>
 
 @endsection
