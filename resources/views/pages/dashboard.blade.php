@@ -52,12 +52,21 @@
 
 <div class="wrappers" style="margin-top:10px;padding: 0;">
 		<h6> Uploaded Items </h6>
-		<div class="row thumbGallery">
-			@foreach($rateItems as $rateItem)
-				<div class="col-md-3 col-sm-4 col-xs-6"><img class="img-responsive" src="{{url('uploads')}}/{{$rateItem->image_url}}" /></div>
-			@endforeach
-	    </div>
-
+		<!-- <div class="row thumbGallery"> -->
+			<div id="image_container">
+				
+						@foreach($rateItems as $rateItem)
+							<div class="outer">
+								<div class="inner">
+							<!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+								<img class="img-responsive" src="{{url('uploads')}}/{{$rateItem->image_url}}" />
+							<!-- </div> -->
+								</div>                          
+							</div>
+						@endforeach
+					
+			</div>
+	    <!-- </div> -->
 </div>
 
 
