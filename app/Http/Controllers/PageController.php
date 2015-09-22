@@ -70,4 +70,9 @@ class PageController extends Controller
     {       
         return view('pages.dashboard');
     }
+
+    public function addProduct(Request $request)
+    {
+        return $request->all();
+    }
 }

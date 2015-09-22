@@ -12,8 +12,11 @@
 */
 
 Route::get('/', 'PageController@index');
-Route::get('/home', 'PageController@home');
-Route::get('/dashboard', 'PageController@dashboard');
+Route::get('home', 'PageController@home');
+Route::get('dashboard', 'PageController@dashboard');
+
+Route::post('dashboard','PageController@addProduct');
+
 
 
 //RateController
