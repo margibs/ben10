@@ -1,7 +1,7 @@
 @extends('admin.layout')
 
 @section('header_links')
-  <link rel="stylesheet" href="{{ asset('nexuspress/chosen/chosen.min.css') }}" type="text/css" />
+  <link rel="stylesheet" href="{{ asset('nexuspress/dist/css/chosen.min.css') }}" type="text/css" />
 @endsection
 
 @section('content')
@@ -440,7 +440,7 @@ $(document).ready(function(){
 @endsection
 
 @section('footer_scripts')
-  <script type="text/javascript" src="{{ asset('nexuspress/chosen/chosen.jquery.min.js') }}"></script>
+  <script type="text/javascript" src="{{ asset('nexuspress/dist/js/chosen.jquery.min.js') }}"></script>
   <script type="text/javascript">
     var config = {
       '.chosen-select'           : {},

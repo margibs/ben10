@@ -117,7 +117,12 @@ font-family: Oswald;
                                  @endif"><a href="{{ url('admin/users') }}"> <i class="icon-line-head"></i> Users </a></li>
 
                         </ul>
-
+                        <p> Rate Plugin </p>
+                            <ul>
+                               <li>
+                                   <a href="{{ url('plugin/rate/categories') }}"> <i class="icon-line2-settings"></i> Categories </a>
+                               </li> 
+                            </ul>
                         <p> Settings </p>
 
                         <ul>

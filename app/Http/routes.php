@@ -52,6 +52,10 @@ Route::group(['middleware' => 'UserCheck'], function()
 	Route::post('admin/ajax_delete_image','AdminController@ajaxDeleteImage');
 	Route::post('admin/ajax_upload_image','AdminController@ajaxUploadImage');
 	Route::post('admin/ajax_check_content','AdminController@ajaxCheckContent');
+
+	//Plugin Routes
+	Route::get('plugin/rate/categories','RateController@categories');
+	Route::post('plugin/rate/categories','RateController@addCategories');
 });
 
 // Authentication routes...
