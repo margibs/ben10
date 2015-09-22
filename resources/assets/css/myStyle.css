@@ -1039,3 +1039,29 @@ color: #F36198;
     color: #444444;
     font-weight: 600;
 }
+
+#image_container .outer, #image_list .outer, #media_wrapper .outer{
+  width: 163px;
+  height: 150px;
+  overflow: hidden;
+  float: left;
+  position: relative;
+  border-right: 1px solid #E5E5E5;
+  border-bottom: 1px solid #E5E5E5;
+}
+#image_container .inner, #image_list .inner, #media_wrapper .inner{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /*set the width or max-width*/
+    height: 100%; /*this makes sure to maintain the aspect ratio*/
+    -webkit-transform: translate(50%,50%);
+    -ms-transform: translate(50%,50%);
+    transform: translate(50%,50%);
+} 
+#image_container .inner img, #image_list .inner img, #media_wrapper .inner img{
+  -webkit-transform: translate(-50%,-50%);
+    -ms-transform: translate(-50%,-50%);
+    transform: translate(-50%,-50%);
+      max-width: 300%!important;    
+}
