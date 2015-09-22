@@ -110,6 +110,9 @@
 			</div>
 			<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-34" aria-labelledby="ui-id-18" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
 
+			<form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
+			{!! csrf_field() !!}
+			
                 <div style="margin-bottom: 25px;">
 	            	<div class="outer" style="height: 150px; float: right; width: 250px; margin-left: 15px; border-radius: 2px; overflow: hidden;">
                         <div class="inner" style="overflow: hidden;">
@@ -145,7 +148,7 @@
                 <input type="text" style="margin-top: 0;">
 
                 <input type="submit" value="Submit">
-
+			</form>
 			</div>
 		
 

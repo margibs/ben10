@@ -50,6 +50,11 @@ class RateController extends Controller
         return view('plugin.rate.itemLists');
     }
 
+    public function ajaxCheckProduct()
+    {
+        return 30;
+    }
+
    	public function getCategorySlug($value, $slug_check = false)
     {
         if (!$slug_check)

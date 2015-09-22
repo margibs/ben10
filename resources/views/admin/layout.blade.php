@@ -121,10 +121,10 @@ font-family: Oswald;
                             <ul>
                                 <li class="
                                  @if(Request::is('plugin/rate*')){{'current'}}
-                                 @endif"><a> <i class="icon-star3"></i> Rating <label class="badge"> 20 </label> </a>
+                                 @endif"><a> <i class="icon-star3"></i> Rating <label class="badge product_count"> 0 </label> </a>
                                     <ul>
                                         <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-link"></i> Categories </div></a> </li> 
-                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items <label class="badge"> 20 </label></div></a> </li>
+                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items <label class="badge product_count"> 0 </label></div></a> </li>
                                     </ul>
                                </li> 
                             </ul>
@@ -203,7 +203,7 @@ font-family: Oswald;
                     <div class="one_fourth nobottommargin col_last">
                        
                         @yield('content')
-                
+                        
                     </div>
 
                 </div> 
@@ -214,7 +214,7 @@ font-family: Oswald;
         </section><!-- #content end -->
 
     </div><!-- #wrapper end -->
-
+<span id="product_counter" data-notify-type="error" data-notify-msg="" data-notify-close="true"></span>
 
 <!-- Footer Scripts
 ============================================= -->
@@ -224,7 +224,16 @@ font-family: Oswald;
     $(document).ready(function(){
 
         setInterval( function(){
-            
+            $.ajax({ 
+                type: 'get',
+                url: "{{url('plugin/rate/ajax_check_product')}}",
+                success: function(response) 
+                {
+                    $('.product_count').html(response);
+                    $('#product_counter').attr('data-notify-msg','<i class=icon-info-sign></i><a href="{{url('plugin/rate/items')}}">'+response+' Products needs approval!</a>');
+                    // SEMICOLON.widget.notifications('#product_counter');
+                },
+            });
         }, 3000);
 
     });
