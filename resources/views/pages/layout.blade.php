@@ -627,7 +627,7 @@
                 <span> Select an Image </span>
               </div> -->
               <div>                
-                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-line-camera"> </i> </p>                
+                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-line-cloud-upload"> </i> </p>                
               </div>
             </div>
           </div>
