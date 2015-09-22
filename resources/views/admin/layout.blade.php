@@ -117,14 +117,15 @@ font-family: Oswald;
                                  @endif"><a href="{{ url('admin/users') }}"> <i class="icon-line-head"></i> Users </a></li>
 
                         </ul>
+                        @inject('products_count','App\Http\Controllers\RateController')
                         <p> Plugins </p>
                             <ul>
                                 <li class="
                                  @if(Request::is('plugin/rate*')){{'current'}}
-                                 @endif"><a> <i class="icon-star3"></i> Rating <label class="badge product_count"> 0 </label> </a>
+                                 @endif"><a> <i class="icon-star3"></i> Rating <label class="badge product_count"> {{$products_count->ajaxCheckProduct() }} </label> </a>
                                     <ul>
                                         <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-link"></i> Categories </div></a> </li> 
-                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items <label class="badge product_count"> 0 </label></div></a> </li>
+                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items <label class="badge product_count"> {{ $products_count->ajaxCheckProduct() }} </label></div></a> </li>
                                     </ul>
                                </li> 
                             </ul>
@@ -229,10 +230,9 @@ font-family: Oswald;
                 url: "{{url('plugin/rate/ajax_check_product')}}",
                 success: function(response) 
                 {
-                    
                     $('#product_counter').attr('data-notify-msg','<i class=icon-info-sign></i><a href="{{url('plugin/rate/items')}}">'+response+' Products needs approval!</a>');
 
-                    if( $('.product_count').html() != response)
+                    if( parseInt($('.product_count').html()) != parseInt(response))
                     {
                         SEMICOLON.widget.notifications('#product_counter');
                     }

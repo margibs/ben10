@@ -23,6 +23,7 @@
 
 			<tbody>
 				@foreach($products as $product)
+				<tr>
 				<td>{{ $product->name }}</td>
 				<td>{{ $product->intended_applicaion }}</td>
 				<td>{{ $product->alt_products }}</td>
@@ -37,6 +38,7 @@
 					Yes
 					@endif
 				</td>
+				</tr>
 				@endforeach
 			</tbody>
 			</table>
