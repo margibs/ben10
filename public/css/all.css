@@ -29331,6 +29331,19 @@ color: #F36198;
     font-weight: 500;
 }
 .tabs.tabs-bb ul.tab-nav li.ui-tabs-active a{
-      border-bottom: 2px solid #F45793;
+   border-bottom: 2px solid #F45793;
+}
+
+.thumbGallery .col-md-3,  .thumbGallery .col-sm-4, .thumbGallery .col-xs-6 {
+   padding: 0;
+}
+
+.wrappers h6{
+    margin: 0;
+    font-size: 14px;
+    font-family: Roboto;
+    padding: 10px 15px;
+    color: #444444;
+    font-weight: 600;
 }
 /*# sourceMappingURL=all.css.map */
