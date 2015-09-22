@@ -28442,8 +28442,8 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
  .center .contentWrapper .topBlack .admire{
     color: #F276A4;
  }
- .center .contentWrapper .topBlack .send{
-    color: #fff;
+ .center .contentWrapper .topBlack .send, .center .contentWrapper .topBlack .dislike{
+    color: #D8D8D8;
  }
  .center .contentWrapper .topBlack h2{
     color: #fff;
@@ -28463,7 +28463,10 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
  }
   .center .contentWrapper .topBlack ul{
       margin-bottom: 0;
-      margin-top: 15px;
+      margin-top: 12px;
+  }
+  .center .contentWrapper .topBlack ul li a{
+      font-size: 17px;
   }
   .center #commentform{
     margin-bottom: 0;

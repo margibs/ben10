@@ -12,7 +12,7 @@
 
          <ul class="list-inline pull-right">
               <li><a href="" class="admire"><i class="icon-heart3"></i></a></li>
-              <li><a href="" class="dislike"><i class="icon-heart3"></i></a></li>
+              <li><a href="" class="dislike"><i class="icon-heart-empty"></i></a></li>
               <li><a href="" class="send"><i class="icon-paperplane"></i></a></li>
           </ul>
 
