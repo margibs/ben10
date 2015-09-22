@@ -68,6 +68,12 @@ class RateCategorySeeder extends Seeder
 		         'created_at'=>date('Y-m-d H:i:s'),
 		         'updated_at'=> date('Y-m-d H:i:s')
 		    ),
+		    array(
+		         'name'=>'Product',
+		         'slug' => 'product',
+		         'created_at'=>date('Y-m-d H:i:s'),
+		         'updated_at'=> date('Y-m-d H:i:s')
+		    ),
 		);
 
 		RateCategory::insert($data);

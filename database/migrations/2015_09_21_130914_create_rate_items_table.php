@@ -26,6 +26,15 @@ class CreateRateItemsTable extends Migration
             $table->string('name');
             $table->text('description');
 
+            $table->string('intended_applicaion');
+            $table->string('alt_products');
+
+            $table->char('animal_tested', 4);
+            $table->char('eco_friendly', 4);
+
+            $table->string('price_range');
+            $table->string('available_from');
+
             $table->tinyInteger('approved')->default(1);
 
             $table->timestamps();
