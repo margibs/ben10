@@ -6,8 +6,7 @@
     <meta name="author" content="upmire" />
 
     <!-- Stylesheets
-    ============================================= -->
-    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
+    ============================================= -->    
     <link rel="stylesheet" href="{{ asset('css/all.css') }}" type="text/css" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
@@ -93,93 +92,7 @@
         </header><!-- #header end -->
     
 
-       <div id="addLinkModal" class="modal-container">
-          <div class="modal-shade"></div>
-          <div class="modal">
-            <div class="modal-header">
-              <h1> Upload Items </h1>
-              <i class="icon-line2-close closeModalBtn" title="Close Modal"></i>
-            </div>
-            <div class="modal-banner">
-              <input type="radio" id="urlChoice" name="linkChoice" checked>
-              <label for="urlChoice" title="Insert as url" id="urlLabel"> Select a category </label>
-            </div>
-            <div class="modal-body-container">
-             
-              <div id="url" class="modal-body">
-                
-                <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-                    <span>Sub-Category</span>
-                    <ul class="dropdown">
-                        <li><a href="#">Outfit</a></li>                        
-                    </ul>
-                </div>
-
-                <i class="fa fa-chevron-right"></i>
-
-                <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
-                    <span>Category</span>
-                    <ul class="dropdown">
-                        <li><a href="#">Outfit</a></li>
-                        <li><a href="#">Recipe</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Cooking</a></li>
-                        <li><a href="#">Diet</a></li>
-                        <li><a href="#">Room</a></li>
-                        <li><a href="#">Garden</a></li>
-                        <li><a href="#">Jewelry</a></li>
-                        <li><a href="#">Holiday</a></li>
-                    </ul>
-                </div>
-
-                <div>
-                 
-
-                <div class="outer" style="    
-    height: 150px;
-    float: right;
-    width: 250px;
-    margin-left: 15px;
-    border-radius: 2px;
-    overflow: hidden;">
-                                    <div class="inner" style="overflow: hidden;">
-                                        <img id="myImg" style="width:100%;">                              
-                                    </div>
-                    </div>
-                    <div class="fileUpload">
-                        <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
-                        <span>Upload Image</span>
-                        <input type="file" name="file" class="upload" style="width:auto;">
-                    </div>
-                    
-                </div>
-                <div style="
-    clear:both;
-    display: block;
-    margin-top: 30px;">
-                  <input type="text" id="urlText" name="urlTextValue">
-                  <label for="urlText"> Item Title </label>
-                </div>
-                <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Description </label>
-                </div>
-              </div>
-            
-            </div>
-
-            <div class="modal-footer">
-              <!-- <div>
-                <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
-                <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
-                <span> Select an Image </span>
-              </div> -->
-              <div>                
-                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-line-camera"> </i> </p>                
-              </div>
-            </div>
-          </div>
-        </div>
+       
     
         <!-- Content
         ============================================= -->
@@ -192,9 +105,99 @@
                     <div class="row">
                         
                         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-push-2 col-lg-push-2"> 
-                            <div class="wrappers">
-                                Center 
-                            </div>
+                       
+                                <div class="center">
+                                  <div class="commentCount">
+                                      <div class="triangle"></div>
+                                      <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
+                                      <span class="total"> <a href=""> 4 comments </a> </span>                                      
+                                  </div>  
+                                  <div class="contentWrapper">
+                                      <div class="topBlack">
+                                        <h2> Blue Savana
+                                          <span><a href="#"> by Emily Pooter </a></span>
+                                        </h2>
+                                      </div>
+                                      <img src="http://vps184562.ovh.net/uploads/39641_image3.jpg" alt="">
+                                      <div id="commentSection17">
+                                              <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis enim tenetur ea adipisci illum nisi quas totam earum natus. </p>
+                                              <div id="commentArea" style="padding:0;">
+                                                  <div class="commentWrapper" style="margin-top: 20px;">
+
+
+                                                      <h3> Comments  
+                                                          <span> · 
+                                                              <span class="comment_counter">
+                                                                  4 
+                                                              </span>
+                                                          </span> 
+                                                      </h3>
+
+                                                      <ul class="put_comments_here">
+                                                                                                                  <li>
+                                                              <img src="
+                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                   
+
+                                                                " alt="">
+                                                              <span class="name"> 
+                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                  <span class="commentDate"> · 2015-09-18 12:23:29 </span> 
+                                                              </span>
+                                                              <p class="commentContent"> water </p>
+                                                              </li>
+                                                                                                                  <li>
+                                                              <img src="
+                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                   
+
+                                                                " alt="">
+                                                              <span class="name"> 
+                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                  <span class="commentDate"> · 2015-09-21 12:39:32 </span> 
+                                                              </span>
+                                                              <p class="commentContent">  </p>
+                                                              </li>
+                                                                                                                  <li>
+                                                              <img src="
+                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                   
+
+                                                                " alt="">
+                                                              <span class="name"> 
+                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                  <span class="commentDate"> · 2015-09-21 12:39:33 </span> 
+                                                              </span>
+                                                              <p class="commentContent"> HALLO </p>
+                                                              </li>
+                                                                                                                  <li>
+                                                              <img src="
+                                                                                                                                http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                   
+
+                                                                " alt="">
+                                                              <span class="name"> 
+                                                                  <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                  <span class="commentDate"> · 2015-09-21 14:30:13 </span> 
+                                                              </span>
+                                                              <p class="commentContent"> tttttt </p>
+                                                              </li>
+                                                                             
+                                                      </ul>
+
+                                                      <div class="clearfix"></div>
+
+                                                      <form class="clearfix" action="#" method="post" id="commentform">
+                                                          <textarea class="comment_yeah" name="comment" cols="30" rows="10" get-this-id="17"></textarea>
+                                                          <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style=" margin-bottom: 20px; margin-top: 10px;">
+                                                      </form>
+
+                                                  </div>
+                                              </div>
+                                          </div>
+                                  </div>
+                                </div>
+                          
                         </div>
 
                         <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-pull-7 col-lg-pull-7">
@@ -243,7 +246,6 @@
 
 
                                 </div>
-                          
                         </div>
 
                         <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
@@ -609,6 +611,93 @@
 
     </div><!-- #wrapper end -->
 
+<div id="addLinkModal" class="modal-container">
+          <div class="modal-shade"></div>
+          <div class="modal">
+            <div class="modal-header">
+              <h1> Upload Items </h1>
+              <i class="icon-line2-close closeModalBtn" title="Close Modal"></i>
+            </div>
+            <div class="modal-banner">
+              <input type="radio" id="urlChoice" name="linkChoice" checked>
+              <label for="urlChoice" title="Insert as url" id="urlLabel"> Select a category </label>
+            </div>
+            <div class="modal-body-container">
+             
+              <div id="url" class="modal-body">
+                
+                <div id="dd" class="wrapper-dropdown-3" tabindex="1">
+                    <span>Sub-Category</span>
+                    <ul class="dropdown">
+                        <li><a href="#">Outfit</a></li>                        
+                    </ul>
+                </div>
+
+                <i class="fa fa-chevron-right"></i>
+
+                <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
+                    <span>Category</span>
+                    <ul class="dropdown">
+                        <li><a href="#">Outfit</a></li>
+                        <li><a href="#">Recipe</a></li>
+                        <li><a href="#">Shoes</a></li>
+                        <li><a href="#">Cooking</a></li>
+                        <li><a href="#">Diet</a></li>
+                        <li><a href="#">Room</a></li>
+                        <li><a href="#">Garden</a></li>
+                        <li><a href="#">Jewelry</a></li>
+                        <li><a href="#">Holiday</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                 
+
+                <div class="outer" style="    
+    height: 150px;
+    float: right;
+    width: 250px;
+    margin-left: 15px;
+    border-radius: 2px;
+    overflow: hidden;">
+                                    <div class="inner" style="overflow: hidden;">
+                                        <img id="myImg" style="width:100%;">                              
+                                    </div>
+                    </div>
+                    <div class="fileUpload">
+                        <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
+                        <span>Upload Image</span>
+                        <input type="file" name="file" class="upload" style="width:auto;">
+                    </div>
+                    
+                </div>
+                <div style="
+    clear:both;
+    display: block;
+    margin-top: 30px;">
+                  <input type="text" id="urlText" name="urlTextValue">
+                  <label for="urlText"> Item Title </label>
+                </div>
+                <div>
+                  <input type="url" id="urlURL" name="urlURLValue">
+                  <label for="urlURL"> Description </label>
+                </div>
+              </div>
+            
+            </div>
+
+            <div class="modal-footer">
+              <!-- <div>
+                <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
+                <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
+                <span> Select an Image </span>
+              </div> -->
+              <div>                
+                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-line-camera"> </i> </p>                
+              </div>
+            </div>
+          </div>
+        </div>
 
     <!-- Go To Top
     ============================================= -->
@@ -735,6 +824,7 @@
           
           // When user clicks on add link button in top left corner
           $("#addLinkBtn").on("click", function() {
+            $("#addLinkModal").css({'z-index':'9999'});
             TweenMax.to($(".modal"), .3, { // Drop down modal
               top: "10%",             
               onComplete: function() { // When modal drops, lengthen modal body height 
@@ -790,6 +880,7 @@
           
           // When the user clicks on the close modal button
           $(".closeModalBtn").on("click", function() {
+
             TweenMax.to($(".modal"), .3, {
               top: "-100%",
               ease: Back.easeIn
@@ -798,6 +889,7 @@
               position: "relative",
               opacity: 0
             });
+
             
             // Change Modal Container Height back to auto
             $(".modal-body-container").css("height", "auto");
@@ -815,7 +907,9 @@
             $("#file").css({
               "display": "none",
               "opacity": 0
-            });
+            });    
+            $("#addLinkModal").css({'z-index':'-1'});
+
           });
           
           $(window).resize(function() {

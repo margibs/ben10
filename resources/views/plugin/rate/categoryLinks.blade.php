@@ -6,39 +6,55 @@
 
 @section('content')
 	<h2 class="adminTitle"> <i class="icon-line-head"></i>  Rate Categories </h2>
-	<form action="{{url('plugin/rate/categories')}}" method="POST">
-		{!! csrf_field() !!}
-		<input type="text" 	name="name" placeholder="Name" required>
-        {!! Form::select('parent_id',$category_select, null, ['data-placeholder' => 'parent','class' => 'chosen-select','style' => 'width:350px;']) !!}
-        <input type="submit" value="Add Category">
-	</form>
-	<div id="contentMainWrapper">
-	<div class="table-responsive adminPosts">
-		<table class="table table-striped">
-		<thead>			
-			<th>Name</th>
-			<th>Slug</th>
-			<th>Sub Categories</th>
-		</thead>
 
-		<tbody>
-			@foreach($categories as $category)
-				<tr>
-					<td>{{ $category->name }}</td>
-					<td>{{ $category->slug }}</td>
-					<td>
-						@if(count($category->sub_categories))
-							@foreach($category->sub_categories as $sub_category)
-								{{ $sub_category->name }},
-							@endforeach
-						@endif
-					</td>
-				</tr>
-			@endforeach
-		</tbody>
-		</table>
-</div>	
-</div>
+	<div class="col_two_third" style="margin-right: 10px;">
+		<div id="contentMainWrapper">
+		<div class="table-responsive adminPosts">
+				<table class="table table-striped">
+				<thead>			
+					<th>Name</th>
+					<th>Slug</th>
+					<th>Sub Categories</th>
+				</thead>
+
+				<tbody>
+					@foreach($categories as $category)
+						<tr>
+							<td class="subTD">{{ $category->name }}</td>
+							<td class="subTD">{{ $category->slug }}</td>
+							<td class="subTD">
+								@if(count($category->sub_categories))
+									@foreach($category->sub_categories as $sub_category)
+										{{ $sub_category->name }},
+									@endforeach
+								@endif
+							</td>
+						</tr>
+					@endforeach
+				</tbody>
+				</table>
+		</div>	
+		</div>
+	</div>
+	<div class="col_one_third col_last" style="margin-top: 10px;">
+			<form action="{{url('plugin/rate/categories')}}" method="POST">
+				{!! csrf_field() !!}
+				<p style="    
+	font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;"> Select parent category </p>
+				{!! Form::select('parent_id',$category_select, null, ['data-placeholder' => 'parent','class' => 'chosen-select','style' => 'width:350px;']) !!}
+				<p style="
+    margin-top:15px;
+	font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 5px;"> Enter new category </p>
+				<input type="text" 	name="name" placeholder="Name" class="form-control" required>
+		        
+		        <input type="submit" value="Add Category" class="button" style="margin-top: 10px;">
+			</form>
+	</div>
+
 @endsection
 
 @section('footer_scripts')
