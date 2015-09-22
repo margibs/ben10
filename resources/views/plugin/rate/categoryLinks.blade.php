@@ -9,7 +9,7 @@
 	<form action="{{url('plugin/rate/categories')}}" method="POST">
 		{!! csrf_field() !!}
 		<input type="text" 	name="name" placeholder="Name" required>
-        {!! Form::select('parent_id',$category_select, null, ['data-placeholder' => 'parent','class' => 'chosen-select','style' => 'width:350px;']) !!}
+        {!! Form::select(' ',$category_select, null, ['data-placeholder' => 'parent','class' => 'chosen-select','style' => 'width:350px;']) !!}
         <input type="submit" value="Add Category">
 	</form>
 	<div id="contentMainWrapper">

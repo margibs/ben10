@@ -12,6 +12,7 @@ use App\PluginModel\RateCategory;
 
 class RateController extends Controller
 {
+    //Backend
     public function categories()
     {
     	$categories = RateCategory::where('parent_id',0)->paginate(10);

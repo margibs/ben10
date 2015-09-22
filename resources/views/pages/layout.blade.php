@@ -4,6 +4,7 @@
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="author" content="upmire" />
+    <meta name="csrf-token" content="{{ csrf_token() }}" />
 
     <!-- Stylesheets
     ============================================= -->
@@ -193,7 +194,7 @@
                         
                         <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-push-2 col-lg-push-2"> 
                             <div class="wrappers">
-                                Center 
+                                @yield('content')
                             </div>
                         </div>
 

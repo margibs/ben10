@@ -14,6 +14,9 @@
 Route::get('/home', 'PageController@home');
 Route::get('/', 'PageController@index');
 
+//RateController
+Route::get('rate', 'PageController@rate');
+
 
 Route::group(['middleware' => 'UserCheck'], function()
 {
