@@ -117,10 +117,15 @@ font-family: Oswald;
                                  @endif"><a href="{{ url('admin/users') }}"> <i class="icon-line-head"></i> Users </a></li>
 
                         </ul>
-                        <p> Rate Plugin </p>
+                        <p> Plugins </p>
                             <ul>
-                               <li>
-                                   <a href="{{ url('plugin/rate/categories') }}"> <i class="icon-line2-settings"></i> Categories </a>
+                                <li class="
+                                 @if(Request::is('plugin/rate*')){{'current'}}
+                                 @endif"><a> <i class="icon-star3"></i> Rating </a>
+                                    <ul>
+                                        <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-link"></i> Categories </div></a> </li> 
+                                        <li><a href="{{ url('/admin/new_link') }}"><div> <i class="icon-line-square-plus"></i> Items </div></a> </li>                                    
+                                    </ul>
                                </li> 
                             </ul>
                         <p> Settings </p>
@@ -190,6 +195,7 @@ font-family: Oswald;
                                  @elseif (Request::is('admin/comments*')) <i class="icon-line-speech-bubble"></i> Comments                                  
                                  @elseif (Request::is('admin/users*')) <i class="icon-line-head"></i> Users
                                  @elseif (Request::is('admin/settings*')) <i class="icon-line2-settings"></i> General Settings
+                                 @elseif (Request::is('plugin/rate*')) <i class="icon-star3"></i> Rate Plugin
                                  @endif </h2>
                          </div>
                     </div> 
