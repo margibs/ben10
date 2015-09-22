@@ -61,6 +61,7 @@ Route::group(['middleware' => 'UserCheck'], function()
 	Route::get('plugin/rate/categories','RateController@categories');
 	Route::post('plugin/rate/categories','RateController@addCategories');
 	Route::get('plugin/rate/items','RateController@items');
+	Route::get('plugin/rate/ajax_check_product','RateController@ajaxCheckProduct');
 
 });
 
