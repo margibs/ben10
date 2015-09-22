@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', 'PageController@home');
+Route::get('/home', 'PageController@home');
+Route::get('/', 'PageController@index');
 
 Route::group(['middleware' => 'UserCheck'], function()
 {

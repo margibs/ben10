@@ -14,15 +14,20 @@ var elixir = require('laravel-elixir');
 elixir(function(mix) {
 
     mix.styles([
-    	'css1.css',
-    	'css2.css',
-    	'loloy.css'
+    	'/dist/bootstrap.css',
+    	'/dist/style.css',
+    	'/dist/dark.css',
+    	'/dist/animate.css',
+    	'/dist/responsive.css',
+    	'/dist/font-icons.css',
+    	'myStyle.css',
     ],'public/css/all.css');
     
-    mix.scripts([
-    	'one.js',
-    	'two.js'
-    ],'public/js/all.js');
+    // mix.scripts([
+    // 	'/dist/jquery.js',
+    // 	'/dist/plugins.js',
+    // 	'/dist/functions.js'
+    // ],'public/js/all.js');
 
 
 });
