@@ -124,7 +124,7 @@ font-family: Oswald;
                                  @endif"><a> <i class="icon-star3"></i> Rating </a>
                                     <ul>
                                         <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-link"></i> Categories </div></a> </li> 
-                                        <li><a href="{{ url('/admin/new_link') }}"><div> <i class="icon-line-square-plus"></i> Items </div></a> </li>                                    
+                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items </div></a> </li>                                    
                                     </ul>
                                </li> 
                             </ul>
@@ -220,6 +220,15 @@ font-family: Oswald;
 ============================================= -->
 <script type="text/javascript" src="{{ asset('nexuspress/dist/js/functions.js') }}"></script>
 @yield('footer_scripts')
+<script>
+    $(document).ready(function(){
+
+        setInterval( function(){
+            
+        }, 3000);
+
+    });
+</script>
 </body>
 </html>
 

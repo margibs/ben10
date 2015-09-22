@@ -45,6 +45,11 @@ class RateController extends Controller
         return  redirect('plugin/rate/categories');
     }
 
+    public function items()
+    {
+        return view('plugin.rate.itemLists');
+    }
+
    	public function getCategorySlug($value, $slug_check = false)
     {
         if (!$slug_check)

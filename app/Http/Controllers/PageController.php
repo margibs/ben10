@@ -89,7 +89,6 @@ class PageController extends Controller
             $this->data['latest_upload'] = SubCategories::find($sub_category)->name;
         }
 
-
         $this->data['side_poll_items'] = 
             DB::select("
                     SELECT a.id,a.image_url,a.sub_category_id,a.name,b.id as category_id, c.name as sub_name
