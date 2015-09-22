@@ -54,7 +54,7 @@ class CustomQuery {
 				->join('users','users.id','=','posts.user_id')
 		        ->join('post_categories','posts.id','=','post_categories.post_id')
 		        ->join('categories','categories.id','=','post_categories.category_id')
-		        ->select('users.name as user_name','users.id as user_id','posts.slug','posts.feat_image_url','posts.title','posts.created_at','posts.excerpt','categories.name as category_name','categories.slug as cat_slug')
+		        ->select('users.name as user_name','users.id as user_id','posts.slug','posts.feat_image_url','posts.title','posts.created_at','posts.excerpt','categories.name as category_name','categories.slug as category_slug')
 		        ->where('posts.status','=',1);
 
 		if($id != null)
@@ -115,7 +115,7 @@ class CustomQuery {
 			->where('posts.slug','=',$slug)
 			->where('posts.status','=',1)
 			->where('categories.slug','=',$category_slug)
-			->select('posts.id','posts.title','posts.created_at','posts.feat_image_url','posts.content','posts.user_id','users.name','users.avatar','users.description','categories.name as cat_name','categories.slug as cat_slug','categories.id as cat_id')
+			->select('users.name as user_name','users.avatar','users.id as user_id','users.description','posts.id as post_id','posts.feat_image_url','posts.title','posts.created_at','posts.content','categories.name as category_name','categories.slug as category_slug','categories.id as category_id')
 			->first();
 	}
 

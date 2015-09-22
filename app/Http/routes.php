@@ -14,6 +14,7 @@
 Route::get('/home', 'PageController@home');
 Route::get('/', 'PageController@index');
 
+
 Route::group(['middleware' => 'UserCheck'], function()
 {
 	//AdminController
@@ -52,6 +53,10 @@ Route::group(['middleware' => 'UserCheck'], function()
 	Route::post('admin/ajax_delete_image','AdminController@ajaxDeleteImage');
 	Route::post('admin/ajax_upload_image','AdminController@ajaxUploadImage');
 	Route::post('admin/ajax_check_content','AdminController@ajaxCheckContent');
+
+	//Plugin Routes
+	Route::get('plugin/rate/categories','RateController@categories');
+	Route::post('plugin/rate/categories','RateController@addCategories');
 });
 
 // Authentication routes...
@@ -62,3 +67,7 @@ Route::get('logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('register', 'Auth\AuthController@getRegister');
 Route::post('register', 'Auth\AuthController@postRegister');
+
+//Single BLog
+Route::get('{category}','PageController@category');
+Route::get('{category}/{slug?}','PageController@single');
