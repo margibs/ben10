@@ -121,10 +121,10 @@ font-family: Oswald;
                             <ul>
                                 <li class="
                                  @if(Request::is('plugin/rate*')){{'current'}}
-                                 @endif"><a> <i class="icon-star3"></i> Rating </a>
+                                 @endif"><a> <i class="icon-star3"></i> Rating <label class="badge"> 20 </label> </a>
                                     <ul>
                                         <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-link"></i> Categories </div></a> </li> 
-                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items </div></a> </li>                                    
+                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items <label class="badge"> 20 </label></div></a> </li>
                                     </ul>
                                </li> 
                             </ul>

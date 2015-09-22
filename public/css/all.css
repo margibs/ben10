@@ -28458,8 +28458,9 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
  }
  .center .commentCount .total a{
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 13px;
+    color: #9A9A9A;
  }
 .center .commentCount > img {
       border-radius: 50%;
@@ -28481,6 +28482,8 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     padding: 10px 20px;
     font-weight: 400!important;
     font-size: 14px!important;
+    text-align: left;
+    line-height: 23px!important;
 }
 
 /* ============== COMMENTS ================ */

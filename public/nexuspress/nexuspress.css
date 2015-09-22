@@ -704,3 +704,10 @@ h3{
 .ajax-file-upload-abort:hover{
 	cursor: pointer;
 }
+
+.badge{
+    background-color: #C82222;
+    margin-left: 5px;
+    position: relative;
+    top: -2px;
+}
