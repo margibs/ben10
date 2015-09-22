@@ -20,11 +20,13 @@ class CreateRateItemsTable extends Migration
 
             $table->string('image_url');
 
-            $table->integer('sub_category_id')->unsigned();
-            $table->foreign('sub_category_id')->references('id')->on('rate_categories');
+            $table->integer('category_id')->unsigned();
+            $table->foreign('category_id')->references('id')->on('rate_categories');
 
             $table->string('name');
             $table->text('description');
+
+            $table->tinyInteger('approved')->default(1);
 
             $table->timestamps();
         });
