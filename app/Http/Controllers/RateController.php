@@ -9,6 +9,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Str;
 
 use App\PluginModel\RateCategory;
+use App\PluginModel\RateItem;
 
 class RateController extends Controller
 {
@@ -47,12 +48,14 @@ class RateController extends Controller
 
     public function items()
     {
-        return view('plugin.rate.itemLists');
+        $products = RateItem::where('category_id',10)->where('approved',0)->get();
+        return view('plugin.rate.itemLists',compact('products'));
     }
 
     public function ajaxCheckProduct()
     {
-        return 30;
+        $product_count = RateItem::where('category_id',10)->where('approved',0)->count();
+        return $product_count;
     }
 
    	public function getCategorySlug($value, $slug_check = false)
