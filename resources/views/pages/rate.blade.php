@@ -9,9 +9,17 @@
     </div>  
     <div class="contentWrapper">
         <div class="topBlack">
+
+         <ul class="list-inline pull-right">
+              <li><a href="" class="admire"><i class="icon-heart3"></i></a></li>
+              <li><a href="" class="dislike"><i class="icon-heart3"></i></a></li>
+              <li><a href="" class="send"><i class="icon-paperplane"></i></a></li>
+          </ul>
+
           <h2> Blue Savana
             <span><a href="#"> by Emily Pooter </a></span>
-          </h2>
+          </h2>        
+
         </div>
         <a href=""> <img src="http://vps184562.ovh.net/uploads/39641_image3.jpg" alt=""> </a>
         <div id="commentSection17">
