@@ -136,36 +136,36 @@
 	                <div class="fileUpload fileUpload2">
 	                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
 	                    <span>Upload Image</span>
-	                    <input type="file" name="file" class="upload" style="width:auto;">
+	                    <input type="file" name="file2" class="upload" style="width:auto;">
 	                </div>
                 </div>
 
 				<span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Product Name </span>
-                <input type="text" style="margin-top: 0;">
+                <input type="text" name="name" style="margin-top: 0;" required>
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Intended application </span>
-                <input type="text" style="margin-top: 0;">
+                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Animal Tested </span>
-	             <input type="radio" name="animal_tested_yes" value="yes" checked> Yes
-				 <input type="radio" name="animal_tested_no" value="No"> No
+	             <input type="radio" name="animal_tested" value="yes" checked> Yes
+				 <input type="radio" name="animal_tested" value="No"> No
 				 <br />
 				 <br />
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Eco Friendly </span>
-                <input type="radio" name="animal_tested_yes" value="yes" checked> Yes
-				 <input type="radio" name="animal_tested_no" value="No"> No
+                <input type="radio" name="eco_friendly" value="yes" checked> Yes
+				 <input type="radio" name="eco_friendly" value="No"> No
 				 <br />
 				 <br />
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Alternative Products </span>
-                <input type="text" style="margin-top: 0;">
+                <input type="text" name="alt_products" style="margin-top: 0;" required>
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Price Range </span>
-                <input type="text" style="margin-top: 0;">
+                <input type="text" name="price_range" style="margin-top: 0;" required>
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Available From </span>
-                <input type="text" style="margin-top: 0;">
+                <input type="text" name="available_from" style="margin-top: 0;" required>
 
                 <input type="submit" value="Submit">
 			</form>
