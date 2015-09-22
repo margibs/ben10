@@ -229,9 +229,16 @@ font-family: Oswald;
                 url: "{{url('plugin/rate/ajax_check_product')}}",
                 success: function(response) 
                 {
-                    $('.product_count').html(response);
+                    
                     $('#product_counter').attr('data-notify-msg','<i class=icon-info-sign></i><a href="{{url('plugin/rate/items')}}">'+response+' Products needs approval!</a>');
-                    // SEMICOLON.widget.notifications('#product_counter');
+
+                    if( $('.product_count').html() != response)
+                    {
+                        SEMICOLON.widget.notifications('#product_counter');
+                    }
+
+                    $('.product_count').html(response);
+
                 },
             });
         }, 3000);
