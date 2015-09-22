@@ -3,13 +3,13 @@
 @section('content')
 
 <style>
-	.wrapper-dropdown-3, .wrapper-dropdown-1{
+	.tab-content .wrapper-dropdown-3, .tab-content .wrapper-dropdown-1{
 		margin: 10px 0 30px 0!important;
 	}
-	.wrapper-dropdown-3 {	 
+	.tab-content .wrapper-dropdown-3 {	 
 	    margin-right: 185px!important;
 	}
-	input[type=submit] {
+	.tab-content input[type=submit] {
 	    margin: 0;
 	    margin-top: 15px;
     	margin-bottom: 0;

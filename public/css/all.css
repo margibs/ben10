@@ -28345,6 +28345,9 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
  #header, #header.sticky-header #header-wrap{
     background-color: #000;
  }
+ #header.sticky-header #header-wrap{
+      z-index: 999999999;
+ }
  #header.full-header #logo, #header.full-header #primary-menu > ul{
     border-right: none;
  }
@@ -28603,8 +28606,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
 .left .coinTotal p{
   margin-left: 65px;
 }
-.left .coinTotal h3{
-  font-family: Montserrat;
+.left .coinTotal h3{  
   font-size: 35px;
   letter-spacing: -1px;
   margin-top: -10px;
@@ -29124,8 +29126,7 @@ color: #F36198;
   /* Size and position */
   position: relative;
   width: 200px;    
-  padding: 10px;
-  z-index: 9999;
+  padding: 10px;  
 
   /* Styles */
   background: #fff;
