@@ -28773,13 +28773,13 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
 }
 
 
-input[type=radio] {
+.modal input[type=radio] {
 display: none;
 }
-input[type=radio] + label {
+.modal input[type=radio] + label {
 padding-right: 15px;
 }
-input[type=radio] + label::before {
+.modal input[type=radio] + label::before {
 -webkit-touch-callout: none;
 -webkit-user-select: none;
 -khtml-user-select: none;
@@ -28790,10 +28790,10 @@ font-family: FontAwesome;
 content: "\f10c";
 padding-right: 5px;
 }
-input[type=radio] + label:hover, input[type=radio] + label:active {
+.modal input[type=radio] + label:hover, input[type=radio] + label:active {
 cursor: pointer;
 }
-input[type=radio]:checked + label::before {
+.modal input[type=radio]:checked + label::before {
 font-family: FontAwesome;
 content: "\f192";
 color: #F36198;

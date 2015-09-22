@@ -133,10 +133,16 @@
                 <input type="text" style="margin-top: 0;">
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Animal Tested </span>
-                <input type="text" style="margin-top: 0;">
+	             <input type="radio" name="animal_tested_yes" value="yes" checked> Yes
+				 <input type="radio" name="animal_tested_no" value="No"> No
+				 <br />
+				 <br />
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Eco Friendly </span>
-                <input type="text" style="margin-top: 0;">
+                <input type="radio" name="animal_tested_yes" value="yes" checked> Yes
+				 <input type="radio" name="animal_tested_no" value="No"> No
+				 <br />
+				 <br />
 
                 <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Alternative Products </span>
                 <input type="text" style="margin-top: 0;">
