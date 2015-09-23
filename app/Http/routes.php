@@ -15,6 +15,9 @@ Route::get('/', 'PageController@index');
 Route::get('home', 'PageController@home');
 Route::get('dashboard', 'PageController@dashboard');
 
+Route::get('sample', 'PageController@sample');
+Route::post('ajax_sample','PageController@ajaxSample');
+
 Route::post('dashboard','PageController@addProduct');
 
 
