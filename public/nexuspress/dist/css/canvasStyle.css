@@ -2327,7 +2327,7 @@ body:not(.device-touch) #page-menu.dots-menu nav li .dots-menu-caption {
 	position: absolute;
 	content: '\e7a5';
 	top: 5px;
-	right: 15px;
+	right: 25px;
 	-webkit-transition: transform .2s linear;
 	-o-transition: transform .2s linear;
 	transition: transform .2s linear;
