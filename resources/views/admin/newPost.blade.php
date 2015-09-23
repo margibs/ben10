@@ -123,10 +123,15 @@
                             <div id="img_here2"></div>         
                           </div>
                             <input type="hidden" id="widget_image_url" name="widget_image_url" value="">
-                            <input type="text" name="music_sounds" placeholder="Music Sound" value="{{ old('music_sounds') }}">
-                            <input type="text" name="fun_rate" placeholder="Fun Rate" value="{{ old('fun_rate') }}">
-                            <input type="text" name="long_term_play" placeholder="Long Term Play" value="{{ old('long_term_play') }}">
-                            <input type="text" name="graphics" placeholder="Graphics" value="{{ old('graphics') }}">
+                            {!! Form::checkbox('widget_visible', 1) !!} Enable Widget<br>
+                            Music Sounds
+                            {!! Form::select('music_sounds', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',]) !!} <br>
+                            Fun Rate
+                            {!! Form::select('fun_rate', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',]) !!} <br>
+                            Long term play
+                            {!! Form::select('long_term_play', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',]) !!} <br>
+                            Graphics
+                            {!! Form::select('graphics', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',]) !!} <br>
                             <input type="text" name="slot_url" placeholder="Slot Url" value="{{ old('slot_url') }}">
                           </div>
                       </div>
@@ -367,7 +372,7 @@ $(document).ready(function(){
         
         load_file = 0;
 
-        console.log(url);
+        // console.log(url);
     });
 });
 

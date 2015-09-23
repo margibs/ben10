@@ -88,6 +88,43 @@
                  </div>
             </div>
         </div>
+                  <div class="panel panel-default">
+                     <div class="panel-heading">
+                          <h2 class="panel-title"> Widget Rate </h2>
+                      </div>
+                      <div class="panel-body">
+                          <div class="controls">
+                          <div class="panel-heading">
+                              <h2 class="panel-title"> Review Image <a href="#" id="load_media_files2" class="featImageButton"> <i class="icon-plus-sign"></i> </a>  </h2>
+                          </div>
+                          <div class="panel-body" style="padding-top: 0;">
+                                
+                            <div id="img_here2">
+                              <?php $widget_visible_var = false; ?>
+                              @if($widget_rating != null)
+                                <img src="{{url('uploads')}}/{{$widget_rating->image_url}}" alt="">
+                                @if($widget_rating->enable == 1)
+                                  <?php $widget_visible_var = true; ?>
+                                @endif
+                              @endif
+                            </div>         
+                          </div>
+                            <input type="hidden" id="widget_image_url" name="widget_image_url" value="{{ $widget_rating != null ? $widget_rating->image_url : '' }}">
+
+                            {!! Form::checkbox('widget_visible', 1, $widget_visible_var) !!} Enable Widget<br>
+                            Music Sounds
+                            {!! Form::select('music_sounds', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->music_sounds : 1) !!} <br>
+                            Fun Rate
+                            {!! Form::select('fun_rate', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->fun_rate : 1) !!} <br>
+                            Long term play
+                            {!! Form::select('long_term_play', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->long_term_play : 1) !!} <br>
+                            Graphics
+                            {!! Form::select('graphics', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->graphics : 1) !!} <br>
+                            <input type="text" name="slot_url" placeholder="Slot Url" value="{{ $widget_rating != null ? $widget_rating->slot_url : '' }}">
+                          </div>
+                      </div>
+
+                  </div>
 
         <div class="panel panel-default">
           
@@ -110,6 +147,8 @@
               <input type="submit" value="Update Post" class="button button-3d" style="display: block;margin: 0 auto 15px auto;">
             </div>
         </div>
+
+
 
    
 </form>
@@ -181,9 +220,11 @@
 $(document).ready(function(){
 
   var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content'),
-      template_for_media_file = $.trim($("#template_for_media_file").html());
+      template_for_media_file = $.trim($("#template_for_media_file").html()),
+      load_file = 0;
 
   $('#load_media_files').on('click',function(){
+    load_file = 1;
     $('#image_list').html('');
       $.ajax({ 
         type: 'get',
@@ -199,6 +240,32 @@ $(document).ready(function(){
               var add_parent = 
               template_for_media_file.replace(/--image_url--/ig, obj.image_url)
               .replace(/--id--/ig, obj.id);
+
+              $('#image_list').append(add_parent);
+
+          });
+
+        }
+      });
+
+    $('#myModal').modal('show');
+  });
+
+      $('#load_media_files2').on('click',function(){
+      load_file = 2;
+    $('#image_list').html('');
+      $.ajax({ 
+        type: 'get',
+        url: "{{url('admin/ajax_get_media_file')}}",
+        success: function(response)
+        {
+          var parsed = JSON.parse(response);
+
+            $.each( parsed, function( index, obj){
+
+              var add_parent = 
+                template_for_media_file.replace(/--image_url--/ig, obj.image_url)
+                .replace(/--id--/ig, obj.id);
 
               $('#image_list').append(add_parent);
 
@@ -258,9 +325,19 @@ $(document).ready(function(){
   // Hide modal if "Okay" is pressed
     $('#myModal #save_changes_modal').click(function() {
         $('#myModal').modal('hide');
-        $('#img_here').html("<img src='{{ url('uploads') }}/"+url+"'>");
-        $('#featured_image').attr('value',url);
-        console.log(url);
+        if(load_file == 1)
+        {
+          $('#img_here').html("<img src='{{ url('uploads') }}/"+url+"'>");
+          $('#featured_image').attr('value',url);
+        }
+        else if(load_file == 2)
+        {
+          $('#img_here2').html("<img src='{{ url('uploads') }}/"+url+"'>");
+          $('#widget_image_url').attr('value',url);
+        }
+        
+        load_file = 0;
+        // console.log(url);
     });
 });
 
