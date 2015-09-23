@@ -28,6 +28,8 @@ use App\Model\Post;
 use App\Model\Comment;
 use App\Model\LinksCountry;
 
+use App\PluginModel\WidgetRating;
+
 
 use App\CustomQuery;
 use App\CommonFunctions;
@@ -136,6 +138,7 @@ class AdminController extends Controller
 
 	public function addPost(Request $request,$id = 0)
 	{
+        // dd($request->all());
         $redirect = 'admin/new_post';  
 
         //check if new post or edit post
@@ -162,10 +165,12 @@ class AdminController extends Controller
         if($id != 0)
         {
             $post = Post::find($id);
+            $widget_rating = WidgetRating::where('post_id',$post->id)->first();
         }
         else
         {
             $post = new Post;
+            $widget_rating = new WidgetRating;
             $post->slug = $this->getPostSlug($request->input('title'));
             $post->user_id = Auth::user()->id;
         }
@@ -229,6 +234,18 @@ class AdminController extends Controller
             $postCategories->category_id = 1;
             $postCategories->save();
         }
+
+        //Widget rating here
+        $widget_rating->post_id = $post->id;
+        $widget_rating->image_url = $request->input('widget_image_url');
+        $widget_rating->music_sounds = $request->input('music_sounds');
+        $widget_rating->long_term_play = $request->input('long_term_play');
+        $widget_rating->fun_rate = $request->input('fun_rate');
+        $widget_rating->graphics = $request->input('graphics');
+        $widget_rating->slot_url = $request->input('slot_url');
+        $widget_rating->save();
+        //End widget rating
+
 
         $get_category = $this->customQuery->getPostCategories($post->id,false);
         $blog_url = "http://alllad.com/".$get_category->slug.'/'.$post->slug;

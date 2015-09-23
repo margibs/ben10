@@ -27,7 +27,21 @@ class PageController extends Controller
 		$customQuery->per_page = 15;
 	}
 
-	   public function index()
+
+	   
+
+  public function sample()
+  {
+      return view('sample');
+  }
+
+  public function ajaxSample(Request $request)
+  {
+      return $request->all();
+  }
+
+	public function index()
+
     {    	
     	return view('pages.layout');
     }
