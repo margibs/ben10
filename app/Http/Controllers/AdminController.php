@@ -112,6 +112,8 @@ class AdminController extends Controller
         $data['shared_fb_status'] = false;
         $data['shared_twitter_status'] = false;
 
+        $data['widget_rating'] = WidgetRating::where('post_id',$id)->first();
+
         if($data['post']->shared_fb == 1)
         {
             $data['shared_fb_status'] = true;
@@ -170,7 +172,6 @@ class AdminController extends Controller
         else
         {
             $post = new Post;
-            $widget_rating = new WidgetRating;
             $post->slug = $this->getPostSlug($request->input('title'));
             $post->user_id = Auth::user()->id;
         }
@@ -236,6 +237,13 @@ class AdminController extends Controller
         }
 
         //Widget rating here
+        $widget_rating = WidgetRating::where('post_id',$post->id)->first();
+
+        if($widget_rating == null)
+        {
+            $widget_rating = new WidgetRating;
+        }
+
         $widget_rating->post_id = $post->id;
         $widget_rating->image_url = $request->input('widget_image_url');
         $widget_rating->music_sounds = $request->input('music_sounds');
@@ -243,6 +251,7 @@ class AdminController extends Controller
         $widget_rating->fun_rate = $request->input('fun_rate');
         $widget_rating->graphics = $request->input('graphics');
         $widget_rating->slot_url = $request->input('slot_url');
+        $widget_rating->enable = $request->input('widget_visible');
         $widget_rating->save();
         //End widget rating
 

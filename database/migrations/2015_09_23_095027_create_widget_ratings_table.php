@@ -19,10 +19,11 @@ class CreateWidgetRatingsTable extends Migration
             $table->foreign('post_id')->references('id')->on('posts');
 
             $table->string('image_url');
-            $table->double('music_sounds', 2, 2)->default(0);
-            $table->double('long_term_play', 2, 2)->default(0);
-            $table->double('fun_rate', 2, 2)->default(0);
-            $table->double('graphics', 2, 2)->default(0);
+            $table->tinyInteger('music_sounds')->default(0);
+            $table->tinyInteger('long_term_play')->default(0);
+            $table->tinyInteger('fun_rate')->default(0);
+            $table->tinyInteger('graphics')->default(0);
+            $table->tinyInteger('enable')->default(0);
 
             $table->text('slot_url');
 
