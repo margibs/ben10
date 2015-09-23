@@ -18,8 +18,9 @@ elixir(function(mix) {
     	'/dist/style.css',
     	'/dist/dark.css',
     	'/dist/animate.css',
-    	'/dist/responsive.css',
+    	// '/dist/responsive.css',
     	'/dist/font-icons.css',
+        '/dist/simplebar.css',
     	'myStyle.css',
     ],'public/css/all.css');
     

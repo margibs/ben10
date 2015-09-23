@@ -3,27 +3,58 @@
 @section('content')
 
 <style>
-	.tab-content .wrapper-dropdown-3, .tab-content .wrapper-dropdown-1{
-		margin: 10px 0 30px 0!important;
+	.uploadModal{
+		position: fixed;
+		top: -100%;
+		left: 25%;
+		width: 100%;
+		max-width: 600px;
 	}
-	.tab-content .wrapper-dropdown-3 {	 
-	    margin-right: 185px!important;
+	.tabs{
+		margin-bottom: 0;
 	}
-	.tab-content input[type=submit] {
-	    margin: 0;
-	    margin-top: 15px;
-    	margin-bottom: 0;
-	    font-family: Roboto;
-	    font-weight: 500;
-	    background-color: transparent;
-	    border: 0;
-	    background-color: rgb(239, 66, 109);
-	    color: #fff;
-	    padding: 7px 15px;
+	.uploadModalClose{
+		float: right;
+	    margin: 9px 10px;
 	    font-size: 15px;
+	    position: relative;
+	    z-index: 2;
+	    color: #E93376;
+	}
+	.productUploadForm span{
+		color: #B3B2B2;
+	    font-size: 14px;
+	    font-weight: 500;
+	}
+	
+	.productUploadSubmit{
+		background-color: #F45F98;
+	    border: 0;
+	    color: #fff;
+	    font-family: Roboto;
+	    font-weight: 700;
+	    padding: 6px 22px;
+	    font-size: 17px;
 	    border-radius: 20px;
 	}
+	ul.tab-nav:not(.tab-nav-lg) li a{
+		color: #fff;
+	}
+	.tabs.tabs-bb ul.tab-nav li a{
+		border-bottom: none;
+	}
+	.tabs.tabs-bb ul.tab-nav li.ui-tabs-active a {
+		background-color: #E35E90;
+		height: 43px;
+	    border-bottom: none;
+	    -moz-box-shadow: inset 0 0 10px -3px #CF1B5E;
+	    -webkit-box-shadow: inset 0 0 10px -3px #CF1B5E;
+	    box-shadow: inset 0 0 10px -3px #CF1B5E;
+	}
 </style>
+
+
+
 
 <div class="wrappers">	
 	<div class="dashLink">
@@ -37,8 +68,73 @@
 	</div>
 </div>
 
+	
+<div class="wrappers" style="margin-top:10px;padding: 0;background-color: #E7E5E5;">		
+		<select name="" id="" class="pull-right" style="    
+	margin: 10px;
+    padding: 3px 5px;
+    font-family: Roboto;
+    font-size: 13px;
+    border-radius: 3px;
+    background-color: #F2F0F0;
+    border: navajowhite;
+    color: #000;
+    font-weight: 600;">
+			<option value=""> Category: All </option>
+			<option value=""> Outfits </option>
+			<option value=""> Recipe </option>
+			<option value=""> Shoes </option>
+			<option value=""> Cooking </option>
+		</select>
+		<select name="" id="" class="pull-right" style="    
+	margin: 10px;
+    padding: 3px 5px;
+    font-family: Roboto;
+    font-size: 13px;
+    border-radius: 3px;
+    background-color: #F2F0F0;
+    border: navajowhite;
+    color: #000;
+    font-weight: 600;">
+			<option value=""> Most Admired </option>
+			<option value=""> Ascending </option>
+			<option value=""> Descending </option>
+		</select>
+		<h6> Uploaded Items </h6>
+		<!-- <div class="row thumbGallery"> -->
+			<div id="image_container">
+				
+						@foreach($rateItems as $rateItem)
+							<div class="outer">
+								<div class="inner">
+							<!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+								<a href=""><img class="img-responsive" src="{{url('uploads')}}/{{$rateItem->image_url}}" /></a>
+							<!-- </div> -->
+								</div>                          
+							</div>
+						@endforeach
+						<div class="outer">
+							<div class="inner" style="transform: translate(30%,24%);">
+						<!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+							<a id="uploadItemBtn" style="    
+    display: inline-block;
+    border: 1px dashed;
+    padding: 5px 15px;
+    font-size: 40px;
+    color: #B8B8B8;"><i class="icon-line-plus"></i></a>
+						<!-- </div> -->
+							</div>                          
+						</div>
+						
+					
+			</div>
+	    <!-- </div> -->
+</div>
 
-<div class="wrappers">
+
+
+
+<div class="wrappers" style="margin-top:10px;">		
 	<div class="referralContainer center">
 		<ul class="list-inline">
 			<li><a target="_blank" href="javascript:window.open('https://www.facebook.com/sharer/sharer.php?app_id=809770709118677&amp;sdk=joey&amp;u=http%3A%2F%2Flilotime.com%2F&amp;display=popup&amp;ref=plugin&amp;src=share_button','FB Share','width=500,height=300')" data-toggle="tooltip" title="" data-original-title="Refer on Facebook"><i class="icon-facebook-sign" style="color: #425f9c;"></i></a></li>
@@ -50,144 +146,54 @@
 	</div>
 </div>
 
-<div class="wrappers" style="margin-top:10px;padding: 0;">
-		<h6> Uploaded Items </h6>
-		<!-- <div class="row thumbGallery"> -->
-			<div id="image_container">
-				
-						@foreach($rateItems as $rateItem)
-							<div class="outer">
-								<div class="inner">
-							<!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
-								<img class="img-responsive" src="{{url('uploads')}}/{{$rateItem->image_url}}" />
-							<!-- </div> -->
-								</div>                          
-							</div>
-						@endforeach
-					
-			</div>
-	    <!-- </div> -->
-</div>
 
-
-<div class="wrappers" style="margin-top:10px;">
-	<div class="tabs tabs-bb clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">
-
-		<ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist">
-			<li class="ui-state-default ui-corner-top  ui-tabs-active ui-state-active" role="tab" tabindex="-1" aria-controls="tabs-33" aria-labelledby="ui-id-17" aria-selected="false"><a href="#tabs-33" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-17"> Item </a></li>
-			<li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-34" aria-labelledby="ui-id-18" aria-selected="false"><a href="#tabs-34" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-18"> Product </a></li>			
-		</ul>
-
-		<div class="tab-container">
-
-			<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-33" aria-labelledby="ui-id-17" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
-				
-		
-
-				<div id="dd" class="wrapper-dropdown-3" tabindex="1">
-                    <span>Sub-Category</span>
-                    <ul id="subDropdown" class="dropdown">
-                        <li><a href="#">Outfit</a></li>                        
-                    </ul>
-                </div>
-
-                <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
-                    <span>Category</span>
-                    <ul id="parentDropdown" class="dropdown">
-                        <li><a href="#">Outfit</a></li>
-                        <li><a href="#">Recipe</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Cooking</a></li>
-                        <li><a href="#">Diet</a></li>
-                        <li><a href="#">Room</a></li>
-                        <li><a href="#">Garden</a></li>
-                        <li><a href="#">Jewelry</a></li>
-                        <li><a href="#">Holiday</a></li>
-                    </ul>
-                </div>
-
-                <div style="margin-bottom: 25px;">
-	            	<div class="outer" style="height: 150px; float: right; width: 250px; margin-left: 15px; border-radius: 2px; overflow: hidden;">
-                        <div class="inner" style="overflow: hidden;">
-                            <img id="myImg1" style="width:100%;">                              
-                        </div>
-	                </div>
-	                <div class="fileUpload fileUpload1">
-	                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
-	                    <span>Upload Image</span>
-	                    <input type="file" name="file" class="upload" style="width:auto;">
-	                </div>
-                </div>
-
-				<span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Item Title </span>
-                <input type="text" style="margin-top: 0;">
-
-                <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Description </span>
-                <input type="text" style="margin-top: 0;">
-
-                <input type="submit" value="Submit">
-
-
-                
-
-			</div>
-			<div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-34" aria-labelledby="ui-id-18" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
-
-			<form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
-			{!! csrf_field() !!}
-			
-                <div style="margin-bottom: 25px;">
-	            	<div class="outer" style="height: 150px; float: right; width: 250px; margin-left: 15px; border-radius: 2px; overflow: hidden;">
-                        <div class="inner" style="overflow: hidden;">
-                            <img id="myImg2" style="width:100%;">                              
-                        </div>
-	                </div>
-	                <div class="fileUpload fileUpload2">
-	                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
-	                    <span>Upload Image</span>
-	                    <input type="file" name="file2" class="upload" style="width:auto;">
-	                </div>
-                </div>
-
-				<span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Product Name </span>
-                <input type="text" name="name" style="margin-top: 0;" required>
-
-                <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Intended application </span>
-                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
-
-                <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Animal Tested </span>
-	             <input type="radio" name="animal_tested" value="yes" checked> Yes
-				 <input type="radio" name="animal_tested" value="No"> No
-				 <br />
-				 <br />
-
-                <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Eco Friendly </span>
-                <input type="radio" name="eco_friendly" value="yes" checked> Yes
-				 <input type="radio" name="eco_friendly" value="No"> No
-				 <br />
-				 <br />
-
-                <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Alternative Products </span>
-                <input type="text" name="alt_products" style="margin-top: 0;" required>
-
-                <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Price Range </span>
-                <input type="text" name="price_range" style="margin-top: 0;" required>
-
-                <span style="text-transform: uppercase; color: #D2D2D2; font-size: 13px;"> Available From </span>
-                <input type="text" name="available_from" style="margin-top: 0;" required>
-
-                <input type="submit" value="Submit">
-			</form>
-			</div>
-		
-
-		</div>
-
-	</div>
-</div>
 
 <script>
        $(document).ready(function() {
+
+       		$("#uploadItemBtn").on("click", function() {
+       			TweenMax.to($(".uploadModal"), .3, { // Drop down modal
+	              top: "10%",         
+	              zIndex: "9999999",    
+	              ease: Expo.easeOut,
+	              onComplete: function() { // When modal drops, lengthen modal body height 
+	                // if ($("#urlChoice").is(':checked')) { // Make sure urlChoice radio is selected
+	                //   TweenMax.to($(".modal-body-container"), .5, { // Change the height of modal body
+	                //     height: $urlHeight,
+	                //     ease: Expo.easeOut,
+	                //     // When at correct height, show url body and focus on first input
+	                //     onComplete: function() { 
+	                //       TweenMax.to($("#url"), .3, {
+	                //         opacity: 1,
+	                //         //onComplete: function() {$("#urlText").focus();}
+	                //       })
+	                //     }
+	                //   });
+	                //   TweenMax.to($("#url"), .5, {display: "block"});
+	                // }
+	              }
+	            });
+				TweenMax.to($(".modal-shade"), .7, { // Delay start the modal shade
+	              position: "fixed",
+	              opacity: 1,
+	              delay: .3
+	            });
+       		});
+
+			 $(".uploadModalClose").on("click", function() {
+			      
+			            TweenMax.to($(".uploadModal"), .3, {
+			              top: "-100%",
+			              zIndex: "-1",
+			              ease: Back.easeIn
+			            });
+			            TweenMax.to($(".modal-shade"), .6, {
+			              position: "relative",
+			              opacity: 0
+			            });
+			 });
+
+
            
        		$(".fileUpload1 :file").change(function () {
                 if (this.files && this.files[0]) {
@@ -212,6 +218,49 @@
             function imageIsLoaded2(e) {
                 $('#myImg2').attr('src', e.target.result);           
             };
+
+            function DropDown(el) {
+                this.dd4 = el;
+                this.placeholder = this.dd4.children('span');
+                this.opts = this.dd4.find('ul.dropdown > li');
+                this.val = '';
+                this.index = -1;
+                this.initEvents();
+            }
+            DropDown.prototype = {
+                initEvents : function() {
+                    var obj = this;
+
+                    obj.dd4.on('click', function(event){
+                        $(this).toggleClass('active');
+                        return false;
+                    });
+
+                    obj.opts.on('click',function(){
+                        var opt = $(this);
+                        obj.val = opt.text();
+                        obj.index = opt.index();
+                        obj.placeholder.text(obj.val);
+                    });
+                },
+                getValue : function() {
+                    return this.val;
+                },
+                getIndex : function() {
+                    return this.index;
+                }
+            }
+
+            $(function() {
+
+                var dd4 = new DropDown( $('#dd4') );
+
+                $(document).click(function() {
+                    // all dropdowns
+                    $('.wrapper-dropdown-4').removeClass('active');
+                });
+
+            });
 
 		});
 </script>
