@@ -529,6 +529,14 @@ h3{
     color: #B7B7B7;
     font-weight: 500;
 }
+.controls select{
+    width: 55px;
+    float: right;
+    border-radius: 20px;
+    height: auto;
+    padding: 2px 5px;
+    margin-bottom: 5px;
+}
 
 #image_container, #image_list{
 	clear: both;
