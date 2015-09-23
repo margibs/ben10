@@ -32,18 +32,24 @@
             top: -100%;
             left: 20%;
             width: 850px;
-            height: 600px;
-            /*overflow: hidden;*/
+            height: 620px;
+            overflow: hidden;
             background-color: #fff;
             margin: 0 auto;
             border-radius: 3px;
         }
         #rateItem .left{
             background-color: #000;
+            height: 620px;
+            line-height: 630px;
+            overflow: hidden;
             text-align: center;
             -moz-box-shadow: inset 0 0 10px -4px #000;
             -webkit-box-shadow: inset 0 0 10px -4px #000;
             box-shadow: inset 0 0 15px -10px #000;
+        }
+        #rateItem .left img{
+            vertical-align: middle;
         }
         #rateItem > .col-md-5, #rateItem > .col-md-7{
             padding: 0;
@@ -145,11 +151,12 @@
             margin: 6px 0;
         }
         #rateItem .admireComment .totalCoins{
-            margin-left: 5px;
-            font-weight: 500;
+            margin-left: 14px;
+            font-weight: 400;
             color: #C5C5C5;
             display: block;
-            margin-top: 0;
+            margin-top: 1px;
+            font-size: 11px;
         }
         #rateItem .admireComment .current_coins{
             font-size: 30px;
@@ -171,7 +178,7 @@
             font-size: 12px;
         }
         #rateItem .commentWrapper ul{
-            max-height: 250px;
+            max-height: 270px;
             overflow: auto;
         }
     </style>
@@ -871,8 +878,8 @@
 position: absolute;
 color: #EDEDED;
 z-index: 2;
-right: -50px;
-/* top: 5px; */
+top: 10px;
+left: 10px;
 font-size: 13px;
 text-transform: uppercase;
 font-weight: 600;"> Close </a>
@@ -882,7 +889,7 @@ font-weight: 600;"> Close </a>
                 <!-- <div class="user"><img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt=""> <span><a href="">by Emily</a></span> </div> -->
                 <h2> Sweet Navy</h2>
             </div>
-            <img src="http://vps184562.ovh.net/uploads/27457_lbue.jpg" alt="">
+            <img src="http://des.rosewholesale.com/uploads/201211/heditor/201211191121242461.jpg" alt="">
         </div>
     </div>
     <div class="col-md-5">
@@ -962,6 +969,52 @@ font-weight: 600;"> Close </a>
                                                           <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
                                                           <p class="commentContent"> tttttt </p>
                                                       </li>
+                                                      <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
+                                                          <p class="commentContent"> tttttt </p>
+                                                      </li>
+                                                      <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
+                                                          <p class="commentContent"> tttttt </p>
+                                                      </li>
+                                                      <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
+                                                          <p class="commentContent"> tttttt </p>
+                                                      </li>
+                                                      <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
+                                                          <p class="commentContent"> tttttt </p>
+                                                      </li>
+                                                      <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
+                                                          <p class="commentContent"> tttttt </p>
+                                                      </li>
+
                                                                      
                                               </ul>
                                           <div class="clearfix"></div>

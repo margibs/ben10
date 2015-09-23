@@ -128,6 +128,9 @@ font-family: Oswald;
                                         <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> Items <label class="badge product_count"> {{ $products_count->ajaxCheckProduct() }} </label></div></a> </li>
                                     </ul>
                                </li> 
+                                <li class="
+                                 @if(Request::is('admin/media_gallery*')){{'current'}}
+                                 @endif"><a href="{{ url('admin/media_gallery') }}"> <i class="icon-line-eye"></i> Review </a></li>
                             </ul>
                         <p> Settings </p>
 
@@ -196,7 +199,8 @@ font-family: Oswald;
                                  @elseif (Request::is('admin/comments*')) <i class="icon-line-speech-bubble"></i> Comments                                  
                                  @elseif (Request::is('admin/users*')) <i class="icon-line-head"></i> Users
                                  @elseif (Request::is('admin/settings*')) <i class="icon-line2-settings"></i> General Settings
-                                 @elseif (Request::is('plugin/rate*')) <i class="icon-star3"></i> Rate Plugin
+                                 @elseif (Request::is('plugin/rate/categories')) <i class="icon-star3"></i> Ratingh Categories
+                                 @elseif (Request::is('plugin/rate/items*')) <i class="icon-star3"></i> Uploaded Products
                                  @endif </h2>
                          </div>
                     </div> 

@@ -27,6 +27,9 @@ class PageController extends Controller
 		$customQuery->per_page = 15;
 	}
 
+
+	   
+
   public function sample()
   {
       return view('sample');
@@ -38,9 +41,11 @@ class PageController extends Controller
   }
 
 	public function index()
+
     {    	
     	return view('pages.layout');
     }
+
 
     public function home()
     {
