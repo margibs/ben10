@@ -24,7 +24,157 @@
     <!-- Document Title
     ============================================= -->
     <title> Upmire </title>
-
+    
+    <style>
+        #rateItem{
+            position: fixed;
+            z-index: 10;
+            top: -100%;
+            left: 20%;
+            width: 850px;
+            height: 600px;
+            /*overflow: hidden;*/
+            background-color: #fff;
+            margin: 0 auto;
+            border-radius: 3px;
+        }
+        #rateItem .left{
+            background-color: #000;
+            text-align: center;
+            -moz-box-shadow: inset 0 0 10px -4px #000;
+            -webkit-box-shadow: inset 0 0 10px -4px #000;
+            box-shadow: inset 0 0 15px -10px #000;
+        }
+        #rateItem > .col-md-5, #rateItem > .col-md-7{
+            padding: 0;
+        }
+        #rateItem .left .topBlack .user{
+            float: left;
+        }
+        #rateItem .left .topBlack{
+            position: absolute;
+            background-color: rgba(0, 0, 0, 0.65);
+            width: 100%; 
+        }
+        #rateItem .left .topBlack h2{
+            margin-bottom: 0;
+            color: #fff;
+            font-size: 20px;
+            padding: 5px;
+        }
+        #rateItem .left .topBlack img{
+            border-radius: 50%;
+            width: 30px;
+            margin-top: 7px;
+            margin-left: 10px;
+        }
+        #rateItem .left .topBlack span{
+            margin-bottom: 0;
+            float: right;
+        }
+        #rateItem .admireBox{
+            background-color: #f45793;
+            padding: 5px 20px;
+            border-bottom: 1px solid #d93574;
+            text-align: center;
+        }
+        #rateItem .admireBox h2{
+            margin-bottom: 0;
+            color: #fff;
+            font-size: 30px;
+            margin: 3px 0px;
+            letter-spacing: -1px;
+        }
+        #rateItem .admireBox h2 span{
+            color: #fddbe8;
+            text-shadow: 0px 0px 4px #FCC1D7;
+        }
+        #rateItem .admireBox .meterWrapper2 {
+            margin: -15px 30px 5px 30px;
+        }
+        #rateItem .admireBox ul{
+            margin-bottom: 10px;
+            padding: 0 10px;
+        }    
+        #rateItem .admireBox ul li, #rateItem .admireBox .listtwo li{
+            padding: 0 3px;
+        }
+        #rateItem .admireBox .listtwo li a{            
+            background-color: #FA68A0;
+            border: 1px solid #FA87B2;
+            padding: 3px 12px;
+            color: #FFFFFF;
+            border-radius: 30px;
+            font-family: Roboto;
+            font-size: 12px;
+        }
+        #rateItem .admireBox .listtwo li a i{
+            color: rgb(247, 181, 206);
+        }
+        .pinkSeparator {
+            border-top: 1px solid #eb4c89;
+            border-bottom: 1px solid #f2659b;
+            margin-bottom: 15px;
+        }
+         #rateItem .admireBox  li a i.admired{
+            color: rgb(247, 170, 200);
+         }
+         #rateItem .admireBox  li a i.dislike{
+            color: rgb(234, 65, 130);
+         }
+        #rateItem .admireBox  li span{
+            color: #fff;
+        }
+        #rateItem .admireComment {
+            overflow: hidden;
+            border-bottom: 1px solid #ececec;
+        }
+        #rateItem .admireComment .meter{
+            margin: 15px auto 0 auto;
+            width: 80%;
+        }
+        #rateItem .admireComment .col_three_fifth, #rateItem .admireComment .col_two_fifth{
+            padding: 5px 10px;
+        }
+        #rateItem .admireComment #coins_to_earn{
+            font-family: Roboto;
+            font-size: 12px;
+            color: #BDBABA;
+            display: block;
+            text-align: center;
+            margin: 6px 0;
+        }
+        #rateItem .admireComment .totalCoins{
+            margin-left: 5px;
+            font-weight: 500;
+            color: #C5C5C5;
+            display: block;
+            margin-top: 0;
+        }
+        #rateItem .admireComment .current_coins{
+            font-size: 30px;
+            font-weight: 600;
+            color: #000;
+            padding-left: 15px;
+            margin-top: -7px;
+            margin-bottom: 0;
+        }
+        #rateItem .commentWrapper h3{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        #rateItem .commentWrapper textarea{
+            height: 40px;
+            font-size: 13px;
+        }
+        #rateItem .commentWrapper .name a{
+            font-size: 12px;
+        }
+        #rateItem .commentWrapper ul{
+            max-height: 250px;
+            overflow: auto;
+        }
+    </style>
 
 </head>
 
@@ -521,11 +671,20 @@
 
     </div><!-- #wrapper end -->
 
+
+<!--- Quick Uplaod Popup -->
+
 <div id="addLinkModal" class="modal-container">
           <div class="modal-shade"></div>
           <div class="modal">
             <div class="modal-header">
-              <h1> Upload Items </h1>
+              <h1> Upload Items  <a href="http://localhost/upmire/public/dashboard" style="    
+    font-size: 13px;
+    font-family: Roboto;
+    color: #FFAFCD;
+    padding: 10px;
+    position: relative;
+    top: -2px;"> Click here for product upload </a>     </h1>
               <i class="icon-line2-close closeModalBtn" title="Close Modal"></i>
             </div>
             <div class="modal-banner">
@@ -542,8 +701,6 @@
                         <li><a href="#">Outfit</a></li>                        
                     </ul>
                 </div>
-
-                <i class="fa fa-chevron-right"></i>
 
                 <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
                     <span>Category</span>
@@ -563,28 +720,34 @@
                 <div>
                  
 
-                <div class="outer" style="    
-    height: 150px;
-    float: right;
-    width: 250px;
-    margin-left: 15px;
+             
+                    <div class="fileUpload">
+                        <i class="icon-line-upload" style="display:block;color: #E4075B;"></i>
+                        <span>Upload Image</span>
+                        <input type="file" name="file" class="upload" style="width:auto;">
+
+                           <div class="outer" style="  
+    height: 100%;
+    width:100%;                            
     border-radius: 2px;
-    overflow: hidden;">
-                                    <div class="inner" style="overflow: hidden;">
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0.3;">
+                                    <div class="inner" style="overflow: hidden;-moz-transform: translate(0%,-15%);-webkit-transform: translate(0%,-15%);transform: translate(0%,-15%);">
                                         <img id="myImg" style="width:100%;">                              
                                     </div>
                     </div>
-                    <div class="fileUpload">
-                        <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
-                        <span>Upload Image</span>
-                        <input type="file" name="file" class="upload" style="width:auto;">
+
                     </div>
                     
                 </div>
                 <div style="
     clear:both;
     display: block;
-    margin-top: 30px;">
+    margin-top: 15px;
+  ">
                   <input type="text" id="urlText" name="urlTextValue">
                   <label for="urlText"> Item Title </label>
                 </div>
@@ -592,30 +755,6 @@
                   <input type="url" id="urlURL" name="urlURLValue">
                   <label for="urlURL"> Description </label>
                 </div>           
-               <!--  <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Intended application </label>
-                </div>
-                <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Animal Tested </label>
-                </div>
-                <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Eco Friendly </label>
-                </div>
-                <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Alternative Products </label>
-                </div>
-                <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Price Range </label>
-                </div>
-                <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Available From </label>
-                </div> -->
               </div>
             
             </div>
@@ -627,11 +766,217 @@
                 <span> Select an Image </span>
               </div> -->
               <div>                
-                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-line-cloud-upload"> </i> </p>                
+                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>   
+
               </div>
             </div>
           </div>
         </div>
+
+
+<!--- Dashboard Uplaod Popup -->
+<div class="wrappers uploadModal" style="margin-top:10px;padding: 0;position: absolute;top: -100%;">
+    <i class="icon-line2-close uploadModalClose" title="Close Modal"></i>
+    <div class="tabs tabs-bb clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">
+
+        <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="    
+    background-color: #F36198;">
+            <li class="ui-state-default ui-corner-top  ui-tabs-active ui-state-active" role="tab" tabindex="-1" aria-controls="tabs-33" aria-labelledby="ui-id-17" aria-selected="false"><a href="#tabs-33" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-17"> Item Upload </a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-34" aria-labelledby="ui-id-18" aria-selected="false"><a href="#tabs-34" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-18"> Product Upload </a></li>           
+        </ul>
+
+        <div class="tab-container">
+
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-33" aria-labelledby="ui-id-17" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
+                
+        
+            </div>
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-34" aria-labelledby="ui-id-18" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
+
+                <form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
+                            {!! csrf_field() !!}
+                
+
+                        <div class="col_half">
+                            
+                             <div style="margin-bottom: 25px;">
+                                 <div class="fileUpload fileUpload2" style="width:100%;padding: 15px;">
+                                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
+                                    <span>Upload Image</span>
+                                    <input type="file" name="file2" class="upload" style="width:auto;">
+                                </div>
+                                <div class="outer" style=" height: 300px; margin-top:20px; border-radius: 2px; overflow: hidden;">
+                                    <div class="inner" style="overflow: hidden;">
+                                        <img id="myImg2" style="width:100%;">                              
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+
+                        </div>
+                        <div class="col_half col_last">
+                            
+                            <div class="productUploadForm">
+                                <span> Product Name </span>
+                                <input type="text" name="name" style="margin-top: 0;" required>
+
+                                <span> Intended application </span>
+                                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
+
+                                <span> Animal Tested </span>
+                                 <input type="radio" name="animal_tested" value="yes" checked> 
+                                 <label for="animal_tested"> Yes </label>
+                                 <input type="radio" name="animal_tested" value="No"> 
+                                 <label for="animal_tested"> No </label>
+                                 <br />
+                                 <br />
+
+
+                                <span> Eco Friendly </span>
+                                <input type="radio" name="eco_friendly" value="yes" checked>
+                                <label for="eco_friendly"> Yes </label>
+                                 <input type="radio" name="eco_friendly" value="No">
+                                 <label for="eco_friendly"> No </label>
+                                 <br />
+                                 <br />
+
+                                <span> Alternative Products </span>
+                                <input type="text" name="alt_products" style="margin-top: 0;" required>
+
+                                <span> Price Range </span>
+                                <input type="text" name="price_range" style="margin-top: 0;" required>
+
+                                <span> Available From </span>
+                                <input type="text" name="available_from" style="margin-top: 0;" required>
+
+                                <input class="productUploadSubmit" type="submit" value="Submit">  
+                            </div>
+
+                        </div>
+
+                </form>
+
+            </div>
+        
+
+        </div>
+
+    </div>
+</div>
+
+<!---Rate Item Popup -->
+<div id="rateItem">
+    <a class="imgRateClose" style="    
+position: absolute;
+color: #EDEDED;
+z-index: 2;
+right: -50px;
+/* top: 5px; */
+font-size: 13px;
+text-transform: uppercase;
+font-weight: 600;"> Close </a>
+    <div class="col-md-7">
+        <div class="left">
+            <div class="topBlack">
+                <!-- <div class="user"><img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt=""> <span><a href="">by Emily</a></span> </div> -->
+                <h2> Sweet Navy</h2>
+            </div>
+            <img src="http://vps184562.ovh.net/uploads/27457_lbue.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="right">
+            <div class="admireBox">
+                <h2> 100% <span> admirability </span> </h2>
+
+                <div class="meterWrapper2 ">
+                    <div class="meter" style="background:#df4580; border:1px solid rgb(240, 78, 140); height: 12px;">                   
+                        <span style="width:100.0000%;"><span class="progress" style="background:#fd96be;"></span></span>
+                    </div>
+                  </div>
+
+                <div class="pinkSeparator"></div>
+                <ul class="list-inline pull-right listtwo">
+                    <li> <a href=""> <i class="icon-share-alt"></i> </a> </li>
+                    <li> <a href=""> <i class="icon-paperplane"></i> </a> </li>
+                </ul>
+                <ul class="list-inline">
+                    <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
+                    <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
+                    <li> <span> You admire this. </span></li>                   
+                </ul>
+            </div>
+
+            <div class="admireComment">
+                <div class="col_three_fifth nobottommargin">
+                    <div class="meter">
+                     <span id="meter_yoyo" style="width:41.66666666666667%;"><span class="progress2"></span></span>
+                    </div>
+                    <span class="info" id="coins_to_earn"> 70 coins can be earned </span>
+                </div>
+                <div class="col_two_fifth col_last nobottommargin">
+                    <span class="totalCoins"> Your Coins</span>
+                    <p class="coins current_coins">907</p>
+                </div>
+            </div>
+
+            <div class="commentWrapper">                              
+
+                                            
+                                            <h3> Comments <span> · <span id="comment_counter">4 </span></span></h3>
+                                              <ul id="put_comments_here">
+                                                                                                        <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-18 12:23:29 </span> </span>
+                                                          <p class="commentContent"> water </p>
+                                                      </li>
+                                                                                                        <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 12:39:32 </span> </span>
+                                                          <p class="commentContent">  </p>
+                                                      </li>
+                                                                                                        <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 12:39:33 </span> </span>
+                                                          <p class="commentContent"> HALLO </p>
+                                                      </li>
+                                                                                                        <li>
+                                                          <img src="
+                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                             
+
+                                                          " alt="">
+                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
+                                                          <p class="commentContent"> tttttt </p>
+                                                      </li>
+                                                                     
+                                              </ul>
+                                          <div class="clearfix"></div>
+                                          <form class="clearfix" action="#" method="post" id="commentform">
+                                              <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
+                                              <!-- <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;"> -->
+                                          </form>
+                                        </div>
+
+        </div>
+    </div>
+</div>
+
+
+
 
     <!-- Go To Top
     ============================================= -->
@@ -644,7 +989,8 @@
     <!-- External JavaScripts
     ============================================= -->
     <script type="text/javascript" src="{{ asset('js/functions.js') }}"></script>
-
+    <script type="text/javascript" src="{{ asset('js/simplebar.min.js') }}"></script>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenLite.min.js"></script>
@@ -652,6 +998,7 @@
     <script>
        $(document).ready(function() {
            
+            $('#put_comments_here').simplebar();
 
             $(":file").change(function () {
                 if (this.files && this.files[0]) {
@@ -752,11 +1099,57 @@
 
             });
 
+        
+
+          
+          $(".imgRate").on("click", function() {
+               TweenMax.to($("#rateItem"), .3, { // Drop down modal
+                  top: "6%",             
+                  onComplete: function() { // When modal drops, lengthen modal body height 
+                    // if ($("#urlChoice").is(':checked')) { // Make sure urlChoice radio is selected
+                    //   TweenMax.to($(".modal-body-container"), .5, { // Change the height of modal body
+                    //     height: $urlHeight,
+                    //     ease: Expo.easeOut,
+                    //     // When at correct height, show url body and focus on first input
+                    //     onComplete: function() { 
+                    //       TweenMax.to($("#url"), .3, {
+                    //         opacity: 1,
+                    //         //onComplete: function() {$("#urlText").focus();}
+                    //       })
+                    //     }
+                    //   });
+                    //   TweenMax.to($("#url"), .5, {display: "block"});
+                    // }
+                  }
+                });
+                TweenMax.to($(".modal-shade"), .7, { // Delay start the modal shade
+                  position: "fixed",
+                  opacity: 1,
+                  delay: .3
+                });
+            });
+
+            $(".imgRateClose").on("click", function() {
+                  
+                TweenMax.to($("#rateItem"), .3, {
+                  top: "-100%",
+                  ease: Back.easeIn
+                });
+                TweenMax.to($(".modal-shade"), .6, {
+                  position: "relative",
+                  opacity: 0
+                });
+
+           });
+
+
+
           // Set global variables
           var $textInputTypes = $("input[type=text], input[type=url]");
           var $fileHeight = $("#file").css("height");
           var $urlHeight = $("#url").css("height");
-          
+
+
           // When user clicks on add link button in top left corner
           $("#addLinkBtn").on("click", function() {
             $(".modal").css({'z-index':'9999'});
@@ -845,10 +1238,6 @@
               "display": "none",
               "opacity": 0
             });  
-
-
-            
-           
 
           });
           

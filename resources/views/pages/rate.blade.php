@@ -21,7 +21,7 @@
           </h2>        
 
         </div>
-        <a href=""> <img src="http://vps184562.ovh.net/uploads/39641_image3.jpg" alt=""> </a>
+        <a class="imgRate"> <img src="http://vps184562.ovh.net/uploads/39641_image3.jpg" alt=""> </a>
         <div id="commentSection17">
                 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis enim tenetur ea adipisci illum nisi quas totam earum natus. </p>
                 <div id="commentArea" style="padding:0;">
