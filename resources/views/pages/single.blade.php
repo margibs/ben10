@@ -58,89 +58,89 @@
                                                         <h2 >{{$post->title}}</h2>
                                                     </div>
 
-                                                                   
+@if($widget_rating != null)
+<!-- Ratings here -->
+<div class="col_two_fifth nobottommargin">
+<div class="entry-image">
+<a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
+</div>
+</div>
 
-                                                    
-                                                    <div class="clearfix"></div>
-
-                                                    <!-- Entry Image
-                                                    ============================================= -->
-                                                    <div class="entry-image">
-                                                        <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
-                                                    </div><!-- .entry-image end -->
-                            @if($widget_rating != null)
-                                                    <!-- Ratings here -->
-                                                        <div class="col_two_fifth">
-      <div class="entry-image">
-        <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
-      </div>
-   </div>
-
-   <div class="col_three_fifth col_last" style="    
+<div class="col_three_fifth col_last nobottommargin" style="    
 padding-right: 20px;
 padding-left: 10px;">
-      <p style="    
+<p style="    
 font-weight: 700;
 font-size: 22px;
 line-height: 22px;
 color: #000;
 margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 
-   
-        <div class="col-md-5">
-          <p> Music & Sounds </p>
-        </div>
-        <div class="col-md-7">
-          <div class="star-ratings-css">
-            <div class="star-ratings-css-top" style="width: {{ $widget_rating->music_sounds / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          </div>
-        </div>
 
-       <div class="clearfix"></div>
+<div class="col-md-5">
+<p> Music & Sounds </p>
+</div>
+<div class="col-md-7">
+<div class="star-ratings-css">
+<div class="star-ratings-css-top" style="width: {{ $widget_rating->music_sounds / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+</div>
+</div>
 
-        <div class="col-md-5">
-          <p> Long Term Playability </p>
-        </div>
-        <div class="col-md-7">
-          <div class="star-ratings-css">
-            <div class="star-ratings-css-top" style="width: {{ $widget_rating->long_term_play / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          </div>
-        </div>
+<div class="clearfix"></div>
 
-        <div class="clearfix"></div>
+<div class="col-md-5">
+<p> Long Term Playability </p>
+</div>
+<div class="col-md-7">
+<div class="star-ratings-css">
+<div class="star-ratings-css-top" style="width: {{ $widget_rating->long_term_play / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+</div>
+</div>
 
-        <div class="col-md-5">
-          <p> Fun Rating </p>
-        </div>
-        <div class="col-md-7">
-          <div class="star-ratings-css">
-            <div class="star-ratings-css-top" style="width: {{ $widget_rating->fun_rate / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          </div>
-        </div>
+<div class="clearfix"></div>
 
-        <div class="clearfix"></div>
+<div class="col-md-5">
+<p> Fun Rating </p>
+</div>
+<div class="col-md-7">
+<div class="star-ratings-css">
+<div class="star-ratings-css-top" style="width: {{ $widget_rating->fun_rate / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+</div>
+</div>
 
-        <div class="col-md-5">
-          <p> Graphics </p>
-        </div>
-        <div class="col-md-7">
-          <div class="star-ratings-css">
-            <div class="star-ratings-css-top" style="width: {{ $widget_rating->graphics / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-            <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
-          </div>
-        </div>
+<div class="clearfix"></div>
 
-        <div class="clearfix"></div>
+<div class="col-md-5">
+<p> Graphics </p>
+</div>
+<div class="col-md-7">
+<div class="star-ratings-css">
+<div class="star-ratings-css-top" style="width: {{ $widget_rating->graphics / 10 * 100 }}%"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+<div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+</div>
+</div>
 
-        <a href="{{$widget_rating->slot_url}}" class="button playnowBtn"> Play Now! <i class="icon-circle-arrow-left"></i> </a>
+<div class="clearfix"></div>
 
-      
-  </div>  
-                                                    <!-- end Ratings here -->
-                        @endif
+<a href="{{$widget_rating->slot_url}}" class="button playnowBtn"> Play Now! <i class="icon-circle-arrow-left"></i> </a>
+
+
+</div>  
+<!-- end Ratings here -->
+@endif
+
+                                                    
+                                                    <div class="clearfix"></div>
+
+                                                    <!-- Entry Image
+                                                    ============================================= -->
+                                                    <!-- <div class="entry-image">
+                                                        <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
+                                                    </div> --><!-- .entry-image end -->
+                            
                                                     <!-- Entry Content
                                                     ============================================= -->
                                                     <div class="entry-content notopmargin" id="get_content_here">
@@ -270,8 +270,8 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
     var player;
     function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-        height: '560',
-        width: '315',
+        height: '400',
+        width: '550',
         videoId: youtube_ni,
         playerVars: { 'controls': 0, 'showinfo': 0, 'modestbranding': 1, 'autohide': 1, 'rel': 0, 'start': 0, 'fs': 1, 'autoplay': 0 },
         events: {
