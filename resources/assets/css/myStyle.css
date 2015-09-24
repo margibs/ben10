@@ -29,7 +29,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     background-color: #000;
  }
  #header.sticky-header #header-wrap{
-      z-index: 1;
+      z-index: 2;
  }
  #header.full-header #logo, #header.full-header #primary-menu > ul{
     border-right: none;
@@ -1077,8 +1077,29 @@ color: #F36198;
 }
 
 /* ============ SINGLE =============== */
-.single-post{
-    padding: 5px 20px;
+
+.entry{
+  padding: 0;
+  margin: 0;
+  border-bottom: 0;
+}
+.entry-content{
+  padding: 10px 20px;
+}
+.entry-content h1{
+  margin-bottom: 10px;
+  font-family: Oswald;
+  color: #000;
+  font-size: 35px;
+  letter-spacing: -1px;
+}
+.entry-content p{
+  color: #191919;
+  text-align: left!important;
+  margin-bottom: 11px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 21px;
 }
 .entry-title h2 {
     clear: both;
@@ -1147,7 +1168,7 @@ color: #F36198;
 #rateItem{
     position: fixed;
     z-index: 10;
-    top: -100%;
+    top: -500%;
     left: 20%;
     width: 850px;
     height: 620px;
@@ -1299,4 +1320,20 @@ color: #F36198;
 #rateItem .commentWrapper ul{
     max-height: 270px;
     overflow: auto;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+}
+ 
+.video-container iframe,
+.video-container object,
+.video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

@@ -27,6 +27,17 @@
 
 
     <style>
+        .headerNotification{
+            position:relative;
+        }
+        .headerNotification .badge{
+            position: absolute;
+            top: -12px;
+            font-size: 10px;
+            padding: 4px 6px;
+            background-color: #EF2F2F;
+
+        }
         #shareBox{
             display: none; 
             position: absolute;
@@ -71,13 +82,14 @@
             bottom: 100%;            
             border-width: 0 8px 8px 8px;
             border-style: solid;
-            border-color: #fff transparent;
         }
         #sendBox:before{
             right: 20px;
+            border-color: #F1F1F1 transparent;
         }
         #shareBox:before{
             right: 65px;
+            border-color: #fff transparent;
         }
         #sendBox input, #sendBox textarea{
             margin: 0;
@@ -90,6 +102,12 @@
             -moz-box-shadow: inset 0 -2px 10px -9px #464545;
             -webkit-box-shadow: inset 0 -2px 10px -9px #464545;
             box-shadow: inset 0 -2px 10px -9px #464545;
+            font-size: 15px!important; 
+            font-weight: 600!important;
+        }
+        #sendBox input{
+            background-color: #fff;
+            margin-top: -5px;
         }
         #sendBox .sendImgWrap{
             height: 50px;
@@ -247,6 +265,7 @@
 
                             <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
                             <a href=""><i class="icon-line2-heart"></i></a>
+                            <a href="" class="headerNotification"><i class="icon-bell"></i><span class="badge"> 2</span></a>
                             <a href=""><i class="icon-line2-lock"></i></a>                            
                             <form action="search.html" method="get">
                                 <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
@@ -950,9 +969,9 @@ font-weight: 600;"> Close </a>
                                     <img src="http://i01.i.aliimg.com/wsphoto/v0/2026196955_2/MOLE-2015-New-Fashion-Autumn-Winter-Sweater-Mohair-Cardigan-Knitted-Solid-Dress-Long-Sleeve-Knitted-Sweater.jpg" alt="">                                    
                                 </div> -->
                                 
-                                <!-- <input type="text" placeholder="Your message here...">  -->
+                               
                                 <textarea placeholder="Your message here..."></textarea>
-
+                                <input type="text" placeholder="Search users"> 
                                 <div class="friendlist">
                                     <span style="    
     color: #E8BFCE;
@@ -1138,11 +1157,15 @@ font-weight: 600;"> Close </a>
 
             $(".sendLink").click(function() {
                 $("#sendBox").toggle();
+                $("#rateItem .icon-paperplane").css('color','white');
+                $("#rateItem .icon-share-alt").css('color','#f8aac7');
                 $("#shareBox").css('display','none');
             });
 
             $(".shareLink").click(function() {
-                $("#shareBox").toggle();
+                $("#shareBox").toggle();                
+                $("#rateItem .icon-share-alt").css('color','white');
+                $("#rateItem .icon-paperplane").css('color','#f8aac7');
                 $("#sendBox").css('display','none');
             });
            
