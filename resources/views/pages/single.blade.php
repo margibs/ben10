@@ -14,7 +14,7 @@
     width: 80%;
     height: auto;
     text-align: center;
-    margin: 20px 0;
+    margin: 20px 0 0 0;
     font-size: 17px;
     text-transform: capitalize;
     letter-spacing: 0px;
