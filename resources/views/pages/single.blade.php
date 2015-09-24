@@ -68,7 +68,7 @@
                                                     <div class="entry-image">
                                                         <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
                                                     </div><!-- .entry-image end -->
-                            @if($widget_rating != null)
+                            @if($widget_rating != null && $widget_rating->enable != 0)
                                                     <!-- Ratings here -->
                                                         <div class="col_two_fifth">
       <div class="entry-image">
