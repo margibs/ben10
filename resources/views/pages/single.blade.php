@@ -301,7 +301,7 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 
           //jQuery('.imgHere').css({'display':'none'});   
           jQuery('.video-container').css({'padding-top':'0'});
-          jQuery('.video-container').prepend('<a href="http://winnercasino.eveningmailnews.com/"><img id="embedIMG" src="'+url_for_image+'" /></a>')       
+          jQuery('.video-container').html('<a href="http://winnercasino.eveningmailnews.com/"><img id="embedIMG" src="'+url_for_image+'" /></a>');
         }
     }
 
