@@ -24,163 +24,175 @@
     <!-- Document Title
     ============================================= -->
     <title> Upmire </title>
-    
+
+
     <style>
-        #rateItem{
-            position: fixed;
-            z-index: 10;
-            top: -100%;
-            left: 20%;
-            width: 850px;
-            height: 620px;
-            overflow: hidden;
+        #shareBox{
+            display: none; 
+            position: absolute;
             background-color: #fff;
-            margin: 0 auto;
+            z-index: 2;
+            right: 25px;
+            top: 141px;
             border-radius: 3px;
+            border-left: 1px solid #C3C3C3;
+            border-right: 1px solid #C3C3C3;
+            border-bottom: 1px solid #C3C3C3;
+            box-shadow: 0 0 10px 1px #D0D0D0;
+            text-align: left;
+
         }
-        #rateItem .left{
-            background-color: #000;
-            height: 620px;
-            line-height: 630px;
+     
+        #sendBox{
+            display: none; 
+            position: absolute;
+            background-color: #fff;
+            z-index: 2;
+            right: 25px;
+            top: 141px;
+            border-radius: 3px;
+            border-left: 1px solid #C3C3C3;
+            border-right: 1px solid #C3C3C3;
+            border-bottom: 1px solid #C3C3C3;
+            box-shadow: 0 0 10px 1px #D0D0D0;
+            text-align: left;
+        }
+        #shareBox{
+            width: 150px;
+        }
+        #sendBox{
+            width: 300px;
+        }
+        #sendBox:before, #shareBox:before{
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            bottom: 100%;            
+            border-width: 0 8px 8px 8px;
+            border-style: solid;
+            border-color: #fff transparent;
+        }
+        #sendBox:before{
+            right: 20px;
+        }
+        #shareBox:before{
+            right: 65px;
+        }
+        #sendBox input, #sendBox textarea{
+            margin: 0;
+            height: 45px;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-bottom: 1px solid #E8E8E8;
+            background-color: #F1F1F1;
+            -moz-box-shadow: inset 0 -2px 10px -9px #464545;
+            -webkit-box-shadow: inset 0 -2px 10px -9px #464545;
+            box-shadow: inset 0 -2px 10px -9px #464545;
+        }
+        #sendBox .sendImgWrap{
+            height: 50px;
+            width: 50px;
+            border-radius: 50%;
+            margin: 5px 10px;
             overflow: hidden;
-            text-align: center;
-            -moz-box-shadow: inset 0 0 10px -4px #000;
-            -webkit-box-shadow: inset 0 0 10px -4px #000;
-            box-shadow: inset 0 0 15px -10px #000;
-        }
-        #rateItem .left img{
-            vertical-align: middle;
-        }
-        #rateItem > .col-md-5, #rateItem > .col-md-7{
-            padding: 0;
-        }
-        #rateItem .left .topBlack .user{
             float: left;
         }
-        #rateItem .left .topBlack{
-            position: absolute;
-            background-color: rgba(0, 0, 0, 0.65);
-            width: 100%; 
+        #sendBox .itemTitle{
+            color: #625D5D!important;
+            font-family: Roboto!important;
+            font-weight: 600!important;
+            font-size: 17px;
+            display: inline-block;
+            margin-top: 5px;
         }
-        #rateItem .left .topBlack h2{
-            margin-bottom: 0;
-            color: #fff;
-            font-size: 20px;
-            padding: 5px;
-        }
-        #rateItem .left .topBlack img{
-            border-radius: 50%;
-            width: 30px;
-            margin-top: 7px;
-            margin-left: 10px;
-        }
-        #rateItem .left .topBlack span{
-            margin-bottom: 0;
-            float: right;
-        }
-        #rateItem .admireBox{
-            background-color: #f45793;
-            padding: 5px 20px;
-            border-bottom: 1px solid #d93574;
-            text-align: center;
-        }
-        #rateItem .admireBox h2{
-            margin-bottom: 0;
-            color: #fff;
-            font-size: 30px;
-            margin: 3px 0px;
-            letter-spacing: -1px;
-        }
-        #rateItem .admireBox h2 span{
-            color: #fddbe8;
-            text-shadow: 0px 0px 4px #FCC1D7;
-        }
-        #rateItem .admireBox .meterWrapper2 {
-            margin: -15px 30px 5px 30px;
-        }
-        #rateItem .admireBox ul{
-            margin-bottom: 10px;
-            padding: 0 10px;
-        }    
-        #rateItem .admireBox ul li, #rateItem .admireBox .listtwo li{
-            padding: 0 3px;
-        }
-        #rateItem .admireBox .listtwo li a{            
-            background-color: #FA68A0;
-            border: 1px solid #FA87B2;
-            padding: 3px 12px;
-            color: #FFFFFF;
-            border-radius: 30px;
-            font-family: Roboto;
-            font-size: 12px;
-        }
-        #rateItem .admireBox .listtwo li a i{
-            color: rgb(247, 181, 206);
-        }
-        .pinkSeparator {
-            border-top: 1px solid #eb4c89;
-            border-bottom: 1px solid #f2659b;
-            margin-bottom: 15px;
-        }
-         #rateItem .admireBox  li a i.admired{
-            color: rgb(247, 170, 200);
-         }
-         #rateItem .admireBox  li a i.dislike{
-            color: rgb(234, 65, 130);
-         }
-        #rateItem .admireBox  li span{
-            color: #fff;
-        }
-        #rateItem .admireComment {
+        #sendBox .friendlist, #shareBox .friendlist{
             overflow: hidden;
-            border-bottom: 1px solid #ececec;
+            background-color: #fff;
+            padding: 0 0 10px 0;
         }
-        #rateItem .admireComment .meter{
-            margin: 15px auto 0 auto;
-            width: 80%;
+        #shareBox .friendlist{
+            padding-bottom: 0;
         }
-        #rateItem .admireComment .col_three_fifth, #rateItem .admireComment .col_two_fifth{
-            padding: 5px 10px;
+        #sendBox .friendlist .friendImg,  #shareBox .friendlist .friendImg{
+                width: 40px;
+                height: 40px;
+                overflow: hidden;
+                border-radius: 50%;
+                float:left;
+                margin-right: 10px;
         }
-        #rateItem .admireComment #coins_to_earn{
-            font-family: Roboto;
-            font-size: 12px;
-            color: #BDBABA;
-            display: block;
-            text-align: center;
-            margin: 6px 0;
+        #sendBox .friendlist ul, #shareBox .friendlist ul{
+            padding: 0;
         }
-        #rateItem .admireComment .totalCoins{
-            margin-left: 14px;
-            font-weight: 400;
-            color: #C5C5C5;
-            display: block;
-            margin-top: 1px;
-            font-size: 11px;
-        }
-        #rateItem .admireComment .current_coins{
-            font-size: 30px;
-            font-weight: 600;
-            color: #000;
-            padding-left: 15px;
-            margin-top: -7px;
+        #shareBox .friendlist ul{
             margin-bottom: 0;
         }
-        #rateItem .commentWrapper h3{
-            font-size: 20px;
-            margin-top: 10px;
+        #sendBox .friendlist li a, #shareBox .friendlist li a{
+            display: block;
+            background-color: transparent!important;
+            border: none!important;
+            padding: 0!important;
+            border-radius: 20px;   
+            overflow: hidden;
+            border-radius: 0!important;
+            padding: 6px 10px!important;
+            transition: background 0.3s ease;
         }
-        #rateItem .commentWrapper textarea{
-            height: 40px;
-            font-size: 13px;
+        #shareBox .friendlist li a{
+            padding: 10px!important;
+            color: #fff!important;
+            border-radius: 3px!important;
+            overflow: hidden;
+            margin: 2px 0;
         }
-        #rateItem .commentWrapper .name a{
+        #shareBox .friendlist li a i{
+            color: #fff!important;
+            font-size: 20px!important;
+        }
+        #shareBox .friendlist li a  span{
+            margin-left: 10px;
+            position: relative;
+            top: -3px;
+            font-size: 14px;
+        }
+        #shareBox .friendlist li a p{
+            margin-top: 0;
+        }
+        #shareBox .friendlist li a.fb{
+            background-color: #3b5998!important;
+        }
+        #shareBox .friendlist li a.fb:hover,
+        #shareBox .friendlist li a.fb:active{
+            background-color: #4F70B6!important;
+        }
+        #shareBox .friendlist li a.twtr{
+            background-color: #2DACFF!important;
+        }
+        #shareBox .friendlist li a.twtr:hover,
+        #shareBox .friendlist li a.twtr:active{
+            background-color: #6EBDF0!important;
+        }
+        #shareBox .friendlist li a.pinterest{
+            background-color: #C72527!important;
+        }
+        #shareBox .friendlist li a.pinterest:hover,
+        #shareBox .friendlist li a.pinterest:active{
+            background-color: #DA3739!important;
+        }
+        #sendBox .friendlist li a:hover, #shareBox .friendlist li a:hover{
+            background-color: #eee!important;
+        }        
+        #sendBox .friendlist p, #shareBox .friendlist p{
+            margin-bottom: 0;
             font-size: 12px;
+            color: #161515;
+            font-family: Roboto;
+            margin-top: 10px;
+            font-weight: 500;
         }
-        #rateItem .commentWrapper ul{
-            max-height: 270px;
-            overflow: auto;
-        }
+        
     </style>
 
 </head>
@@ -889,7 +901,7 @@ font-weight: 600;"> Close </a>
                 <!-- <div class="user"><img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt=""> <span><a href="">by Emily</a></span> </div> -->
                 <h2> Sweet Navy</h2>
             </div>
-            <img src="http://des.rosewholesale.com/uploads/201211/heditor/201211191121242461.jpg" alt="">
+            <img src="https://s-media-cache-ak0.pinimg.com/236x/c2/31/e0/c231e0ed77147142ed2bb9e5e9b07002.jpg" alt="">
         </div>
     </div>
     <div class="col-md-5">
@@ -905,9 +917,82 @@ font-weight: 600;"> Close </a>
 
                 <div class="pinkSeparator"></div>
                 <ul class="list-inline pull-right listtwo">
-                    <li> <a href=""> <i class="icon-share-alt"></i> </a> </li>
-                    <li> <a href=""> <i class="icon-paperplane"></i> </a> </li>
+                    <li> <a class="shareLink"> <i class="icon-share-alt"></i> </a> 
+                         <div id="shareBox">                                
+                                <div class="friendlist">
+                                    <ul>
+                                        <li>
+                                            <a href="" class="fb">
+                                                <p> <i class='icon-facebook-sign'></i> <span> Facebook </span>  </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="twtr">
+                                                <p> <i class='icon-twitter'></i>  <span> Twitter </span> </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="" class="pinterest">
+                                                <p> <i class='icon-pinterest2'></i>  <span> Pinterest </span></p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                    </li>
+                    <li> <a class="sendLink"> <i class="icon-paperplane"></i> </a>
+                             <div id="sendBox">                                                                                             
+                                <!-- <div class="sendImgWrap">
+                                    <img src="http://des.rosewholesale.com/uploads/201211/heditor/201211191121242461.jpg" alt="">
+                                </div> -->
+                                <!-- <div style="height:100px;width:100%;overflow:hidden;">
+                                    <span class="itemTitle">Sweet Navy</span>
+                                    <img src="http://i01.i.aliimg.com/wsphoto/v0/2026196955_2/MOLE-2015-New-Fashion-Autumn-Winter-Sweater-Mohair-Cardigan-Knitted-Solid-Dress-Long-Sleeve-Knitted-Sweater.jpg" alt="">                                    
+                                </div> -->
+                                
+                                <!-- <input type="text" placeholder="Your message here...">  -->
+                                <textarea placeholder="Your message here..."></textarea>
+
+                                <div class="friendlist">
+                                    <span style="    
+    color: #E8BFCE;
+    font-size: 11px;
+    margin: 0 12px;
+    display: block;
+    text-align: right;"> Send to  </span> 
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <div class="friendImg">                                            
+                                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11692791_1033839559960313_372475612082020913_n.jpg?oh=0dc578c37cb4448f0ed656cf1d3b8dfd&oe=56A697B7&__gda__=1452669051_59a0ec27323dad96c80cacbeddd5e32b" alt="">                                                
+                                                </div>
+                                                <p> Alice Watermelon </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="friendImg">                                            
+                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/4765654_thumb.jpg" alt="">                                                
+                                                </div>
+                                                <p> faliha101 </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="friendImg">                                            
+                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/1337071_thumb.jpg" alt="">                                                
+                                                </div>
+                                                <p> littleboyorange </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+
+                            </div>
+                     </li>
                 </ul>
+               
                 <ul class="list-inline">
                     <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
                     <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
@@ -1050,6 +1135,16 @@ font-weight: 600;"> Close </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script>
        $(document).ready(function() {
+
+            $(".sendLink").click(function() {
+                $("#sendBox").toggle();
+                $("#shareBox").css('display','none');
+            });
+
+            $(".shareLink").click(function() {
+                $("#shareBox").toggle();
+                $("#sendBox").css('display','none');
+            });
            
             $('#put_comments_here').simplebar();
 

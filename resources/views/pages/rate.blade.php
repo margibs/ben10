@@ -21,8 +21,8 @@
           </h2>        
 
         </div>
-        <a class="imgRate"> <img src="http://vps184562.ovh.net/uploads/39641_image3.jpg" alt=""> </a>
-        <div id="commentSection17">
+        <a class="imgRate"> <img src="https://s-media-cache-ak0.pinimg.com/236x/c2/31/e0/c231e0ed77147142ed2bb9e5e9b07002.jpg" alt=""> </a>
+        <div id="commentSection17 whiteBG" style="background-color: #fff">
                 <p class="description"> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis enim tenetur ea adipisci illum nisi quas totam earum natus. </p>
                 <div id="commentArea" style="padding:0;">
                     <div class="commentWrapper" style="margin-top: 20px;">

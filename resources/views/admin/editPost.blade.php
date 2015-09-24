@@ -75,8 +75,31 @@
                 </div>
             </div>
 
+      <div class="panel panel-default">
+           <div class="panel-heading">
+                <h2 class="panel-title"> Autopost </h2>
+            </div>
+            <div class="panel-body">
+                <div class="controls">
+                   <div class="switch pull-right">                              
+                       {!! Form::checkbox('shared_fb', 1, $shared_fb_status, ['id'=>'cmn-toggle-2','class'=>'cmn-toggle cmn-toggle-round']) !!}
+                      <label for="cmn-toggle-2"></label>
+                  </div>
+                  Facebook
 
-       <div class="panel panel-default">
+                  <div class="clearfix"></div>
+
+                  <div class="switch pull-right">                              
+                       {!! Form::checkbox('shared_twitter', 1, $shared_twitter_status, ['id'=>'cmn-toggle-3','class'=>'cmn-toggle cmn-toggle-round']) !!}
+                      <label for="cmn-toggle-3"></label>
+                  </div>
+                  Twitter
+                </div>
+            </div>
+
+        </div>
+
+<!--        <div class="panel panel-default">
           <div class="panel-heading">
                 <h2 class="panel-title"> Autopost </h2>
             </div>
@@ -87,44 +110,91 @@
                       {!! Form::checkbox('shared_twitter', 1,$shared_twitter_status) !!} <i class="icon-twitter-sign"> </i>  Post on Twitter
                  </div>
             </div>
-        </div>
-                  <div class="panel panel-default">
+        </div> -->
+        <!-- <div class="panel panel-default">
+           <div class="panel-heading">
+                <h2 class="panel-title"> Widget Rate </h2>
+            </div>
+            <div class="panel-body">
+                <div class="controls">
+                <div class="panel-heading">
+                    <h2 class="panel-title"> Review Image <a href="#" id="load_media_files2" class="featImageButton"> <i class="icon-plus-sign"></i> </a>  </h2>
+                </div>
+                <div class="panel-body" style="padding-top: 0;">
+                      
+                  <div id="img_here2">
+                    <?php $widget_visible_var = false; ?>
+                    @if($widget_rating != null)
+                      <img src="{{url('uploads')}}/{{$widget_rating->image_url}}" alt="">
+                      @if($widget_rating->enable == 1)
+                        <?php $widget_visible_var = true; ?>
+                      @endif
+                    @endif
+                  </div>         
+                </div>
+                  <input type="hidden" id="widget_image_url" name="widget_image_url" value="{{ $widget_rating != null ? $widget_rating->image_url : '' }}">
+
+                  {!! Form::checkbox('widget_visible', 1, $widget_visible_var) !!} Enable Widget<br>
+                  Music Sounds
+                  {!! Form::select('music_sounds', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->music_sounds : 1) !!} <br>
+                  Fun Rate
+                  {!! Form::select('fun_rate', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->fun_rate : 1) !!} <br>
+                  Long term play
+                  {!! Form::select('long_term_play', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->long_term_play : 1) !!} <br>
+                  Graphics
+                  {!! Form::select('graphics', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->graphics : 1) !!} <br>
+                  <input type="text" name="slot_url" placeholder="Slot Url" value="{{ $widget_rating != null ? $widget_rating->slot_url : '' }}">
+                </div>
+            </div>
+
+        </div> -->
+       <div class="panel panel-default">
+           <div class="panel-heading">
+                <h2 class="panel-title"> Rating Widget </h2>
+            </div>
+            <div class="panel-body">
+                <div class="controls">
+                 
+                    <input type="hidden" id="widget_image_url" name="widget_image_url" value="">
+                     <div class="switch pull-right">                              
+                       {!! Form::checkbox('widget_visible', 1, $widget_visible_var, ['id'=>'cmn-toggle-1','class'=>'cmn-toggle cmn-toggle-round']) !!}
+                      <label for="cmn-toggle-1"></label>
+                    </div>
+
+                    Enable Widget
+                    <div class="clearfix"></div>
+                    Music Sounds
+                    {!! Form::select('music_sounds', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',], $widget_rating != null ? $widget_rating->music_sounds : 1, ['class'=>'form-control']) !!} <br>
+                    <div class="clearfix"></div>
+                    Fun Rate                              
+                    {!! Form::select('fun_rate', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',], $widget_rating != null ? $widget_rating->fun_rate : 1, ['class'=>'form-control']) !!} <br>
+                    <div class="clearfix"></div>
+                    Long term play                              
+                    {!! Form::select('long_term_play', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',], $widget_rating != null ? $widget_rating->long_term_play : 1, ['class'=>'form-control']) !!} <br>
+                    <div class="clearfix"></div>
+                    Graphics
+                    {!! Form::select('graphics', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',], $widget_rating != null ? $widget_rating->graphics : 1, ['class'=>'form-control']) !!} <br>
+                    <div class="clearfix"></div>
+                    <hr />
+                    <input type="text" name="slot_url" class="form-control"  placeholder="Enter slot game URL" value="{{ $widget_rating != null ? $widget_rating->slot_url : '' }}">
+                    <hr />
                      <div class="panel-heading">
-                          <h2 class="panel-title"> Widget Rate </h2>
-                      </div>
-                      <div class="panel-body">
-                          <div class="controls">
-                          <div class="panel-heading">
-                              <h2 class="panel-title"> Review Image <a href="#" id="load_media_files2" class="featImageButton"> <i class="icon-plus-sign"></i> </a>  </h2>
-                          </div>
-                          <div class="panel-body" style="padding-top: 0;">
-                                
-                            <div id="img_here2">
-                              <?php $widget_visible_var = false; ?>
-                              @if($widget_rating != null)
-                                <img src="{{url('uploads')}}/{{$widget_rating->image_url}}" alt="">
-                                @if($widget_rating->enable == 1)
-                                  <?php $widget_visible_var = true; ?>
-                                @endif
-                              @endif
-                            </div>         
-                          </div>
-                            <input type="hidden" id="widget_image_url" name="widget_image_url" value="{{ $widget_rating != null ? $widget_rating->image_url : '' }}">
+                      <h2 class="panel-title" style="display: block;margin: 0 0 15px 0;text-align: center;"> Image after video play <a href="#" id="load_media_files2" class="featImageButton"> <i class="icon-plus-sign"></i> </a>  </h2>
+                    </div>
+                    <div id="img_here2">
+                      <?php $widget_visible_var = false; ?>
+                      @if($widget_rating != null)
+                        <img src="{{url('uploads')}}/{{$widget_rating->image_url}}" alt="">
+                        @if($widget_rating->enable == 1)
+                          <?php $widget_visible_var = true; ?>
+                        @endif
+                      @endif
+                    </div> 
 
-                            {!! Form::checkbox('widget_visible', 1, $widget_visible_var) !!} Enable Widget<br>
-                            Music Sounds
-                            {!! Form::select('music_sounds', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->music_sounds : 1) !!} <br>
-                            Fun Rate
-                            {!! Form::select('fun_rate', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->fun_rate : 1) !!} <br>
-                            Long term play
-                            {!! Form::select('long_term_play', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->long_term_play : 1) !!} <br>
-                            Graphics
-                            {!! Form::select('graphics', ['1'=>'1','2'=>'2','3'=>'3','4'=>'4','5'=>'5','6'=>'6','7'=>'7','8'=>'8','9'=>'9','10'=>'10',],$widget_rating != null ? $widget_rating->graphics : 1) !!} <br>
-                            <input type="text" name="slot_url" placeholder="Slot Url" value="{{ $widget_rating != null ? $widget_rating->slot_url : '' }}">
-                          </div>
-                      </div>
+                </div>
+            </div>
 
-                  </div>
+        </div>
 
         <div class="panel panel-default">
           
