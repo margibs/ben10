@@ -268,7 +268,8 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
         @if($widget_rating != null)
         var url_for_image = "{{url('uploads')}}/{{$widget_rating->image_url}}";
         @endif
-         console.log(url_for_image);
+
+        console.log(url_for_image);
 
     var isShowing = false;
     var tag = document.createElement('script');
@@ -300,7 +301,7 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 
           //jQuery('.imgHere').css({'display':'none'});   
           jQuery('.video-container').css({'padding-top':'0'});
-          jQuery('.video-container').prepend('<a href="http://winnercasino.eveningmailnews.com/"><img id="embedIMG" src="'+url_for_image+'" /></a>')       
+          jQuery('.video-container').html('<a href="http://winnercasino.eveningmailnews.com/"><img id="embedIMG" src="'+url_for_image+'" /></a>');
         }
     }
 
