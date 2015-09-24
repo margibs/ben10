@@ -5,28 +5,10 @@
 <style>
   .col-md-5, .col-d-7{
     padding: 0;
-    color: #000;
+    color: #B3B3B3;
   }
   .col-md-5 > p{
     margin-bottom: 3px;
-  }
-  .playnowBtn{
-    width: 80%;
-    height: auto;
-    text-align: center;
-    margin: 20px 0 0 0;
-    font-size: 17px;
-    text-transform: capitalize;
-    letter-spacing: 0px;
-    font-family: Roboto;
-    font-size: 18px;
-    text-shadow: 0 0 0;
-    border-radius: 2px;
-    font-weight: 400;
-    border: 1px solid #F25A94;
-  }
-  .playnowBtn:hover{
-    background-color: #F25A94; 
   }
 </style>
 
@@ -66,21 +48,25 @@
                                                         <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
                                                     </div> --><!-- .entry-image end -->
 
-<div>                                                
+<div style="    
+overflow: hidden;
+padding: 0 20px;">     
+                                           
 @if($widget_rating != null && $widget_rating->enable != 0)
                         <!-- Ratings here -->
 <div class="col_two_fifth nobottommargin">
 <div class="entry-image">
 <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
+<a href="{{$widget_rating->slot_url}}" class="button playnowBtn"> Play Now! <i class="icon-circle-arrow-left"></i> </a>
 </div>
 </div>
 
 <div class="col_three_fifth col_last nobottommargin">
 <p style="    
 font-weight: 700;
-font-size: 22px;
+font-size: 20px;
 line-height: 22px;
-color: #000;
+color: #292929;
 margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 
 
@@ -129,11 +115,6 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 <div class="star-ratings-css-bottom"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
 </div>
 </div>
-
-<div class="clearfix"></div>
-
-<a href="{{$widget_rating->slot_url}}" class="button playnowBtn"> Play Now! <i class="icon-circle-arrow-left"></i> </a>
-
 
 </div>  
 <!-- end Ratings here -->
@@ -191,7 +172,7 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
                                                 </div> -->
                                                 <!-- Post Single - Author End -->
 
-                                                <div class="line"></div>
+                                                <!-- <div class="line"></div>
 
                                                 <h4>Related post:</h4>
 
@@ -222,32 +203,86 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 
                                                     <div class="clear"></div>
 
-                                                </div>
+                                                </div> -->
+                                                
                                                 <!-- Comments
                                                 ============================================= -->
                                  
                                                     
                                                     <!-- Comments List
                                                     ============================================= -->
-                                                  <div class="commentWrapper" style="padding:0;">
-                                                        <h3> Comments  <span> &middot; <span id="comment_counter"> </span></span> </h3>
-                                                        <ul id="put_comments_here">
-                                                        
-                                                                <li>
-                                                                    <img src="" alt="">
-                                                                    <span class="name"> <a href="">  </a> <span class="commentDate"> &middot;  </span> </span>
-                                                                    <p class="commentContent">  </p>
+                                                    <div class="commentWrapper" style="margin-top: 20px;">
+
+
+                                                        <h3> Comments  
+                                                            <span> · 
+                                                                <span class="comment_counter">
+                                                                    4 
+                                                                </span>
+                                                            </span> 
+                                                        </h3>
+
+                                                        <ul class="put_comments_here">
+                                                                                                                    <li>
+                                                                <img src="
+                                                                                                                                  http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                     
+
+                                                                  " alt="">
+                                                                <span class="name"> 
+                                                                    <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                    <span class="commentDate"> · 2015-09-18 12:23:29 </span> 
+                                                                </span>
+                                                                <p class="commentContent"> water </p>
                                                                 </li>
-                                                                      
+                                                                                                                    <li>
+                                                                <img src="
+                                                                                                                                  http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                     
+
+                                                                  " alt="">
+                                                                <span class="name"> 
+                                                                    <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                    <span class="commentDate"> · 2015-09-21 12:39:32 </span> 
+                                                                </span>
+                                                                <p class="commentContent">  </p>
+                                                                </li>
+                                                                                                                    <li>
+                                                                <img src="
+                                                                                                                                  http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                     
+
+                                                                  " alt="">
+                                                                <span class="name"> 
+                                                                    <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                    <span class="commentDate"> · 2015-09-21 12:39:33 </span> 
+                                                                </span>
+                                                                <p class="commentContent"> HALLO </p>
+                                                                </li>
+                                                                                                                    <li>
+                                                                <img src="
+                                                                                                                                  http://vps184562.ovh.net/uploads/29713_cat.jpg 
+                                                                                                                                     
+
+                                                                  " alt="">
+                                                                <span class="name"> 
+                                                                    <a href="http://vps184562.ovh.net/profile/1"> Emily </a> 
+                                                                    <span class="commentDate"> · 2015-09-21 14:30:13 </span> 
+                                                                </span>
+                                                                <p class="commentContent"> tttttt </p>
+                                                                </li>
+                                                                               
                                                         </ul>
-                                                        
+
                                                         <div class="clearfix"></div>
-                                                       
+
                                                         <form class="clearfix" action="#" method="post" id="commentform">
-                                                            <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
-                                                            <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;">
+                                                            <textarea class="comment_yeah" name="comment" cols="30" rows="10" get-this-id="17"></textarea>
+                                                            <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style=" margin-bottom: 20px; margin-top: 10px;">
                                                         </form>
+
                                                     </div>
+
 
                                                     <div class="clear"></div>
 			              

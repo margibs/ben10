@@ -10604,17 +10604,16 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 .single-post .entry-meta { margin-bottom: 20px; }
 
 .entry-meta li {
-	float: left;
-	font-size: 13px;
-	line-height: 14px;
-	margin: 0 10px 15px 0;
-	color: #999;
-	font-family: 'Crete Round', serif;
-	font-style: italic;
+    float: left;
+    font-size: 13px;
+    line-height: 14px;
+    margin: 0 10px 15px 0;
+    color: #999;
+    font-family: 'Roboto', serif;
 }
 
 .entry-meta li:before {
-	content: '/';
+	content: '';
 	display: inline-block;
 	margin-right: 10px;
 	opacity: 0.5
@@ -26357,7 +26356,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
   .center .contentWrapper .topBlack ul li a{
       font-size: 17px;
   }
-  .center #commentform{
+  .center #commentform,  #commentform{
     margin-bottom: 0;
   }
  .center .commentCount{
@@ -26429,6 +26428,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
    border-bottom: 1px solid #efefef;
    padding-bottom: 10px;
    margin-bottom: 20px;
+   overflow: hidden;
 }
 .commentWrapper img{
   width: 40px;
@@ -26985,17 +26985,17 @@ color: #F36198;
 
 
 .fileUpload {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    text-align: center;
-    padding: 60px 19px;
-    border: 3px dashed rgba(244, 87, 147, 0.42);
-    font-size: 20px;
-    font-family: Roboto;
-    font-weight: 700;
-    z-index: 2;
-    /* width: 50%; */
+  position: relative;
+  overflow: hidden;
+  display: block;
+  text-align: center;
+  padding: 60px 19px;
+  border: 3px dashed rgba(244, 87, 147, 0.42);
+  font-size: 20px;
+  font-family: Roboto;
+  font-weight: 700;
+  z-index: 2;
+  /* width: 50%; */
 }
 .fileUpload:hover{
   cursor: pointer;
@@ -27256,14 +27256,16 @@ color: #F36198;
 #image_container{
   overflow: hidden;
   clear: both;
+  padding: 3px 0 0 3px;
 }
 #image_container .outer, #image_list .outer, #media_wrapper .outer{
-  width: 163px;
+  width: 162px;
   height: 150px;
   overflow: hidden;
   float: left;
   position: relative;
-  border: 1px solid #E7E5E5;
+  border-right: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
 }
 #image_container .inner, #image_list .inner, #media_wrapper .inner{
   position: absolute;
@@ -27282,6 +27284,67 @@ color: #F36198;
       max-width: 300%!important;    
 }
 
+/* ============= HOME ================= */
+
+.floatingCategory {
+    position: absolute;
+    padding: 8px 25px;
+    z-index: 1;
+    background-color: #ED568F;
+    color: #fff;
+    font-family: Roboto;
+    font-size: 14px;
+    font-weight: 500;
+}
+.customMyPost .ipost{
+  margin-bottom: 40px;
+}
+.customMyPost{
+    float: left;
+    font-size: 13px;
+    line-height: 14px;
+    margin: 0 10px 15px 0;
+    color: #999;
+    font-family: Roboto;
+    font-weight: 400;
+}
+
+.customMyPost .entry-content{
+  padding: 10px 0;
+}
+.customMyPost .entry-title{
+  width: 90%;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #fff;
+    margin-top: -55px;
+    position: relative;
+    margin: 20px 15px 20px 15px;
+    padding-top: 10px;
+}
+.customMyPost .ipost .entry-title h3{
+    margin: 7px 10px;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.customMyPost .entry-title h3 a{
+    font-size: 35px;
+    font-weight: 700;
+    color: #000;
+    line-height: 37px;
+    font-family: Oswald;
+    letter-spacing: -1px;
+    transition: all 0.2s ease;
+}
+.customMyPost .entry-meta{
+  margin-top: 15px!important;
+}
+.customMyPost .entry-meta, .ipost .entry-content{
+  width: 90%;
+    margin: 0 auto;    
+}
+
 /* ============ SINGLE =============== */
 
 .entry{
@@ -27295,6 +27358,9 @@ color: #F36198;
 .entry-content{
   padding: 10px 20px;
 }
+.entry-title{
+  margin: 20px 15px 20px 15px;
+}
 .entry-content h1{
   margin-bottom: 10px;
   font-family: Oswald;
@@ -27305,19 +27371,18 @@ color: #F36198;
 .entry-content p{
   color: #191919;
   text-align: left!important;
-  margin-bottom: 11px;
+  margin-bottom: 28px;
   font-family: Roboto;
-  font-size: 14px;
-  line-height: 21px;
+  font-size: 16px;
+  line-height: 23px!important;
 }
 .entry-title h2 {
     clear: both;
     display: block;
     padding-top: 25px;
-    font-size: 40px;
+    font-size: 37px;
     font-weight: 700;
-    line-height: 46px;
-    margin: 0 0 20px 0;
+    line-height: 42px;    
     letter-spacing: -1px;
     font-family: 'Oswald', sans-serif;
     color: #000;
@@ -27370,6 +27435,32 @@ color: #F36198;
   float: left;
   height: 21px;
   display: block;
+}
+.playnowBtn{
+  width: 80%;
+  height: auto;
+  text-align: center;
+  margin: 10px 0 0 0;
+  font-size: 17px;
+  text-transform: capitalize;
+  letter-spacing: 0px;
+  font-family: Roboto;
+  font-size: 18px;
+  text-shadow: 0 0 0;
+  border-radius: 2px;
+  font-weight: 400;
+  border: 1px solid #F25A94;
+  background: #f280aa;
+  background: -moz-linear-gradient(top, #f280aa 0%, #f45793 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f280aa), color-stop(100%,#f45793));
+  background: -webkit-linear-gradient(top, #f280aa 0%,#f45793 100%);
+  background: -o-linear-gradient(top, #f280aa 0%,#f45793 100%);
+  background: -ms-linear-gradient(top, #f280aa 0%,#f45793 100%);
+  background: linear-gradient(to bottom, #f280aa 0%,#f45793 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f280aa', endColorstr='#f45793',GradientType=0 );
+}
+.playnowBtn:hover{
+  background-color: #F25A94; 
 }
 
 /* ===== RATE ITEM MODAL ======= */
@@ -27530,6 +27621,189 @@ color: #F36198;
     max-height: 270px;
     overflow: auto;
 }
+.headerNotification{
+    position:relative;
+}
+.headerNotification .badge{
+    position: absolute;
+    top: -12px;
+    font-size: 10px;
+    padding: 4px 6px;
+    background-color: #EF2F2F;
+
+}
+#shareBox{
+    display: none; 
+    position: absolute;
+    background-color: #fff;
+    z-index: 2;
+    right: 25px;
+    top: 141px;
+    border-radius: 3px;
+    border-left: 1px solid #C3C3C3;
+    border-right: 1px solid #C3C3C3;
+    border-bottom: 1px solid #C3C3C3;
+    box-shadow: 0 0 10px 1px #D0D0D0;
+    text-align: left;
+
+}
+
+#sendBox{
+    display: none; 
+    position: absolute;
+    background-color: #fff;
+    z-index: 2;
+    right: 25px;
+    top: 141px;
+    border-radius: 3px;
+    border-left: 1px solid #C3C3C3;
+    border-right: 1px solid #C3C3C3;
+    border-bottom: 1px solid #C3C3C3;
+    box-shadow: 0 0 10px 1px #D0D0D0;
+    text-align: left;
+}
+#shareBox{
+    width: 150px;
+}
+#sendBox{
+    width: 300px;
+}
+#sendBox:before, #shareBox:before{
+    content: "";
+    width: 0;
+    height: 0;
+    position: absolute;
+    bottom: 100%;            
+    border-width: 0 8px 8px 8px;
+    border-style: solid;
+}
+#sendBox:before{
+    right: 20px;
+    border-color: #F1F1F1 transparent;
+}
+#shareBox:before{
+    right: 65px;
+    border-color: #fff transparent;
+}
+#sendBox input, #sendBox textarea{
+    margin: 0;
+    height: 45px;
+    padding: 10px;
+    border: none;
+    width: 100%;
+    border-bottom: 1px solid #E8E8E8;
+    background-color: #F1F1F1;
+    -moz-box-shadow: inset 0 -2px 10px -9px #464545;
+    -webkit-box-shadow: inset 0 -2px 10px -9px #464545;
+    box-shadow: inset 0 -2px 10px -9px #464545;
+    font-size: 15px!important; 
+    font-weight: 600!important;
+}
+#sendBox input{
+    background-color: #fff;
+    margin-top: -5px;
+}
+#sendBox .sendImgWrap{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 5px 10px;
+    overflow: hidden;
+    float: left;
+}
+#sendBox .itemTitle{
+    color: #625D5D!important;
+    font-family: Roboto!important;
+    font-weight: 600!important;
+    font-size: 17px;
+    display: inline-block;
+    margin-top: 5px;
+}
+#sendBox .friendlist, #shareBox .friendlist{
+    overflow: hidden;
+    background-color: #fff;
+    padding: 0 0 10px 0;
+}
+#shareBox .friendlist{
+    padding-bottom: 0;
+}
+#sendBox .friendlist .friendImg,  #shareBox .friendlist .friendImg{
+        width: 40px;
+        height: 40px;
+        overflow: hidden;
+        border-radius: 50%;
+        float:left;
+        margin-right: 10px;
+}
+#sendBox .friendlist ul, #shareBox .friendlist ul{
+    padding: 0;
+}
+#shareBox .friendlist ul{
+    margin-bottom: 0;
+}
+#sendBox .friendlist li a, #shareBox .friendlist li a{
+    display: block;
+    background-color: transparent!important;
+    border: none!important;
+    padding: 0!important;
+    border-radius: 20px;   
+    overflow: hidden;
+    border-radius: 0!important;
+    padding: 6px 10px!important;
+    transition: background 0.3s ease;
+}
+#shareBox .friendlist li a{
+    padding: 10px!important;
+    color: #fff!important;
+    border-radius: 3px!important;
+    overflow: hidden;
+    margin: 2px 0;
+}
+#shareBox .friendlist li a i{
+    color: #fff!important;
+    font-size: 20px!important;
+}
+#shareBox .friendlist li a  span{
+    margin-left: 10px;
+    position: relative;
+    top: -3px;
+    font-size: 14px;
+}
+#shareBox .friendlist li a p{
+    margin-top: 0;
+}
+#shareBox .friendlist li a.fb{
+    background-color: #3b5998!important;
+}
+#shareBox .friendlist li a.fb:hover,
+#shareBox .friendlist li a.fb:active{
+    background-color: #4F70B6!important;
+}
+#shareBox .friendlist li a.twtr{
+    background-color: #2DACFF!important;
+}
+#shareBox .friendlist li a.twtr:hover,
+#shareBox .friendlist li a.twtr:active{
+    background-color: #6EBDF0!important;
+}
+#shareBox .friendlist li a.pinterest{
+    background-color: #C72527!important;
+}
+#shareBox .friendlist li a.pinterest:hover,
+#shareBox .friendlist li a.pinterest:active{
+    background-color: #DA3739!important;
+}
+#sendBox .friendlist li a:hover, #shareBox .friendlist li a:hover{
+    background-color: #eee!important;
+}        
+#sendBox .friendlist p, #shareBox .friendlist p{
+    margin-bottom: 0;
+    font-size: 12px;
+    color: #161515;
+    font-family: Roboto;
+    margin-top: 10px;
+    font-weight: 500;
+}
 
 .video-container {
     position: relative;
@@ -27546,4 +27820,6 @@ color: #F36198;
     width: 100%;
     height: 100%;
 }
+
+
 /*# sourceMappingURL=all.css.map */
