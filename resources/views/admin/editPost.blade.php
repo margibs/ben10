@@ -155,7 +155,7 @@
             <div class="panel-body">
                 <div class="controls">
                  
-                    <input type="hidden" id="widget_image_url" name="widget_image_url" value="">
+                    <input type="hidden" id="widget_image_url" name="widget_image_url" value="{{ $widget_rating != null ? $widget_rating->image_url : '' }}">
                      <div class="switch pull-right">                              
                        {!! Form::checkbox('widget_visible', 1, $widget_visible_var, ['id'=>'cmn-toggle-1','class'=>'cmn-toggle cmn-toggle-round']) !!}
                       <label for="cmn-toggle-1"></label>

@@ -57,18 +57,25 @@
                                                       <span class="date">{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span> / <span class="Categ"><a href=""> Celebs </a></span>
                                                         <h2 >{{$post->title}}</h2>
                                                     </div>
+     
+                                                    <div class="clearfix"></div>
 
-@if($widget_rating != null)
-<!-- Ratings here -->
+                                                    <!-- Entry Image
+                                                    ============================================= -->
+                                                   <!--  <div class="entry-image">
+                                                        <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
+                                                    </div> --><!-- .entry-image end -->
+
+<div>                                                
+@if($widget_rating != null && $widget_rating->enable != 0)
+                        <!-- Ratings here -->
 <div class="col_two_fifth nobottommargin">
 <div class="entry-image">
 <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
 </div>
 </div>
 
-<div class="col_three_fifth col_last nobottommargin" style="    
-padding-right: 20px;
-padding-left: 10px;">
+<div class="col_three_fifth col_last nobottommargin">
 <p style="    
 font-weight: 700;
 font-size: 22px;
@@ -131,6 +138,8 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 </div>  
 <!-- end Ratings here -->
 @endif
+
+</div>
 
                                                     
                                                     <div class="clearfix"></div>
@@ -259,7 +268,7 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
         @if($widget_rating != null)
         var url_for_image = "{{url('uploads')}}/{{$widget_rating->image_url}}";
         @endif
-        // console.log(url_for_image);
+         console.log(url_for_image);
 
     var isShowing = false;
     var tag = document.createElement('script');

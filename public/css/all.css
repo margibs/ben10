@@ -27284,8 +27284,14 @@ color: #F36198;
 }
 
 /* ============ SINGLE =============== */
-.single-post{
-    padding: 5px 20px;
+
+.entry{
+  padding: 0;
+  margin: 0;
+  border-bottom: 0;
+}
+.entry-content{
+  padding: 10px 20px;
 }
 .entry-content h1{
   margin-bottom: 10px;
@@ -27293,6 +27299,14 @@ color: #F36198;
   color: #000;
   font-size: 35px;
   letter-spacing: -1px;
+}
+.entry-content p{
+  color: #191919;
+  text-align: left!important;
+  margin-bottom: 11px;
+  font-family: Roboto;
+  font-size: 14px;
+  line-height: 21px;
 }
 .entry-title h2 {
     clear: both;
