@@ -27263,8 +27263,7 @@ color: #F36198;
   overflow: hidden;
   float: left;
   position: relative;
-/*  border-right: 1px solid #E5E5E5;
-  border-bottom: 1px solid #E5E5E5;*/
+  border: 1px solid #E7E5E5;
 }
 #image_container .inner, #image_list .inner, #media_wrapper .inner{
   position: absolute;
@@ -27289,6 +27288,9 @@ color: #F36198;
   padding: 0;
   margin: 0;
   border-bottom: 0;
+}
+.entry-image{
+  margin-bottom: 0;
 }
 .entry-content{
   padding: 10px 20px;

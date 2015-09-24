@@ -1056,8 +1056,7 @@ color: #F36198;
   overflow: hidden;
   float: left;
   position: relative;
-/*  border-right: 1px solid #E5E5E5;
-  border-bottom: 1px solid #E5E5E5;*/
+  border: 1px solid #E7E5E5;
 }
 #image_container .inner, #image_list .inner, #media_wrapper .inner{
   position: absolute;

@@ -76,10 +76,18 @@
     font-family: Roboto;
     font-size: 13px;
     border-radius: 3px;
-    background-color: #F2F0F0;
-    border: navajowhite;
+    border: 1px solid #BBBBBB;
     color: #000;
-    font-weight: 600;">
+    font-weight: 600;   
+	background: #EFEFEF; /* Old browsers */
+	background: -moz-linear-gradient(top,  #EFEFEF 0%, #F1F1F1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EFEFEF), color-stop(100%,#F1F1F1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #EFEFEF 0%,#F1F1F1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #EFEFEF 0%,#F1F1F1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #EFEFEF 0%,#F1F1F1 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #EFEFEF 0%,#F1F1F1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EFEFEF', endColorstr='#F1F1F1',GradientType=0 ); /* IE6-9 */
+">
 			<option value=""> Category: All </option>
 			<option value=""> Outfits </option>
 			<option value=""> Recipe </option>
@@ -92,10 +100,18 @@
     font-family: Roboto;
     font-size: 13px;
     border-radius: 3px;
-    background-color: #F2F0F0;
-    border: navajowhite;
+    border: 1px solid #BBBBBB;
     color: #000;
-    font-weight: 600;">
+    font-weight: 600;    
+	background: #EFEFEF; /* Old browsers */
+	background: -moz-linear-gradient(top,  #EFEFEF 0%, #F1F1F1 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#EFEFEF), color-stop(100%,#F1F1F1)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #EFEFEF 0%,#F1F1F1 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #EFEFEF 0%,#F1F1F1 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #EFEFEF 0%,#F1F1F1 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #EFEFEF 0%,#F1F1F1 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#EFEFEF', endColorstr='#F1F1F1',GradientType=0 ); /* IE6-9 */
+">
 			<option value=""> Most Admired </option>
 			<option value=""> Ascending </option>
 			<option value=""> Descending </option>
@@ -133,15 +149,57 @@
 
 
 	
-<div class="wrappers" style="margin-top:10px;padding: 0;background-color: #E7E5E5;">		
-		<h6> Product needs review </h6>
-			<div id="image_container">
-				<div class="outer">
-					<div class="inner">
-					<a href=""><img class="img-responsive" src="http://vps184562.ovh.net/uploads/55540_image7.jpg" /></a>
-					</div>                          
+<div class="wrappers" style="margin-top:10px;padding: 0;">		
+			
+			 <div class="col_two_third col_last nobottommargin">
+				<div class="productUploadForm" style="padding: 15px;">
+	                <span> Product Name </span>
+	                <input type="text" name="name" style="margin-top: 0;" required>
+
+	                <span> Intended application </span>
+	                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
+
+	                <span> Animal Tested </span>
+	                 <input type="radio" name="animal_tested" value="yes" checked> 
+	                 <label for="animal_tested"> Yes </label>
+	                 <input type="radio" name="animal_tested" value="No"> 
+	                 <label for="animal_tested"> No </label>
+	                 <br />
+	       
+
+
+	                <span> Eco Friendly </span>
+	                <input type="radio" name="eco_friendly" value="yes" checked>
+	                <label for="eco_friendly"> Yes </label>
+	                 <input type="radio" name="eco_friendly" value="No">
+	                 <label for="eco_friendly"> No </label>
+	                 <br />
+	               
+
+	                <span> Alternative Products </span>
+	                <input type="text" name="alt_products" style="margin-top: 0;" required>
+
+	                <span> Price Range </span>
+	                <input type="text" name="price_range" style="margin-top: 0;" required>
+
+	                <span> Available From </span>
+	                <input type="text" name="available_from" style="margin-top: 0;" required>
+
+	                <input class="productUploadSubmit" type="submit" value="Submit for Approval">  
+	            </div>
+	        </div>
+
+	        <div class="col_one_third nobottommargin">
+				<div id="image_container">
+					<div class="outer">
+						<div class="inner">
+						<a href=""><img class="img-responsive" src="http://vps184562.ovh.net/uploads/55540_image7.jpg" /></a>
+						</div>                          
+					</div>
 				</div>
 			</div>
+
+
 </div>
 
 
