@@ -16,6 +16,7 @@ use App\CustomQuery;
 use App\Model\Category;
 
 use App\PluginModel\RateItem;
+use App\PluginModel\WidgetRating;
 
 class PageController extends Controller
 {
@@ -57,12 +58,14 @@ class PageController extends Controller
     {
     	$post = $this->customQuery->getPost($slug,$category);
 
-		if($post == null)
+      $widget_rating = WidgetRating::where('post_id',$post->post_id)->first();
+
+		    if($post == null)
         {
             App::abort(404);
         }
 
-    	return view('pages.single',compact('post'));
+    	return view('pages.single',compact(['post','widget_rating']));
     }
 
     public function category($category)
