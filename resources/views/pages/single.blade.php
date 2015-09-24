@@ -256,9 +256,9 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
         console.log(replace_var);
         $('#get_content_here').html(content_men.replace(replace_var, '<div class="video-container"><div id="player"></div></div><div class="imgHere"></div>'));
         console.log(youtube_ni);
-
+        @if($widget_rating != null)
         var url_for_image = "{{url('uploads')}}/{{$widget_rating->image_url}}";
-
+        @endif
         // console.log(url_for_image);
 
     var isShowing = false;
