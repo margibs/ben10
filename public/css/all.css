@@ -26236,7 +26236,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     background-color: #000;
  }
  #header.sticky-header #header-wrap{
-      z-index: 1;
+      z-index: 2;
  }
  #header.full-header #logo, #header.full-header #primary-menu > ul{
     border-right: none;
@@ -27354,7 +27354,7 @@ color: #F36198;
 #rateItem{
     position: fixed;
     z-index: 10;
-    top: -100%;
+    top: -500%;
     left: 20%;
     width: 850px;
     height: 620px;

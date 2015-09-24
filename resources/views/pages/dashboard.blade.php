@@ -132,6 +132,18 @@
 </div>
 
 
+	
+<div class="wrappers" style="margin-top:10px;padding: 0;background-color: #E7E5E5;">		
+		<h6> Product needs review </h6>
+			<div id="image_container">
+				<div class="outer">
+					<div class="inner">
+					<a href=""><img class="img-responsive" src="http://vps184562.ovh.net/uploads/55540_image7.jpg" /></a>
+					</div>                          
+				</div>
+			</div>
+</div>
+
 
 
 <div class="wrappers" style="margin-top:10px;">		
