@@ -140,6 +140,7 @@ class AdminController extends Controller
 
 	public function addPost(Request $request,$id = 0)
 	{
+        // dd($request->input('widget_visible'));
         // dd($request->all());
         $redirect = 'admin/new_post';  
 
@@ -251,7 +252,7 @@ class AdminController extends Controller
         $widget_rating->fun_rate = $request->input('fun_rate');
         $widget_rating->graphics = $request->input('graphics');
         $widget_rating->slot_url = $request->input('slot_url');
-        $widget_rating->enable = $request->input('widget_visible');
+        $widget_rating->enable = $request->input('widget_visible') != null ? $request->input('widget_visible') : 0;
         $widget_rating->save();
         //End widget rating
 
