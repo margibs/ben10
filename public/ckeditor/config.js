@@ -13,6 +13,7 @@ CKEDITOR.editorConfig = function( config ) {
 		{ name: 'clipboard',   groups: [ 'clipboard', 'undo' ] },
 		{ name: 'editing',     groups: [ 'find', 'selection', 'spellchecker' ] },
 		{ name: 'links' },
+		// { name: 'insert', groups: ['Image'] },
 		{ name: 'insert', groups: ['Image', 'Youtube'] },
 		{ name: 'forms' },
 		{ name: 'tools' },
@@ -36,6 +37,7 @@ CKEDITOR.editorConfig = function( config ) {
 	config.removeDialogTabs = 'image:advanced;link:advanced';
 
 	//Plugins
+	// config.extraPlugins = 'popup,filebrowser,justify,lineutils,dialogui,dialog,clipboard,widget,image2';
 	config.extraPlugins = 'youtube,popup,filebrowser,justify,lineutils,dialogui,dialog,clipboard,widget,image2';
 
 	//Youtube
