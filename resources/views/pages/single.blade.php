@@ -259,7 +259,7 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
         @if($widget_rating != null)
         var url_for_image = "{{url('uploads')}}/{{$widget_rating->image_url}}";
         @endif
-        // console.log(url_for_image);
+        console.log(url_for_image);
 
     var isShowing = false;
     var tag = document.createElement('script');
