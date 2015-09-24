@@ -8,7 +8,7 @@
     color: #B3B3B3;
   }
   .col-md-5 > p{
-    margin-bottom: 3px;
+    margin-bottom: 0;
   }
 </style>
 
@@ -35,9 +35,9 @@
                                                 <div class="entry clearfix">
 
                                                   <div class="entry-title">
+                                                     <h2 >{{$post->title}}</h2>                                                        
                                                       <span class="comment pull-right"><i class="icon-comment2"></i> 0 Comments </span>
-                                                      <span class="date">{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span> / <span class="Categ"><a href=""> Celebs </a></span>
-                                                        <h2 >{{$post->title}}</h2>
+                                                      <span class="date">{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span> / <span class="Categ"><a href=""> Celebs </a></span>                                                        
                                                     </div>
      
                                                     <div class="clearfix"></div>
@@ -50,8 +50,9 @@
 
 <div style="    
 overflow: hidden;
-padding: 0 20px;">     
-                                           
+padding: 20px 20px 10px 20px;
+border-top:1px solid #efefef;">     
+
 @if($widget_rating != null && $widget_rating->enable != 0)
                         <!-- Ratings here -->
 <div class="col_two_fifth nobottommargin">
