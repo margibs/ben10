@@ -55,7 +55,7 @@
               </div>
         
           <!-- <a href="#" class="button"> Publish Now </a> -->
-        <button id="check_post" class="button button-3d"  style="display: block;">Check Post</button>
+        <button id="check_post" class="button button-3d"  style="display: none;">Check Post</button>
         <input id="check_post_submit" type="submit" value="Submit" class="button button-3d"  style="display: block;">
        
 
