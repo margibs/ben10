@@ -26,193 +26,6 @@
     <title> Upmire </title>
 
 
-    <style>
-        .headerNotification{
-            position:relative;
-        }
-        .headerNotification .badge{
-            position: absolute;
-            top: -12px;
-            font-size: 10px;
-            padding: 4px 6px;
-            background-color: #EF2F2F;
-
-        }
-        #shareBox{
-            display: none; 
-            position: absolute;
-            background-color: #fff;
-            z-index: 2;
-            right: 25px;
-            top: 141px;
-            border-radius: 3px;
-            border-left: 1px solid #C3C3C3;
-            border-right: 1px solid #C3C3C3;
-            border-bottom: 1px solid #C3C3C3;
-            box-shadow: 0 0 10px 1px #D0D0D0;
-            text-align: left;
-
-        }
-     
-        #sendBox{
-            display: none; 
-            position: absolute;
-            background-color: #fff;
-            z-index: 2;
-            right: 25px;
-            top: 141px;
-            border-radius: 3px;
-            border-left: 1px solid #C3C3C3;
-            border-right: 1px solid #C3C3C3;
-            border-bottom: 1px solid #C3C3C3;
-            box-shadow: 0 0 10px 1px #D0D0D0;
-            text-align: left;
-        }
-        #shareBox{
-            width: 150px;
-        }
-        #sendBox{
-            width: 300px;
-        }
-        #sendBox:before, #shareBox:before{
-            content: "";
-            width: 0;
-            height: 0;
-            position: absolute;
-            bottom: 100%;            
-            border-width: 0 8px 8px 8px;
-            border-style: solid;
-        }
-        #sendBox:before{
-            right: 20px;
-            border-color: #F1F1F1 transparent;
-        }
-        #shareBox:before{
-            right: 65px;
-            border-color: #fff transparent;
-        }
-        #sendBox input, #sendBox textarea{
-            margin: 0;
-            height: 45px;
-            padding: 10px;
-            border: none;
-            width: 100%;
-            border-bottom: 1px solid #E8E8E8;
-            background-color: #F1F1F1;
-            -moz-box-shadow: inset 0 -2px 10px -9px #464545;
-            -webkit-box-shadow: inset 0 -2px 10px -9px #464545;
-            box-shadow: inset 0 -2px 10px -9px #464545;
-            font-size: 15px!important; 
-            font-weight: 600!important;
-        }
-        #sendBox input{
-            background-color: #fff;
-            margin-top: -5px;
-        }
-        #sendBox .sendImgWrap{
-            height: 50px;
-            width: 50px;
-            border-radius: 50%;
-            margin: 5px 10px;
-            overflow: hidden;
-            float: left;
-        }
-        #sendBox .itemTitle{
-            color: #625D5D!important;
-            font-family: Roboto!important;
-            font-weight: 600!important;
-            font-size: 17px;
-            display: inline-block;
-            margin-top: 5px;
-        }
-        #sendBox .friendlist, #shareBox .friendlist{
-            overflow: hidden;
-            background-color: #fff;
-            padding: 0 0 10px 0;
-        }
-        #shareBox .friendlist{
-            padding-bottom: 0;
-        }
-        #sendBox .friendlist .friendImg,  #shareBox .friendlist .friendImg{
-                width: 40px;
-                height: 40px;
-                overflow: hidden;
-                border-radius: 50%;
-                float:left;
-                margin-right: 10px;
-        }
-        #sendBox .friendlist ul, #shareBox .friendlist ul{
-            padding: 0;
-        }
-        #shareBox .friendlist ul{
-            margin-bottom: 0;
-        }
-        #sendBox .friendlist li a, #shareBox .friendlist li a{
-            display: block;
-            background-color: transparent!important;
-            border: none!important;
-            padding: 0!important;
-            border-radius: 20px;   
-            overflow: hidden;
-            border-radius: 0!important;
-            padding: 6px 10px!important;
-            transition: background 0.3s ease;
-        }
-        #shareBox .friendlist li a{
-            padding: 10px!important;
-            color: #fff!important;
-            border-radius: 3px!important;
-            overflow: hidden;
-            margin: 2px 0;
-        }
-        #shareBox .friendlist li a i{
-            color: #fff!important;
-            font-size: 20px!important;
-        }
-        #shareBox .friendlist li a  span{
-            margin-left: 10px;
-            position: relative;
-            top: -3px;
-            font-size: 14px;
-        }
-        #shareBox .friendlist li a p{
-            margin-top: 0;
-        }
-        #shareBox .friendlist li a.fb{
-            background-color: #3b5998!important;
-        }
-        #shareBox .friendlist li a.fb:hover,
-        #shareBox .friendlist li a.fb:active{
-            background-color: #4F70B6!important;
-        }
-        #shareBox .friendlist li a.twtr{
-            background-color: #2DACFF!important;
-        }
-        #shareBox .friendlist li a.twtr:hover,
-        #shareBox .friendlist li a.twtr:active{
-            background-color: #6EBDF0!important;
-        }
-        #shareBox .friendlist li a.pinterest{
-            background-color: #C72527!important;
-        }
-        #shareBox .friendlist li a.pinterest:hover,
-        #shareBox .friendlist li a.pinterest:active{
-            background-color: #DA3739!important;
-        }
-        #sendBox .friendlist li a:hover, #shareBox .friendlist li a:hover{
-            background-color: #eee!important;
-        }        
-        #sendBox .friendlist p, #shareBox .friendlist p{
-            margin-bottom: 0;
-            font-size: 12px;
-            color: #161515;
-            font-family: Roboto;
-            margin-top: 10px;
-            font-weight: 500;
-        }
-        
-    </style>
-
 </head>
 
 <body class="stretched no-transition">
@@ -321,14 +134,14 @@
                                         <p class="selectItem">* Please select an item</p>
 
                                         <div class="coinTotal">
-                                            <img src="images/gold_coin.png" alt="">
+                                            <img src="{{ asset('images/gold_coin.png') }}" alt="">
                                             <p> Total Coins </p>
                                             <h3> 1423 </h3>
                                         </div>
                                     </div>     
                                     <div class="wrappers" style="margin-top: 10px;">
                                         <div class="coinTotal">
-                                            <img src="images/lotto_icon.gif" alt="">
+                                            <img src="{{ asset('images/lotto_icon.gif') }}" alt="">
                                             <p style="margin-left: 57px;"> Latest Result </p>
                                             <h3> 125 </h3>
                                         </div>
@@ -337,8 +150,8 @@
                                     <div class="wrappers" style="margin-top: 10px;">
                                         <div class="dailyOffer">
                                           <p><i class="icon-star3"></i> Our Daily Offers </p>      
-                                          <a href=""><img src="images/offer1.jpg" alt=""></a>
-                                          <a href=""><img src="images/offer2.jpg" alt=""></a>
+                                          <a href=""><img src="{{ asset('images/offer1.jpg') }}" alt=""></a>
+                                          <a href=""><img src="{{ asset('images/offer2.jpg') }}" alt=""></a>
                                         </div>
                                     </div>
 

@@ -4841,17 +4841,16 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 .single-post .entry-meta { margin-bottom: 20px; }
 
 .entry-meta li {
-	float: left;
-	font-size: 13px;
-	line-height: 14px;
-	margin: 0 10px 15px 0;
-	color: #999;
-	font-family: 'Crete Round', serif;
-	font-style: italic;
+    float: left;
+    font-size: 13px;
+    line-height: 14px;
+    margin: 0 10px 15px 0;
+    color: #999;
+    font-family: 'Roboto', serif;
 }
 
 .entry-meta li:before {
-	content: '/';
+	content: '';
 	display: inline-block;
 	margin-right: 10px;
 	opacity: 0.5
