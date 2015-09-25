@@ -5,7 +5,7 @@
 <style>
   .col-md-5, .col-d-7{
     padding: 0;
-    color: #B3B3B3;
+    color: #868686;
   }
   .col-md-5 > p{
     margin-bottom: 0;
@@ -50,8 +50,8 @@
 
 <div style="    
 overflow: hidden;
-padding: 20px 20px 10px 20px;
-border-top:1px solid #efefef;">     
+padding: 5px 20px 10px 20px;
+">     
 
 @if($widget_rating != null && $widget_rating->enable != 0)
                         <!-- Ratings here -->
@@ -62,7 +62,7 @@ border-top:1px solid #efefef;">
 </div>
 </div>
 
-<div class="col_three_fifth col_last nobottommargin">
+<div class="col_three_fifth col_last nobottommargin"  style=" background-color: #efefef;padding: 10px;">
 <p style="    
 font-weight: 700;
 font-size: 20px;

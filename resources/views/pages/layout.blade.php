@@ -28,7 +28,7 @@
 
 </head>
 
-<body class="stretched no-transition">
+<body class="stretched">
 
     <!-- Document Wrapper
     ============================================= -->
@@ -68,7 +68,7 @@
                                     <li><a href="#"><div> Scratch Cards</div></a></li>                  
                                 </ul>
                             </li>
-                            <li><a href=""><div> Rate </div></a></li>                     
+                            <li><a href="{{ url('/rate') }}"><div> Rate </div></a></li>                     
                         </ul>
 
 
@@ -535,8 +535,8 @@
     color: #FFAFCD;
     padding: 10px;
     position: relative;
-    top: -2px;"> Click here for product upload </a>     </h1>
-              <i class="icon-line2-close closeModalBtn" title="Close Modal"></i>
+    top: -2px;"> Click here for product upload </a>  <i class="i"></i>  </h1>
+              <i class="icon-line-cross closeModalBtn" title="Close Modal"></i>
             </div>
             <div class="modal-banner">
               <input type="radio" id="urlChoice" name="linkChoice" checked>
@@ -723,10 +723,10 @@ position: absolute;
 color: #EDEDED;
 z-index: 2;
 top: 10px;
-left: 10px;
+right: 10px;
 font-size: 13px;
 text-transform: uppercase;
-font-weight: 600;"> Close </a>
+font-weight: 600;"> <i class="icon-line-cross"></i> </a>
     <div class="col-md-7">
         <div class="left">
             <div class="topBlack">

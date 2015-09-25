@@ -1186,7 +1186,7 @@ color: #F36198;
 .entry-title .date, .entry-title .comment, .entry-title .categ{
     font-size: 13px;
     font-family: Roboto;
-    color: #000;
+    color: #9E9E9E;
     font-weight: 400;
 }
 
@@ -1244,15 +1244,15 @@ color: #F36198;
   text-shadow: 0 0 0;
   border-radius: 2px;
   font-weight: 400;
-  border: 1px solid #F25A94;
+  border: 1px solid #121212;
   background: #f280aa;
-  background: -moz-linear-gradient(top, #f280aa 0%, #f45793 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f280aa), color-stop(100%,#f45793));
-  background: -webkit-linear-gradient(top, #f280aa 0%,#f45793 100%);
-  background: -o-linear-gradient(top, #f280aa 0%,#f45793 100%);
-  background: -ms-linear-gradient(top, #f280aa 0%,#f45793 100%);
-  background: linear-gradient(to bottom, #f280aa 0%,#f45793 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f280aa', endColorstr='#f45793',GradientType=0 );
+  background: -moz-linear-gradient(top, #282727 0%, #101010 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282727 ), color-stop(100%,#101010));
+  background: -webkit-linear-gradient(top, #282727 0%,#101010 100%);
+  background: -o-linear-gradient(top, #282727 0%,#101010 100%);
+  background: -ms-linear-gradient(top, #282727 0%,#101010 100%);
+  background: linear-gradient(to bottom, #282727 0%,#101010 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282727', endColorstr='#101010',GradientType=0 );
 }
 .playnowBtn:hover{
   background-color: #F25A94; 
