@@ -48,8 +48,8 @@
                     <!-- Logo
                     ============================================= -->
                     <div id="logo">
-                        <a href="{{url('')}}" class="standard-logo" data-dark-logo=""><img src="" alt="Canvas Logo"></a>
-                        <a href="{{url('')}}" class="retina-logo" data-dark-logo=""><img src="" alt="Canvas Logo"></a>
+                        <a href="{{url('')}}" class="standard-logo" data-dark-logo=""><img src="" alt=""></a>
+                        <a href="{{url('')}}" class="retina-logo" data-dark-logo=""><img src="" alt=""></a>
                     </div><!-- #logo end -->
 
                     <a id="addLinkBtn" class="uploadBtn"> Upload </a>
