@@ -34,16 +34,19 @@
         text-align: center;
         background-color: #fff;
         margin-bottom: 40px;
-        padding-top: 2px;
-        padding-bottom: 5px;
+        padding-top: 8px;
+        padding-bottom: 8px;
         border-radius: 2px;
-        /* border-bottom: 1px dashed #DFDFDF; */
+        border-bottom: 1px solid#DAD8D8;
+        -moz-box-shadow: 0 2px 6px 0px #ddd;
+        -webkit-box-shadow: 0 2px 6px 0px #ddd;
+        box-shadow: 0 2px 6px 0px #ddd;
      }
     .rateMenu li{        
         padding-right: 3px;
     }
     .rateMenu li span{
-        font-size: 10px;
+        font-size: 13px;
         font-weight: 600;
         /*display: block;*/
         color: #343030;
@@ -53,6 +56,7 @@
         text-transform: uppercase;
     }
     .rateMenu li a img{
+        display: none;
         width: 41px;
         padding: 2px;
         overflow: hidden;
@@ -128,6 +132,11 @@
                 </div>   
 
                  @if(Request::is('rate*')) 
+                 <style>
+                    .content-wrap{
+                        padding-top: 70px;
+                    }
+                 </style>
                 <ul class="list-inline rateMenu">
                     <!-- <li><span> Categories </span></li> -->
                     <li> <a href=""> <img src="{{ asset('images/outfits.png') }}" alt=""> <span>Outfits</span> </a> </li>
