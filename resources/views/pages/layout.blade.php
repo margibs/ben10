@@ -29,6 +29,8 @@
 
 <body class="stretched no-transition">
 
+
+
     <!-- Document Wrapper
     ============================================= -->
     <div id="wrapper" class="clearfix">
@@ -51,7 +53,7 @@
                     </div><!-- #logo end -->
 
                     <a id="addLinkBtn" class="uploadBtn"> Upload </a>
-                    <div class="dropdown" style="    
+                    <!-- <div class="dropdown" style="    
    float: right;
     margin-top: 17px;">
                       <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -60,7 +62,7 @@
                       <ul class="dropdown-menu" aria-labelledby="dLabel">
                         ...
                       </ul>
-                    </div>
+                    </div> -->
 
                     <!-- Primary Navigation
                     ============================================= -->
@@ -86,9 +88,7 @@
                         <div id="top-search">
 
                             <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-                          
-                                
-                        
+                            <a href="{{ url('/dashboard')}}"><i class="icon-line2-heart"></i></a> 
                             <a href="{{ url('/login')}}"><i class="icon-line2-lock"></i></a>                            
                             <form action="search.html" method="get">
                                 <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
@@ -217,7 +217,8 @@
 <!--- Quick Uplaod Popup -->
 
 <div id="addLinkModal" class="modal-container">
-<form action="{{ url('rate/rate_upload') }}" method="POST" enctype='multipart/form-data'>
+<form action="{{ url('rate/rate_upload') }}" method="POST" enctype='multipart/form-data' style="margin-bottom:0;">
+
 {!! csrf_field() !!}
     <div class="modal-shade"></div>
     <div class="modal">
@@ -277,8 +278,24 @@
             <span> Select an Image </span>
             </div> -->
             <div>                
-                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>   
-                <input type="submit" value="Submit">
+                <!-- <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>  -->  
+                <input type="submit" value="Upload Now" style="
+    background-color: transparent;
+    border: none;
+    background-color: #F36198;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 20px;
+    background: #f280aa;
+    background: -moz-linear-gradient(top, #f280aa 0%, #f45793 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f280aa), color-stop(100%,#f45793));
+    background: -webkit-linear-gradient(top, #f280aa 0%,#f45793 100%);
+    background: -o-linear-gradient(top, #f280aa 0%,#f45793 100%);
+    background: -ms-linear-gradient(top, #f280aa 0%,#f45793 100%);
+    background: linear-gradient(to bottom, #f280aa 0%,#f45793 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f280aa', endColorstr='#f45793',GradientType=0 );
+    ">
             </div>
         </div>
     </div>
@@ -408,118 +425,7 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                         <span style="width:100.0000%;"><span class="progress" style="background:#fd96be;"></span></span>
                     </div>
                   </div>
-
                 <div class="pinkSeparator"></div>
-                    
-                    <!--  <div class="dropdown" style="float: right;margin-top: 17px;">
-                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
-border: 1px solid #F191B5;
-background-color: #F1669B;
-padding: 2px 10px;
-top: -15px;
-left: -15px;
-border-radius: 20px;                      ">
-                        <i class="icon-share-alt"></i>                
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dLabel" style="padding:0;left: -280px;">
-                        <div id="sendBox">                                                                                             
-                                <textarea placeholder="Your message here..."></textarea>
-                                <input type="text" placeholder="Search users"> 
-                                <div class="friendlist">
-                                    <span style="    
-    color: #E8BFCE;
-    font-size: 11px;
-    margin: 0 12px;
-    display: block;
-    text-align: right;"> Send to  </span> 
-                                    <ul>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11692791_1033839559960313_372475612082020913_n.jpg?oh=0dc578c37cb4448f0ed656cf1d3b8dfd&oe=56A697B7&__gda__=1452669051_59a0ec27323dad96c80cacbeddd5e32b" alt="">                                                
-                                                </div>
-                                                <p> Alice Watermelon </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/4765654_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> faliha101 </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/1337071_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> littleboyorange </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-
-                            </div>
-                      </ul>
-                    </div> -->
-
-                   <!--  <div class="dropdown" style="float: right;margin-top: 17px;">
-                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
-border: 1px solid #F191B5;
-background-color: #F1669B;
-padding: 2px 10px;
-top: -15px;
-left: -25px;
-border-radius: 20px;                      ">
-                        <i class="icon-paperplane"></i>                
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dLabel" style="padding:0;left: -280px;">
-                        <div id="sendBox">                                                                                             
-                           
-                                <textarea placeholder="Your message here..."></textarea>
-                                <input type="text" placeholder="Search users"> 
-                                <div class="friendlist">
-                                    <span style="    
-    color: #E8BFCE;
-    font-size: 11px;
-    margin: 0 12px;
-    display: block;
-    text-align: right;"> Send to  </span> 
-                                    <ul>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11692791_1033839559960313_372475612082020913_n.jpg?oh=0dc578c37cb4448f0ed656cf1d3b8dfd&oe=56A697B7&__gda__=1452669051_59a0ec27323dad96c80cacbeddd5e32b" alt="">                                                
-                                                </div>
-                                                <p> Alice Watermelon </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/4765654_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> faliha101 </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/1337071_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> littleboyorange </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-
-                            </div>
-                      </ul>
-                    </div> -->
-               
                 <ul class="list-inline tleft">
                     <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
                     <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
@@ -543,27 +449,20 @@ border-radius: 20px;                      ">
             </div>
 
             <div class="commentWrapper">                              
-
-                                            
-                                            <h3> Comments <span> · <span id="comment_counter">4 </span></span></h3>
-                                              <ul id="put_comments_here">
-                                                                                                        <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-18 12:23:29 </span> </span>
-                                                          <p class="commentContent"> water </p>
-                                                      </li>          
-                                              </ul>
-                                          <div class="clearfix"></div>
-                                          <form class="clearfix" action="#" method="post" id="commentform">
-                                              <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
-                                              <!-- <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;"> -->
-                                          </form>
-                                        </div>
-
+                <h3> Comments <span> · <span id="comment_counter">4 </span></span></h3>
+                    <ul id="put_comments_here">
+                        <li>
+                            <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
+                                <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-18 12:23:29 </span> </span>
+                                <p class="commentContent"> water </p>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <form class="clearfix" action="#" method="post" id="commentform">
+                      <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
+                      <!-- <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;"> -->
+                     </form>
+            </div>
         </div>
     </div>
 </div>
@@ -582,7 +481,7 @@ border-radius: 20px;                      ">
     <!-- External JavaScripts
     ============================================= -->
     <script type="text/javascript" src="{{ asset('js/functions.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ asset('js/simplebar.min.js') }}"></script> -->
+    <script type="text/javascript" src="{{ asset('js/simplebar.min.js') }}"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>

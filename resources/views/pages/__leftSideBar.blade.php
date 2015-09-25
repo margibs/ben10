@@ -1,8 +1,9 @@
-@if(Auth::check())
-        <div class="left">
-            <div class="wrappers">
+<div class="left">    
+    @if(Auth::check())
+            <div class="wrappers" style="margin-bottom:10px;">
                 <div class="profile">
-                    <img src="{{url('uploads')}}/{{Auth::user()->avatar}}" alt="">
+                    <!-- <img src="{{url('uploads')}}/{{Auth::user()->avatar}}" alt=""> -->
+                    <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
                     <p> {{ ucfirst(Auth::user()->name) }} </p>
                     <ul class="stars">
                         <li> <i class="icon-star3"></i> </li>
@@ -32,8 +33,10 @@
                     <h3> 125 </h3>
                 </div>
             </div>
+   @else
 
-            <div class="wrappers" style="margin-top: 10px;">
+    @endif
+            <div class="wrappers">
                 <div class="dailyOffer">
                   <p><i class="icon-star3"></i> Our Daily Offers </p>      
                   <a href=""><img src="{{ asset('images/offer1.jpg') }}" alt=""></a>
@@ -41,6 +44,4 @@
                 </div>
             </div>
         </div>
-    @else
-
-    @endif
+ 

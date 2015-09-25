@@ -4,10 +4,12 @@
 		<div class="left_content">
 			@if($user_profile->profile_image != "")
 			<a href="#" data-toggle="modal" data-target="#profileModal"> 
-				<img src="{{url('/uploads')}}/{{$user_profile->profile_image}}" class="profilePic" style="border-radius:0;"> </a>
+				<!-- <img src="{{url('/uploads')}}/{{$user_profile->profile_image}}" class="profilePic" style="border-radius:0;"> </a> -->
+				<img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
 			@else
 			<a href="#" data-toggle="modal" data-target="#profileModal"> 
-				<img src="{{ asset('images/nopic-tiny.gif') }}" class="profilePic" alt="">
+				<img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
+				<!-- <img src="{{ asset('images/nopic-tiny.gif') }}" class="profilePic" alt=""> -->
 			</a>
 			@endif	
 			

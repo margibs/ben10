@@ -3,7 +3,7 @@
 @section('ratemenu')
     <style>
     .content-wrap{
-        padding-top: 70px;
+        padding-top: 60px;
     }
     </style>
     <ul class="list-inline rateMenu">
@@ -21,7 +21,8 @@
     <div class="rateEntry">
         <div class="commentCount">
             <div class="triangle"></div>
-            <img src="{{url('uploads')}}/{{ $rate_item->avatar}}" alt="">
+            <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
+            <!-- <img src="{{ url('uploads')}}/{{ $rate_item->avatar }}" alt=""> -->
             <span class="total"> <a href=""> {{ $rate_item->comment_count }} comments </a> </span>                                      
         </div>  
         <div class="contentWrapper">
