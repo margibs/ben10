@@ -121,7 +121,8 @@
 
 	
 <div class="wrappers" style="margin-top:10px;padding: 0;">		
-			
+		<form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
+{!! csrf_field() !!}	
 			 <div class="col_half col_last nobottommargin">
 				<div class="productUploadForm" style="padding: 15px;">
 	                <span> Product Name </span>
@@ -161,6 +162,7 @@
 	            </div>
 	        </div>
 
+
 	        <div class="col_half nobottommargin">
 				
 
@@ -181,7 +183,7 @@
 
 
 			</div>
-
+	        </form>
 
 </div>
 

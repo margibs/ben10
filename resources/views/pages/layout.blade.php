@@ -217,7 +217,7 @@
 <!--- Quick Uplaod Popup -->
 
 <div id="addLinkModal" class="modal-container">
-<form action="rate/rate_upload" method="POST" enctype='multipart/form-data'>
+<form action="{{ url('rate/rate_upload') }}" method="POST" enctype='multipart/form-data'>
 {!! csrf_field() !!}
     <div class="modal-shade"></div>
     <div class="modal">
