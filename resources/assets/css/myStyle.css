@@ -1357,8 +1357,8 @@ color: #F36198;
     text-align: center;
     background-color: #fff;
     margin-bottom: 40px;
-    padding-top: 8px;
-    padding-bottom: 8px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     border-radius: 2px;
  }
 .rateMenu li{        
@@ -1368,7 +1368,7 @@ color: #F36198;
     font-size: 13px;
     font-weight: 600;
     color: #343030;
-    padding: 3px 8px;
+    padding: 9px 8px;
     border-radius: 3px;
     text-transform: uppercase;
 }

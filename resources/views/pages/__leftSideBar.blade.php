@@ -2,7 +2,8 @@
         <div class="left">
             <div class="wrappers">
                 <div class="profile">
-                    <img src="{{url('uploads')}}/{{Auth::user()->avatar}}" alt="">
+                    <!-- <img src="{{url('uploads')}}/{{Auth::user()->avatar}}" alt=""> -->
+                    <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
                     <p> {{ ucfirst(Auth::user()->name) }} </p>
                     <ul class="stars">
                         <li> <i class="icon-star3"></i> </li>

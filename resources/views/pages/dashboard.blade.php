@@ -100,18 +100,18 @@
 								</div>                          
 							</div>
 						@endforeach
-						<div class="outer" style="border:none;">
+					<!-- 	<div class="outer" style="border:none;">
 							<div class="inner" style="transform: translate(30%,24%);">
-						<!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
+		
 							<a id="uploadItemBtn" style="    
     display: inline-block;
     border: 1px dashed;
     padding: 5px 15px;
     font-size: 40px;
     color: #B8B8B8;"><i class="icon-line-plus"></i></a>
-						<!-- </div> -->
+						
 							</div>                          
-						</div>
+						</div> -->
 						
 					
 			</div>

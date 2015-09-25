@@ -29,195 +29,11 @@
 
 <body class="stretched no-transition">
 
-    <!-- Document Wrapper
-    ============================================= -->
-    <div id="wrapper" class="clearfix">
-
-         <!-- Header
-        ============================================= -->
-        <header id="header" class="full-header sticky-header">
-
-           <div id="header-wrap">
-
-                <div class="container clearfix">
-
-                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
-
-                    <!-- Logo
-                    ============================================= -->
-                    <div id="logo">
-                        <a href="{{url('')}}" class="standard-logo" data-dark-logo=""><img src="" alt="Canvas Logo"></a>
-                        <a href="{{url('')}}" class="retina-logo" data-dark-logo=""><img src="" alt="Canvas Logo"></a>
-                    </div><!-- #logo end -->
-
-                    <a id="addLinkBtn" class="uploadBtn"> Upload </a>
-                    <div class="dropdown" style="    
-   float: right;
-    margin-top: 17px;">
-                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-line2-heart"></i><span class="badge"> 2</span>                     
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dLabel">
-                        ...
-                      </ul>
-                    </div>
-
-                    <!-- Primary Navigation
-                    ============================================= -->
-                    <nav id="primary-menu">
-
-                        <ul>
-                            <li><a href="{{url('')}}"><div>Home</div></a></li>                             
-                            <li><a href="{{url('celebs')}}"><div> Celebs </div></a></li>
-                            <li><a href="{{url('cute')}}"><div> Cute </div></a></li>
-                            <li><a href=""><div> Fun </div></a>
-                                <ul>
-                                    <li><a href="{{url('slots')}}"><div> Slots </div></a></li>
-                                    <li><a href="{{url('bingo')}}"><div> Bingo </div></a></li>
-                                    <li><a href="{{url('scratch-cards')}}"><div> Scratch Cards</div></a></li>                  
-                                </ul>
-                            </li>
-                            <li><a href="{{ url('/rate') }}"><div> Rate </div></a></li>                     
-                        </ul>
-
-
-                        <!-- Top Search
-                        ============================================= -->
-                        <div id="top-search">
-
-                            <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-                          
-                                
-                        
-                            <a href="{{ url('/login')}}"><i class="icon-line2-lock"></i></a>                            
-                            <form action="search.html" method="get">
-                                <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
-                            </form>
-                        </div><!-- #top-search end -->
-
-                    </nav><!-- #primary-menu end -->
-
-                </div>   
-
-                 @yield('ratemenu')
-                                    
-                </div>
-
-            </div>
-
-        </header><!-- #header end -->
-    
-
-       
-    
-        <!-- Content
-        ============================================= -->
-        <section id="content">
-
-            <div class="content-wrap">
-                
-                <div class="container">
-                    
-                    <div class="row">
-                        
-                        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-push-2 col-lg-push-2"> 
-
-                                @yield('content')
-                        </div>
-                        
-                        
-                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-pull-7 col-lg-pull-7">
-                            @include('pages.__leftSideBar')
-                            </div>
-                            
-                            @include('pages.__rightSideBar')
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section><!-- #content end -->
-
-
-
-        <!-- Footer
-        ============================================= -->
-        <footer id="footer" class="dark" style="margin-top:0!important;">
-
-            <!-- Copyrights
-            ============================================= -->
-            <div id="copyrights">
-
-                <div class="container clearfix">
-
-                    <div class="col_half">
-                        Copyrights &copy; 2015 All Rights Reserved by Upmire.<br>
-                        <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
-                    </div>
-
-                    <div class="col_half col_last tright">
-                        <div class="fright clearfix">
-                            <a href="#" class="social-icon si-small si-borderless si-facebook">
-                                <i class="icon-facebook"></i>
-                                <i class="icon-facebook"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-twitter">
-                                <i class="icon-twitter"></i>
-                                <i class="icon-twitter"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-gplus">
-                                <i class="icon-gplus"></i>
-                                <i class="icon-gplus"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-pinterest">
-                                <i class="icon-pinterest"></i>
-                                <i class="icon-pinterest"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-vimeo">
-                                <i class="icon-vimeo"></i>
-                                <i class="icon-vimeo"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-github">
-                                <i class="icon-github"></i>
-                                <i class="icon-github"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-yahoo">
-                                <i class="icon-yahoo"></i>
-                                <i class="icon-yahoo"></i>
-                            </a>
-
-                            <a href="#" class="social-icon si-small si-borderless si-linkedin">
-                                <i class="icon-linkedin"></i>
-                                <i class="icon-linkedin"></i>
-                            </a>
-                        </div>
-
-                        <div class="clear"></div>
-
-                        <i class="icon-envelope2"></i> info@upmire.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 
-                    </div>
-
-                </div>
-
-            </div><!-- #copyrights end -->
-
-        </footer><!-- #footer end -->
-
-    </div><!-- #wrapper end -->
-
 
 <!--- Quick Uplaod Popup -->
 
 <div id="addLinkModal" class="modal-container">
-<form action="rate/rate_upload" method="POST" enctype='multipart/form-data'>
+<form action="rate/rate_upload" method="POST" enctype='multipart/form-data' style="margin-bottom:0;">
 {!! csrf_field() !!}
     <div class="modal-shade"></div>
     <div class="modal">
@@ -408,118 +224,7 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                         <span style="width:100.0000%;"><span class="progress" style="background:#fd96be;"></span></span>
                     </div>
                   </div>
-
                 <div class="pinkSeparator"></div>
-                    
-                    <!--  <div class="dropdown" style="float: right;margin-top: 17px;">
-                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
-border: 1px solid #F191B5;
-background-color: #F1669B;
-padding: 2px 10px;
-top: -15px;
-left: -15px;
-border-radius: 20px;                      ">
-                        <i class="icon-share-alt"></i>                
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dLabel" style="padding:0;left: -280px;">
-                        <div id="sendBox">                                                                                             
-                                <textarea placeholder="Your message here..."></textarea>
-                                <input type="text" placeholder="Search users"> 
-                                <div class="friendlist">
-                                    <span style="    
-    color: #E8BFCE;
-    font-size: 11px;
-    margin: 0 12px;
-    display: block;
-    text-align: right;"> Send to  </span> 
-                                    <ul>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11692791_1033839559960313_372475612082020913_n.jpg?oh=0dc578c37cb4448f0ed656cf1d3b8dfd&oe=56A697B7&__gda__=1452669051_59a0ec27323dad96c80cacbeddd5e32b" alt="">                                                
-                                                </div>
-                                                <p> Alice Watermelon </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/4765654_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> faliha101 </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/1337071_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> littleboyorange </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-
-                            </div>
-                      </ul>
-                    </div> -->
-
-                   <!--  <div class="dropdown" style="float: right;margin-top: 17px;">
-                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
-border: 1px solid #F191B5;
-background-color: #F1669B;
-padding: 2px 10px;
-top: -15px;
-left: -25px;
-border-radius: 20px;                      ">
-                        <i class="icon-paperplane"></i>                
-                      </a>
-                      <ul class="dropdown-menu" aria-labelledby="dLabel" style="padding:0;left: -280px;">
-                        <div id="sendBox">                                                                                             
-                           
-                                <textarea placeholder="Your message here..."></textarea>
-                                <input type="text" placeholder="Search users"> 
-                                <div class="friendlist">
-                                    <span style="    
-    color: #E8BFCE;
-    font-size: 11px;
-    margin: 0 12px;
-    display: block;
-    text-align: right;"> Send to  </span> 
-                                    <ul>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11692791_1033839559960313_372475612082020913_n.jpg?oh=0dc578c37cb4448f0ed656cf1d3b8dfd&oe=56A697B7&__gda__=1452669051_59a0ec27323dad96c80cacbeddd5e32b" alt="">                                                
-                                                </div>
-                                                <p> Alice Watermelon </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/4765654_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> faliha101 </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="">
-                                                <div class="friendImg">                                            
-                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/1337071_thumb.jpg" alt="">                                                
-                                                </div>
-                                                <p> littleboyorange </p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                
-
-                            </div>
-                      </ul>
-                    </div> -->
-               
                 <ul class="list-inline tleft">
                     <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
                     <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
@@ -543,104 +248,208 @@ border-radius: 20px;                      ">
             </div>
 
             <div class="commentWrapper">                              
-
-                                            
-                                            <h3> Comments <span> · <span id="comment_counter">4 </span></span></h3>
-                                              <ul id="put_comments_here">
-                                                                                                        <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-18 12:23:29 </span> </span>
-                                                          <p class="commentContent"> water </p>
-                                                      </li>
-                                                                                                        <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 12:39:32 </span> </span>
-                                                          <p class="commentContent">  </p>
-                                                      </li>
-                                                                                                        <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 12:39:33 </span> </span>
-                                                          <p class="commentContent"> HALLO </p>
-                                                      </li>
-                                                                                                        <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
-                                                          <p class="commentContent"> tttttt </p>
-                                                      </li>
-                                                      <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
-                                                          <p class="commentContent"> tttttt </p>
-                                                      </li>
-                                                      <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
-                                                          <p class="commentContent"> tttttt </p>
-                                                      </li>
-                                                      <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
-                                                          <p class="commentContent"> tttttt </p>
-                                                      </li>
-                                                      <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
-                                                          <p class="commentContent"> tttttt </p>
-                                                      </li>
-                                                      <li>
-                                                          <img src="
-                                                                                                                          http://vps184562.ovh.net/uploads/29713_cat.jpg 
-                                                                                                                             
-
-                                                          " alt="">
-                                                          <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-21 14:30:13 </span> </span>
-                                                          <p class="commentContent"> tttttt </p>
-                                                      </li>
-
-                                                                     
-                                              </ul>
-                                          <div class="clearfix"></div>
-                                          <form class="clearfix" action="#" method="post" id="commentform">
-                                              <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
-                                              <!-- <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;"> -->
-                                          </form>
-                                        </div>
+                <h3> Comments <span> · <span id="comment_counter">4 </span></span></h3>
+                    <ul id="put_comments_here">
+                        <li>
+                            <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
+                                <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-18 12:23:29 </span> </span>
+                                <p class="commentContent"> water </p>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <form class="clearfix" action="#" method="post" id="commentform">
+                      <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
+                      <!-- <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;"> -->
+                     </form>
+            </div>
 
         </div>
     </div>
 </div>
+
+    <!-- Document Wrapper
+    ============================================= -->
+    <div id="wrapper" class="clearfix">
+
+         <!-- Header
+        ============================================= -->
+        <header id="header" class="full-header sticky-header">
+
+           <div id="header-wrap">
+
+                <div class="container clearfix">
+
+                    <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+                    <!-- Logo
+                    ============================================= -->
+                    <div id="logo">
+                        <a href="{{url('')}}" class="standard-logo" data-dark-logo=""><img src="" alt="Canvas Logo"></a>
+                        <a href="{{url('')}}" class="retina-logo" data-dark-logo=""><img src="" alt="Canvas Logo"></a>
+                    </div><!-- #logo end -->
+
+                    <a id="addLinkBtn" class="uploadBtn"> Upload </a>
+                    <!-- <div class="dropdown" style="    
+   float: right;
+    margin-top: 17px;">
+                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-line2-heart"></i><span class="badge"> 2</span>                     
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        ...
+                      </ul>
+                    </div> -->
+
+                    <!-- Primary Navigation
+                    ============================================= -->
+                    <nav id="primary-menu">
+
+                        <ul>
+                            <li><a href="{{url('')}}"><div>Home</div></a></li>                             
+                            <li><a href="{{url('celebs')}}"><div> Celebs </div></a></li>
+                            <li><a href="{{url('cute')}}"><div> Cute </div></a></li>
+                            <li><a href=""><div> Fun </div></a>
+                                <ul>
+                                    <li><a href="{{url('slots')}}"><div> Slots </div></a></li>
+                                    <li><a href="{{url('bingo')}}"><div> Bingo </div></a></li>
+                                    <li><a href="{{url('scratch-cards')}}"><div> Scratch Cards</div></a></li>                  
+                                </ul>
+                            </li>
+                            <li><a href="{{ url('/rate') }}"><div> Rate </div></a></li>                     
+                        </ul>
+
+
+                        <!-- Top Search
+                        ============================================= -->
+                        <div id="top-search">
+
+                            <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
+                            <a href="{{ url('/dashboard')}}"><i class="icon-line2-heart"></i></a> 
+                            <a href="{{ url('/login')}}"><i class="icon-line2-lock"></i></a>                            
+                            <form action="search.html" method="get">
+                                <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                            </form>
+                        </div><!-- #top-search end -->
+
+                    </nav><!-- #primary-menu end -->
+
+                </div>   
+
+                 @yield('ratemenu')
+                                    
+                </div>
+
+            </div>
+
+        </header><!-- #header end -->
+    
+
+       
+    
+        <!-- Content
+        ============================================= -->
+        <section id="content">
+
+            <div class="content-wrap">
+                
+                <div class="container">
+                    
+                    <div class="row">
+                        
+                        <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7 col-md-push-2 col-lg-push-2"> 
+
+                                @yield('content')
+                        </div>
+                        
+                        
+                            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 col-md-pull-7 col-lg-pull-7">
+                            @include('pages.__leftSideBar')
+                            </div>
+                            
+                            @include('pages.__rightSideBar')
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section><!-- #content end -->
+
+
+
+        <!-- Footer
+        ============================================= -->
+        <footer id="footer" class="dark" style="margin-top:0!important;">
+
+            <!-- Copyrights
+            ============================================= -->
+            <div id="copyrights">
+
+                <div class="container clearfix">
+
+                    <div class="col_half">
+                        Copyrights &copy; 2015 All Rights Reserved by Upmire.<br>
+                        <div class="copyright-links"><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></div>
+                    </div>
+
+                    <div class="col_half col_last tright">
+                        <div class="fright clearfix">
+                            <a href="#" class="social-icon si-small si-borderless si-facebook">
+                                <i class="icon-facebook"></i>
+                                <i class="icon-facebook"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-twitter">
+                                <i class="icon-twitter"></i>
+                                <i class="icon-twitter"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-gplus">
+                                <i class="icon-gplus"></i>
+                                <i class="icon-gplus"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-pinterest">
+                                <i class="icon-pinterest"></i>
+                                <i class="icon-pinterest"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-vimeo">
+                                <i class="icon-vimeo"></i>
+                                <i class="icon-vimeo"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-github">
+                                <i class="icon-github"></i>
+                                <i class="icon-github"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-yahoo">
+                                <i class="icon-yahoo"></i>
+                                <i class="icon-yahoo"></i>
+                            </a>
+
+                            <a href="#" class="social-icon si-small si-borderless si-linkedin">
+                                <i class="icon-linkedin"></i>
+                                <i class="icon-linkedin"></i>
+                            </a>
+                        </div>
+
+                        <div class="clear"></div>
+
+                        <i class="icon-envelope2"></i> info@upmire.com <span class="middot">&middot;</span> <i class="icon-headphones"></i> +91-11-6541-6369 
+                    </div>
+
+                </div>
+
+            </div><!-- #copyrights end -->
+
+        </footer><!-- #footer end -->
+
+    </div><!-- #wrapper end -->
+
+
 
 
 
@@ -656,7 +465,7 @@ border-radius: 20px;                      ">
     <!-- External JavaScripts
     ============================================= -->
     <script type="text/javascript" src="{{ asset('js/functions.js') }}"></script>
-    <!-- <script type="text/javascript" src="{{ asset('js/simplebar.min.js') }}"></script> -->
+    <script type="text/javascript" src="{{ asset('js/simplebar.min.js') }}"></script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
