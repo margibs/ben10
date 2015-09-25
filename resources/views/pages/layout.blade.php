@@ -30,242 +30,6 @@
 <body class="stretched no-transition">
 
 
-<!--- Quick Uplaod Popup -->
-
-<div id="addLinkModal" class="modal-container">
-<form action="rate/rate_upload" method="POST" enctype='multipart/form-data' style="margin-bottom:0;">
-{!! csrf_field() !!}
-    <div class="modal-shade"></div>
-    <div class="modal">
-        <div class="modal-header">
-            <h1> Upload Items  
-                <a href="{{url('dashboard')}}" style="font-size: 13px; font-family: Roboto; color: #FFAFCD; padding: 10px; position: relative; top: -2px;">
-                    Click here for product upload 
-                </a>  <i class="i"></i>  
-            </h1>
-            <i class="icon-line-cross closeModalBtn" title="Close Modal"></i>
-        </div>
-        <div class="modal-banner">
-            <input type="radio" id="urlChoice" name="linkChoice" checked>
-            <label for="urlChoice" title="Insert as url" id="urlLabel"> Select a category </label>
-        </div>
-        <div class="modal-body-container">
-
-            <div id="url" class="modal-body">
-                {!! Form::select('rate_categories_parent',['outfit' => 'Outfit'], null) !!}
-                {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outift','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
-                <div>
-                    <div class="fileUpload">
-
-                        <i class="icon-line-upload" style="display:block;color: #E4075B;"></i>
-                        <span>Upload Image</span>
-                        <input type="file" name="file" class="upload" style="width:auto;">
-
-                        <div class="outer" style="height: 100%; width:100%; border-radius: 2px; overflow: hidden; position: absolute; top: 0; left: 0;opacity: 0.3;">
-                            <div class="inner" style="overflow: hidden;-moz-transform: translate(0%,-15%);-webkit-transform: translate(0%,-15%);transform: translate(0%,-15%);">
-                                <img id="myImg" style="width:100%;">                              
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <div style="
-                clear:both;
-                display: block;
-                margin-top: 15px;
-                ">
-                    <input type="text" id="urlText" name="name" required>
-                    <label for="urlText"> Item Title </label>
-                </div>
-
-                <div>
-                    <input type="text" id="urlURL" name="description" required>
-                    <label for="urlURL"> Description </label>
-                </div>           
-            </div>
-        </div>
-
-        <div class="modal-footer">
-            <!-- <div>
-            <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
-            <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
-            <span> Select an Image </span>
-            </div> -->
-            <div>                
-                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>   
-                <input type="submit" value="Submit">
-            </div>
-        </div>
-    </div>
-    </form>
-</div>
-
-
-<!--- Dashboard Uplaod Popup -->
-<div class="wrappers uploadModal">
-    <i class="icon-line-cross uploadModalClose" title="Close Modal"></i>
-
-    <div class="tabs tabs-bb clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">    
-
-        <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="    
-    background-color: #F36198;">
-            <li class="ui-state-default ui-corner-top  ui-tabs-active ui-state-active" role="tab" tabindex="-1" aria-controls="tabs-33" aria-labelledby="ui-id-17" aria-selected="false"><a href="#tabs-33" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-17"> Item Upload </a></li>
-            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-34" aria-labelledby="ui-id-18" aria-selected="false"><a href="#tabs-34" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-18"> Product Upload </a></li>           
-        </ul>
-
-        <div class="tab-container">
-
-            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-33" aria-labelledby="ui-id-17" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
-                
-        
-            </div>
-            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-34" aria-labelledby="ui-id-18" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
-
-                <form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
-                            {!! csrf_field() !!}
-                
-
-                        <div class="col_half">
-                            
-                             <div style="margin-bottom: 25px;">
-                                 <div class="fileUpload fileUpload2" style="width:100%;padding: 15px;">
-                                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
-                                    <span>Upload Image</span>
-                                    <input type="file" name="file2" class="upload" style="width:auto;">
-                                </div>
-                                <div class="outer" style=" height: 300px; margin-top:20px; border-radius: 2px; overflow: hidden;">
-                                    <div class="inner" style="overflow: hidden;">
-                                        <img id="myImg2" style="width:100%;">                              
-                                    </div>
-                                </div>
-                               
-                            </div>
-
-
-                        </div>
-                        <div class="col_half col_last">
-                            
-                            <div class="productUploadForm">
-                                <span> Product Name </span>
-                                <input type="text" name="name" style="margin-top: 0;" required>
-
-                                <span> Intended application </span>
-                                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
-
-                                <span> Animal Tested </span>
-                                 <input type="radio" name="animal_tested" value="yes" checked> 
-                                 <label for="animal_tested"> Yes </label>
-                                 <input type="radio" name="animal_tested" value="No"> 
-                                 <label for="animal_tested"> No </label>
-                                 <br />
-                                 <br />
-
-
-                                <span> Eco Friendly </span>
-                                <input type="radio" name="eco_friendly" value="yes" checked>
-                                <label for="eco_friendly"> Yes </label>
-                                 <input type="radio" name="eco_friendly" value="No">
-                                 <label for="eco_friendly"> No </label>
-                                 <br />
-                                 <br />
-
-                                <span> Alternative Products </span>
-                                <input type="text" name="alt_products" style="margin-top: 0;" required>
-
-                                <span> Price Range </span>
-                                <input type="text" name="price_range" style="margin-top: 0;" required>
-
-                                <span> Available From </span>
-                                <input type="text" name="available_from" style="margin-top: 0;" required>
-
-                                <input class="productUploadSubmit" type="submit" value="Submit">  
-                            </div>
-
-                        </div>
-
-                </form>
-
-            </div>
-        
-
-        </div>
-
-    </div>
-</div>
-
-<!---Rate Item Popup -->
-<div id="rateItem">
-    <a class="imgRateClose" style="    
-position: absolute;
-color: #EDEDED;
-z-index: 2;
-top: 10px;
-right: 10px;
-font-size: 13px;
-text-transform: uppercase;
-font-weight: 600;"> <i class="icon-line-cross"></i> </a>
-    <div class="col-md-7">
-        <div class="left">
-            <div class="topBlack">
-                <!-- <div class="user"><img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt=""> <span><a href="">by Emily</a></span> </div> -->
-                <h2> Sweet Navy</h2>
-            </div>
-            <img src="http://www.hammihan.com/users/status/original/HamMihan-201510658816090181021424900436.058.jpg" alt="">
-        </div>
-    </div>
-    <div class="col-md-5">
-        <div class="right">
-            <div class="admireBox">
-                <h2> 100% <span> admirability </span> </h2>
-
-                <div class="meterWrapper2 ">
-                    <div class="meter" style="background:#df4580; border:1px solid rgb(240, 78, 140); height: 12px;">                   
-                        <span style="width:100.0000%;"><span class="progress" style="background:#fd96be;"></span></span>
-                    </div>
-                  </div>
-                <div class="pinkSeparator"></div>
-                <ul class="list-inline tleft">
-                    <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
-                    <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
-                    <li> <span> You admire this. </span></li>                   
-                </ul>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <div class="admireComment">
-                <div class="col_three_fifth nobottommargin">
-                    <div class="meter">
-                     <span id="meter_yoyo" style="width:41.66666666666667%;"><span class="progress2"></span></span>
-                    </div>
-                    <span class="info" id="coins_to_earn"> 70 coins can be earned </span>
-                </div>
-                <div class="col_two_fifth col_last nobottommargin">
-                    <span class="totalCoins"> Your Coins</span>
-                    <p class="coins current_coins">907</p>
-                </div>
-            </div>
-
-            <div class="commentWrapper">                              
-                <h3> Comments <span> · <span id="comment_counter">4 </span></span></h3>
-                    <ul id="put_comments_here">
-                        <li>
-                            <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
-                                <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-18 12:23:29 </span> </span>
-                                <p class="commentContent"> water </p>
-                        </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                    <form class="clearfix" action="#" method="post" id="commentform">
-                      <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
-                      <!-- <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;"> -->
-                     </form>
-            </div>
-
-        </div>
-    </div>
-</div>
 
     <!-- Document Wrapper
     ============================================= -->
@@ -450,6 +214,258 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
     </div><!-- #wrapper end -->
 
 
+<!--- Quick Uplaod Popup -->
+
+<div id="addLinkModal" class="modal-container">
+<form action="{{ url('rate/rate_upload') }}" method="POST" enctype='multipart/form-data' style="margin-bottom:0;">
+
+{!! csrf_field() !!}
+    <div class="modal-shade"></div>
+    <div class="modal">
+        <div class="modal-header">
+            <h1> Upload Items  
+                <a href="{{url('dashboard')}}" style="font-size: 13px; font-family: Roboto; color: #FFAFCD; padding: 10px; position: relative; top: -2px;">
+                    Click here for product upload 
+                </a>  <i class="i"></i>  
+            </h1>
+            <i class="icon-line-cross closeModalBtn" title="Close Modal"></i>
+        </div>
+        <div class="modal-banner">
+            <input type="radio" id="urlChoice" name="linkChoice" checked>
+            <label for="urlChoice" title="Insert as url" id="urlLabel"> Select a category </label>
+        </div>
+        <div class="modal-body-container">
+
+            <div id="url" class="modal-body">
+                {!! Form::select('rate_categories_parent',['outfit' => 'Outfit'], null) !!}
+                {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outfit','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
+                <div>
+                    <div class="fileUpload">
+
+                        <i class="icon-line-upload" style="display:block;color: #E4075B;"></i>
+                        <span>Upload Image</span>
+                        <input type="file" name="file" class="upload" style="width:auto;">
+
+                        <div class="outer" style="height: 100%; width:100%; border-radius: 2px; overflow: hidden; position: absolute; top: 0; left: 0;opacity: 0.3;">
+                            <div class="inner" style="overflow: hidden;-moz-transform: translate(0%,-15%);-webkit-transform: translate(0%,-15%);transform: translate(0%,-15%);">
+                                <img id="myImg" style="width:100%;">                              
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div style="
+                clear:both;
+                display: block;
+                margin-top: 15px;
+                ">
+                    <input type="text" id="urlText" name="name" required>
+                    <label for="urlText"> Item Title </label>
+                </div>
+
+                <div>
+                    <input type="text" id="urlURL" name="description" required>
+                    <label for="urlURL"> Description </label>
+                </div>           
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <!-- <div>
+            <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
+            <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
+            <span> Select an Image </span>
+            </div> -->
+            <div>                
+                <!-- <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>  -->  
+                <input type="submit" value="Upload Now" style="
+    background-color: transparent;
+    border: none;
+    background-color: #F36198;
+    color: #fff;
+    padding: 5px 20px;
+    font-size: 15px;
+    border-radius: 20px;
+    background: #f280aa;
+    background: -moz-linear-gradient(top, #f280aa 0%, #f45793 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f280aa), color-stop(100%,#f45793));
+    background: -webkit-linear-gradient(top, #f280aa 0%,#f45793 100%);
+    background: -o-linear-gradient(top, #f280aa 0%,#f45793 100%);
+    background: -ms-linear-gradient(top, #f280aa 0%,#f45793 100%);
+    background: linear-gradient(to bottom, #f280aa 0%,#f45793 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f280aa', endColorstr='#f45793',GradientType=0 );
+    ">
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
+
+
+<!--- Dashboard Uplaod Popup -->
+<div class="wrappers uploadModal">
+    <i class="icon-line-cross uploadModalClose" title="Close Modal"></i>
+
+    <div class="tabs tabs-bb clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">    
+
+        <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="    
+    background-color: #F36198;">
+            <li class="ui-state-default ui-corner-top  ui-tabs-active ui-state-active" role="tab" tabindex="-1" aria-controls="tabs-33" aria-labelledby="ui-id-17" aria-selected="false"><a href="#tabs-33" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-17"> Item Upload </a></li>
+            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-34" aria-labelledby="ui-id-18" aria-selected="false"><a href="#tabs-34" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-18"> Product Upload </a></li>           
+        </ul>
+
+        <div class="tab-container">
+
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-33" aria-labelledby="ui-id-17" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
+                
+        
+            </div>
+            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-34" aria-labelledby="ui-id-18" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
+
+                <form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
+                            {!! csrf_field() !!}
+                
+
+                        <div class="col_half">
+                            
+                             <div style="margin-bottom: 25px;">
+                                 <div class="fileUpload fileUpload2" style="width:100%;padding: 15px;">
+                                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
+                                    <span>Upload Image</span>
+                                    <input type="file" name="file2" class="upload" style="width:auto;">
+                                </div>
+                                <div class="outer" style=" height: 300px; margin-top:20px; border-radius: 2px; overflow: hidden;">
+                                    <div class="inner" style="overflow: hidden;">
+                                        <img id="myImg2" style="width:100%;">                              
+                                    </div>
+                                </div>
+                               
+                            </div>
+
+
+                        </div>
+                        <div class="col_half col_last">
+                            
+                            <div class="productUploadForm">
+                                <span> Product Name </span>
+                                <input type="text" name="name" style="margin-top: 0;" required>
+
+                                <span> Intended application </span>
+                                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
+
+                                <span> Animal Tested </span>
+                                 <input type="radio" name="animal_tested" value="yes" checked> 
+                                 <label for="animal_tested"> Yes </label>
+                                 <input type="radio" name="animal_tested" value="No"> 
+                                 <label for="animal_tested"> No </label>
+                                 <br />
+                                 <br />
+
+
+                                <span> Eco Friendly </span>
+                                <input type="radio" name="eco_friendly" value="yes" checked>
+                                <label for="eco_friendly"> Yes </label>
+                                 <input type="radio" name="eco_friendly" value="No">
+                                 <label for="eco_friendly"> No </label>
+                                 <br />
+                                 <br />
+
+                                <span> Alternative Products </span>
+                                <input type="text" name="alt_products" style="margin-top: 0;" required>
+
+                                <span> Price Range </span>
+                                <input type="text" name="price_range" style="margin-top: 0;" required>
+
+                                <span> Available From </span>
+                                <input type="text" name="available_from" style="margin-top: 0;" required>
+
+                                <input class="productUploadSubmit" type="submit" value="Submit">  
+                            </div>
+
+                        </div>
+
+                </form>
+
+            </div>
+        
+
+        </div>
+
+    </div>
+</div>
+
+<!---Rate Item Popup -->
+<div id="rateItem">
+    <a class="imgRateClose" style="    
+position: absolute;
+color: #EDEDED;
+z-index: 2;
+top: 10px;
+right: 10px;
+font-size: 13px;
+text-transform: uppercase;
+font-weight: 600;"> <i class="icon-line-cross"></i> </a>
+    <div class="col-md-7">
+        <div class="left">
+            <div class="topBlack">
+                <!-- <div class="user"><img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt=""> <span><a href="">by Emily</a></span> </div> -->
+                <h2> Sweet Navy</h2>
+            </div>
+            <img src="http://www.hammihan.com/users/status/original/HamMihan-201510658816090181021424900436.058.jpg" alt="">
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="right">
+            <div class="admireBox">
+                <h2> 100% <span> admirability </span> </h2>
+
+                <div class="meterWrapper2 ">
+                    <div class="meter" style="background:#df4580; border:1px solid rgb(240, 78, 140); height: 12px;">                   
+                        <span style="width:100.0000%;"><span class="progress" style="background:#fd96be;"></span></span>
+                    </div>
+                  </div>
+                <div class="pinkSeparator"></div>
+                <ul class="list-inline tleft">
+                    <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
+                    <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
+                    <li> <span> You admire this. </span></li>                   
+                </ul>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <div class="admireComment">
+                <div class="col_three_fifth nobottommargin">
+                    <div class="meter">
+                     <span id="meter_yoyo" style="width:41.66666666666667%;"><span class="progress2"></span></span>
+                    </div>
+                    <span class="info" id="coins_to_earn"> 70 coins can be earned </span>
+                </div>
+                <div class="col_two_fifth col_last nobottommargin">
+                    <span class="totalCoins"> Your Coins</span>
+                    <p class="coins current_coins">907</p>
+                </div>
+            </div>
+
+            <div class="commentWrapper">                              
+                <h3> Comments <span> · <span id="comment_counter">4 </span></span></h3>
+                    <ul id="put_comments_here">
+                        <li>
+                            <img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt="">
+                                <span class="name"> <a href="http://vps184562.ovh.net/profile/1"> Emily </a> <span class="commentDate"> · 2015-09-18 12:23:29 </span> </span>
+                                <p class="commentContent"> water </p>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                    <form class="clearfix" action="#" method="post" id="commentform">
+                      <textarea id="comment_yeah" name="comment" cols="30" rows="10"></textarea>
+                      <!-- <input type="submit" id="submit-button" class="commentSubmit pull-right" value="Submit" style="margin: 0; margin-bottom: 20px;"> -->
+                     </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
