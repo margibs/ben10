@@ -144,7 +144,6 @@
 
                  @yield('ratemenu')
                                     
-
                 </div>
 
             </div>
@@ -261,103 +260,73 @@
 <!--- Quick Uplaod Popup -->
 
 <div id="addLinkModal" class="modal-container">
-          <div class="modal-shade"></div>
-          <div class="modal">
-            <div class="modal-header">
-              <h1> Upload Items  <a href="http://localhost/upmire/public/dashboard" style="    
-    font-size: 13px;
-    font-family: Roboto;
-    color: #FFAFCD;
-    padding: 10px;
-    position: relative;
-    top: -2px;"> Click here for product upload </a>  <i class="i"></i>  </h1>
-              <i class="icon-line-cross closeModalBtn" title="Close Modal"></i>
-            </div>
-            <div class="modal-banner">
-              <input type="radio" id="urlChoice" name="linkChoice" checked>
-              <label for="urlChoice" title="Insert as url" id="urlLabel"> Select a category </label>
-            </div>
-            <div class="modal-body-container">
-             
-              <div id="url" class="modal-body">
-                
-                <div id="dd" class="wrapper-dropdown-3" tabindex="1">
-                    <span>Sub-Category</span>
-                    <ul id="subDropdown" class="dropdown">
-                        <li><a href="#">Outfit</a></li>                        
-                    </ul>
-                </div>
+<form action="rate/rate_upload" method="POST" enctype='multipart/form-data'>
+{!! csrf_field() !!}
+    <div class="modal-shade"></div>
+    <div class="modal">
+        <div class="modal-header">
+            <h1> Upload Items  
+                <a href="{{url('dashboard')}}" style="font-size: 13px; font-family: Roboto; color: #FFAFCD; padding: 10px; position: relative; top: -2px;">
+                    Click here for product upload 
+                </a>  <i class="i"></i>  
+            </h1>
+            <i class="icon-line-cross closeModalBtn" title="Close Modal"></i>
+        </div>
+        <div class="modal-banner">
+            <input type="radio" id="urlChoice" name="linkChoice" checked>
+            <label for="urlChoice" title="Insert as url" id="urlLabel"> Select a category </label>
+        </div>
+        <div class="modal-body-container">
 
-                <div id="dd2" class="wrapper-dropdown-1" tabindex="1">
-                    <span>Category</span>
-                    <ul id="parentDropdown" class="dropdown">
-                        <li><a href="#">Outfit</a></li>
-                        <li><a href="#">Recipe</a></li>
-                        <li><a href="#">Shoes</a></li>
-                        <li><a href="#">Cooking</a></li>
-                        <li><a href="#">Diet</a></li>
-                        <li><a href="#">Room</a></li>
-                        <li><a href="#">Garden</a></li>
-                        <li><a href="#">Jewelry</a></li>
-                        <li><a href="#">Holiday</a></li>
-                    </ul>
-                </div>
-
+            <div id="url" class="modal-body">
+                {!! Form::select('rate_categories_parent',['outfit' => 'Outfit'], null) !!}
+                {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outift','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
                 <div>
-                 
-
-             
                     <div class="fileUpload">
+
                         <i class="icon-line-upload" style="display:block;color: #E4075B;"></i>
                         <span>Upload Image</span>
                         <input type="file" name="file" class="upload" style="width:auto;">
 
-                           <div class="outer" style="  
-    height: 100%;
-    width:100%;                            
-    border-radius: 2px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0.3;">
-                                    <div class="inner" style="overflow: hidden;-moz-transform: translate(0%,-15%);-webkit-transform: translate(0%,-15%);transform: translate(0%,-15%);">
-                                        <img id="myImg" style="width:100%;">                              
-                                    </div>
-                    </div>
+                        <div class="outer" style="height: 100%; width:100%; border-radius: 2px; overflow: hidden; position: absolute; top: 0; left: 0;opacity: 0.3;">
+                            <div class="inner" style="overflow: hidden;-moz-transform: translate(0%,-15%);-webkit-transform: translate(0%,-15%);transform: translate(0%,-15%);">
+                                <img id="myImg" style="width:100%;">                              
+                            </div>
+                        </div>
 
                     </div>
-                    
                 </div>
+
                 <div style="
-    clear:both;
-    display: block;
-    margin-top: 15px;
-  ">
-                  <input type="text" id="urlText" name="urlTextValue">
-                  <label for="urlText"> Item Title </label>
+                clear:both;
+                display: block;
+                margin-top: 15px;
+                ">
+                    <input type="text" id="urlText" name="name" required>
+                    <label for="urlText"> Item Title </label>
                 </div>
+
                 <div>
-                  <input type="url" id="urlURL" name="urlURLValue">
-                  <label for="urlURL"> Description </label>
+                    <input type="text" id="urlURL" name="description" required>
+                    <label for="urlURL"> Description </label>
                 </div>           
-              </div>
-            
             </div>
-
-            <div class="modal-footer">
-              <!-- <div>
-                <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
-                <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
-                <span> Select an Image </span>
-              </div> -->
-              <div>                
-                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>   
-
-              </div>
-            </div>
-          </div>
         </div>
+
+        <div class="modal-footer">
+            <!-- <div>
+            <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
+            <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
+            <span> Select an Image </span>
+            </div> -->
+            <div>                
+                <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>   
+                <input type="submit" value="Submit">
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
 
 
 <!--- Dashboard Uplaod Popup -->

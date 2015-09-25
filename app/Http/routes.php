@@ -26,6 +26,7 @@ Route::group(['middleware' => 'AuthCheck'], function()
 	
 	//RateController
 	Route::get('rate', 'PageController@rate');
+	Route::post('rate/rate_upload','PageController@rateUpload');
 	Route::get('rate/{category?}', 'PageController@rateCategory');
 
 });

@@ -1,23 +1,16 @@
 @extends('pages.layout')
 
 @section('ratemenu')
-<style>
-.content-wrap{
-    padding-top: 70px;
-}
-</style>
-<ul class="list-inline rateMenu">
-<!-- <li><span> Categories </span></li> -->
-<li> <a href=""> <img src="{{ asset('images/outfits.png') }}" alt=""> <span>Outfits</span> </a> </li>
-<li> <a href=""> <img src="{{ asset('images/shoes.png') }}" alt=""> <span>Shoes</span> </a> </li>        
-<li> <a href=""> <img src="{{ asset('images/cooking.png') }}" alt=""> <span>Cooking</span> </a> </li>
-<li> <a href=""> <img src="{{ asset('images/diet.png') }}" alt=""> <span> Diet </span></a> </li>
-<li> <a href=""> <img src="{{ asset('images/bedroom.png') }}" alt=""> <span> Bedroom </span> </a> </li>
-<li> <a href=""> <img src="{{ asset('images/garden.png') }}" alt=""> <span> Garden </span></a> </li>
-<li> <a href=""> <img src="{{ asset('images/jewelry.png') }}" alt=""> <span> Jewelry </span></a> </li>
-<li> <a href=""> <img src="{{ asset('images/holiday.png') }}" alt=""> <span> Holiday </span></a> </li>
-<li> <a href=""> <img src="{{ asset('images/product.png') }}" alt=""> <span> Products </span> </a> </li>
-</ul> 
+    <style>
+    .content-wrap{
+        padding-top: 70px;
+    }
+    </style>
+    <ul class="list-inline rateMenu">
+        @foreach($rate_categories as $rate_category)
+        <li> <a href="{{url('rate')}}/{{$rate_category->slug}}"><span>{{$rate_category->name}}</span> </a> </li>
+        @endforeach
+    </ul> 
 @endsection
 
 @section('content')

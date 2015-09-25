@@ -96,6 +96,7 @@ class PageController extends Controller
       ->leftjoin('rate_results', 'rate_items.id','=', 
       DB::raw('rate_results.rate_item_id AND rate_results.user_id = ' . Auth::user()->id))
       ->select('rate_items.id as rate_item_id','rate_items.name as rate_name','rate_items.description as rate_description','rate_items.image_url as rate_image_url ','users.name as user_name','users.id as user_id','users.avatar','rate_results.result_yes as upmire','rate_results.result_no as downmire',DB::raw('(SELECT COUNT(1) FROM rate_comments WHERE rate_comments.rate_item_id = rate_items.id) as comment_count'))
+      ->orderBy('rate_items.id','DESC')
       ->get();
 
 
@@ -123,6 +124,63 @@ class PageController extends Controller
   public function rateCategory($category)
   {
     return 'category';
+  }
+
+  public function rateUpload(Request $request)
+  {
+    // getting all of the post data
+    $file = array('file' => $request->file('file'));
+    // setting up rules
+    //$rules = array('file' => 'required','file' => 'mimes:jpeg,png,bmp'); //mimes:jpeg,bmp,png and for max size max:10000
+    $rules = array('file' => 'required|mimes:jpeg,png,bmp'); 
+    // doing the validation, passing post data, rules and the messages
+    $validator = Validator::make($file, $rules);
+
+    if ($validator->fails()) 
+    {
+      // return $validator->messages();
+      return Redirect::back()->withErrors($validator->messages());
+    }
+    else 
+    {
+
+      // checking file is valid.
+      $originalName = $request->file('file')->getClientOriginalName();
+
+      if ($request->file('file')->isValid()) 
+      {
+        $destinationPath = 'uploads'; // upload path
+        // $extension = Input::file('file')->getClientOriginalExtension(); // getting image extension
+        //$originalName = Input::file('file')->getClientOriginalName();
+        $fileName = rand(11111,99999).'_'.strtolower($originalName); // renameing image
+        $fileSize = $request->file('file')->getSize();
+
+        $request->file('file')->move($destinationPath, $fileName); // uploading file to given path
+        // sending back with message
+        // Session::flash('success', 'Upload successfully'); 
+
+        $file['file_name'] = strtolower($fileName); 
+        $file['file_size'] = $fileSize / 1024;
+
+        $rate_category_slug = RateCategory::where('slug',$request->input('rate_categories_child'))->first();
+        $rateItem = new RateItem;
+        $rateItem->image_url = $file['file_name'];
+        $rateItem->user_id = Auth::user()->id;
+        $rateItem->name = $request->input('name');
+        $rateItem->category_id = $rate_category_slug->id;
+        $rateItem->description = $request->input('description');
+        
+
+        $rateItem->save();
+
+        return redirect('rate');
+      }
+      else 
+      {
+        // return 'not successfully uploaded: '.$request->file('file')->getErrorMessage();
+        return Redirect::back()->withErrors(['error', 'file not valid']);
+      }
+    }
   }
 
   public function dashboard()
