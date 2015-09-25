@@ -10,4 +10,9 @@ class SideBar {
 	{
 		return Post::all();
 	}
+
+	public function watermelon($water)
+	{
+		return $water;
+	}
 }

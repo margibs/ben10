@@ -46,6 +46,13 @@ class PageController extends Controller
 
   public function home()
   {
+    // $sample = DB::table('rate_categories AS a')
+    // ->join('rate_categories AS b','a.parent_id','=','b.id')
+    // ->select('a.name as child_name','a.id as child_id','a.slug as child_slug','b.name as parent_name','b.id as parent_id','b.slug as parent_slug')
+    // ->where('a.id','2')
+    // ->first();
+
+    // dd($sample);
     $posts = $this->customQuery->getPosts();
     return view('pages.home',compact('posts'));
   }

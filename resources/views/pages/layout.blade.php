@@ -65,7 +65,7 @@
                                 <ul>
                                     <li><a href="{{url('slots')}}"><div> Slots </div></a></li>
                                     <li><a href="{{url('bingo')}}"><div> Bingo </div></a></li>
-                                    <li><a href="{{url('')}}"><div> Scratch Cards</div></a></li>                  
+                                    <li><a href="{{url('scratch-cards')}}"><div> Scratch Cards</div></a></li>                  
                                 </ul>
                             </li>
                             <li><a href="{{ url('/rate') }}"><div> Rate </div></a></li>                     
