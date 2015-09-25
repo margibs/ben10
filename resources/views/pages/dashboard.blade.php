@@ -129,14 +129,15 @@
 
 	                <span> Intended application </span>
 	                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
-
+					<br />
+					<br />
 	                <span> Animal Tested </span>
 	                 <input type="radio" name="animal_tested" value="yes" checked> 
 	                 <label for="animal_tested"> Yes </label>
 	                 <input type="radio" name="animal_tested" value="No"> 
 	                 <label for="animal_tested"> No </label>
 	                 <br />
-	       
+	       			<br />	
 
 
 	                <span> Eco Friendly </span>
@@ -145,7 +146,7 @@
 	                 <input type="radio" name="eco_friendly" value="No">
 	                 <label for="eco_friendly"> No </label>
 	                 <br />
-	               
+	               <br />
 
 	                <span> Alternative Products </span>
 	                <input type="text" name="alt_products" style="margin-top: 0;" required>
