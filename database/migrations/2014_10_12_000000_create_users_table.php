@@ -25,6 +25,11 @@ class CreateUsersTable extends Migration
 
             $table->string('avatar');
             $table->text('description');
+
+            $table->string('facebook');
+            $table->string('twitter');
+            $table->integer('coins');
+            
             $table->tinyInteger('is_admin')->default(0);
 
             $table->timestamps();
