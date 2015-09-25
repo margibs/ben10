@@ -27230,6 +27230,9 @@ color: #F36198;
 
 
 /* ================ DASHBOARD ================= */
+#uploadItemBtn:hover, .uploadModalClose:hover{
+  cursor: pointer;
+}
 .dashLink ul{
   margin-bottom: 0;
   text-align: center;
@@ -27288,6 +27291,40 @@ color: #F36198;
 }
 .tabs.tabs-bb ul.tab-nav li.ui-tabs-active a{
    border-bottom: 2px solid #F45793;
+}
+.uploadModal{
+  position: fixed;
+  top: -100%;
+  left: 25%;
+  width: 100%;
+  max-width: 600px;
+  margin-top:10px;
+  padding: 0;
+  top: -100%;
+}
+.uploadModalClose{
+  float: right;
+    margin: 9px 10px;
+    font-size: 15px;
+    position: relative;
+    z-index: 2;
+    color: #fff;
+}
+.productUploadForm span{
+    color: #424253;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.productUploadSubmit{
+  background-color: #F45F98;
+    border: 0;
+    color: #fff;
+    font-family: Roboto;
+    font-weight: 700;
+    padding: 6px 22px;
+    font-size: 15px;
+    border-radius: 20px;
 }
 
 .thumbGallery .col-md-3,  .thumbGallery .col-sm-4, .thumbGallery .col-xs-6 {
@@ -27515,6 +27552,39 @@ color: #F36198;
 }
 
 /* ===== RATE ITEM MODAL ======= */
+.rateEntry .imgRate:hover, .imgRateClose:hover{
+    cursor: pointer;
+}
+.rateEntry{
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+ .rateMenu{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 2px;
+ }
+.rateMenu li{        
+    padding-right: 3px;
+}
+.rateMenu li span{
+    font-size: 13px;
+    font-weight: 600;
+    color: #343030;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.rateMenu li a img{
+    display: none;
+    width: 41px;
+    padding: 2px;
+    overflow: hidden;
+    border-radius: 50%;
+}   
 
 #rateItem{
     position: fixed;
@@ -27697,16 +27767,16 @@ color: #F36198;
     right: 25px;
     top: 141px;
     border-radius: 3px;
-    border-left: 1px solid #C3C3C3;
+ /*     border-left: 1px solid #C3C3C3;
     border-right: 1px solid #C3C3C3;
     border-bottom: 1px solid #C3C3C3;
-    box-shadow: 0 0 10px 1px #D0D0D0;
-    text-align: left;
+  box-shadow: 0 0 10px 1px #D0D0D0;
+*/    text-align: left;
 
 }
 
 #sendBox{
-    display: none; 
+/*    display: none; 
     position: absolute;
     background-color: #fff;
     z-index: 2;
@@ -27717,6 +27787,7 @@ color: #F36198;
     border-right: 1px solid #C3C3C3;
     border-bottom: 1px solid #C3C3C3;
     box-shadow: 0 0 10px 1px #D0D0D0;
+*/  
     text-align: left;
 }
 #shareBox{

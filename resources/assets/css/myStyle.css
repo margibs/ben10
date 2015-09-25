@@ -1024,6 +1024,9 @@ color: #F36198;
 
 
 /* ================ DASHBOARD ================= */
+#uploadItemBtn:hover, .uploadModalClose:hover{
+  cursor: pointer;
+}
 .dashLink ul{
   margin-bottom: 0;
   text-align: center;
@@ -1343,6 +1346,39 @@ color: #F36198;
 }
 
 /* ===== RATE ITEM MODAL ======= */
+.rateEntry .imgRate:hover, .imgRateClose:hover{
+    cursor: pointer;
+}
+.rateEntry{
+    margin-bottom: 30px;
+    overflow: hidden;
+}
+ .rateMenu{
+    text-align: center;
+    background-color: #fff;
+    margin-bottom: 40px;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    border-radius: 2px;
+ }
+.rateMenu li{        
+    padding-right: 3px;
+}
+.rateMenu li span{
+    font-size: 13px;
+    font-weight: 600;
+    color: #343030;
+    padding: 3px 8px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.rateMenu li a img{
+    display: none;
+    width: 41px;
+    padding: 2px;
+    overflow: hidden;
+    border-radius: 50%;
+}   
 
 #rateItem{
     position: fixed;
@@ -1525,16 +1561,16 @@ color: #F36198;
     right: 25px;
     top: 141px;
     border-radius: 3px;
-    border-left: 1px solid #C3C3C3;
+ /*     border-left: 1px solid #C3C3C3;
     border-right: 1px solid #C3C3C3;
     border-bottom: 1px solid #C3C3C3;
-    box-shadow: 0 0 10px 1px #D0D0D0;
-    text-align: left;
+  box-shadow: 0 0 10px 1px #D0D0D0;
+*/    text-align: left;
 
 }
 
 #sendBox{
-    display: none; 
+/*    display: none; 
     position: absolute;
     background-color: #fff;
     z-index: 2;
@@ -1545,6 +1581,7 @@ color: #F36198;
     border-right: 1px solid #C3C3C3;
     border-bottom: 1px solid #C3C3C3;
     box-shadow: 0 0 10px 1px #D0D0D0;
+*/  
     text-align: left;
 }
 #shareBox{

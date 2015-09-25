@@ -25,49 +25,6 @@
     ============================================= -->
     <title> Upmire </title>
 
-<style>
-    .rateEntry{
-        margin-bottom: 30px;
-        overflow: hidden;
-    }
-     .rateMenu{
-        text-align: center;
-        background-color: #fff;
-        margin-bottom: 40px;
-        padding-top: 8px;
-        padding-bottom: 8px;
-        border-radius: 2px;
-      /*  border-bottom: 1px solid#DAD8D8;
-        -moz-box-shadow: 0 2px 6px 0px #ddd;
-        -webkit-box-shadow: 0 2px 6px 0px #ddd;
-        box-shadow: 0 2px 6px 0px #ddd;*/
-     }
-    .rateMenu li{        
-        padding-right: 3px;
-    }
-    .rateMenu li span{
-        font-size: 13px;
-        font-weight: 600;
-        /*display: block;*/
-        color: #343030;
-        /* background-color: #000; */
-        padding: 3px 8px;
-        border-radius: 3px;
-        text-transform: uppercase;
-    }
-    .rateMenu li a img{
-        display: none;
-        width: 41px;
-        padding: 2px;
-        overflow: hidden;
-        border-radius: 50%;
-        /*border: 1px solid #EBEBEB;
-        background-color: whitesmoke;*/
-        /*background: linear-gradient(to bottom, #F5F5F5 0%,#E5E5E5 100%);*/
-    }   
-
-</style>
-
 </head>
 
 <body class="stretched no-transition">
@@ -188,7 +145,7 @@
 
         <!-- Footer
         ============================================= -->
-        <footer id="footer" class="dark">
+        <footer id="footer" class="dark" style="margin-top:0!important;">
 
             <!-- Copyrights
             ============================================= -->
@@ -484,57 +441,19 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                   </div>
 
                 <div class="pinkSeparator"></div>
-                <ul class="list-inline pull-right listtwo">
-                    <li> <a class="shareLink"> <i class="icon-share-alt"></i> </a> 
-                         <div id="shareBox">                                
-                                <div class="friendlist">
-                                    <ul>
-                                        <li>
-                                            <a href="" class="follow">
-                                                <p><i class="icon-star3"></i> <span> Follow Item </span></p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="" class="fb">
-                                                <p> <i class='icon-facebook-sign'></i> <span> Facebook </span>  </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="" class="twtr">
-                                                <p> <i class='icon-twitter'></i>  <span> Twitter </span> </p>
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="" class="pinterest">
-                                                <p> <i class='icon-pinterest2'></i>  <span> Pinterest </span></p>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                    </li>
-                    <li> 
                     
-                    <div class="dropdown" style="float: right;margin-top: 17px;">
-                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        <i class="icon-paperplane"></i>                
+                    <!--  <div class="dropdown" style="float: right;margin-top: 17px;">
+                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
+border: 1px solid #F191B5;
+background-color: #F1669B;
+padding: 2px 10px;
+top: -15px;
+left: -15px;
+border-radius: 20px;                      ">
+                        <i class="icon-share-alt"></i>                
                       </a>
-                      <ul class="dropdown-menu" aria-labelledby="dLabel">
-                        ...
-                      </ul>
-                    </div>
-
-                    <a class="sendLink"> <i class="icon-paperplane"></i> </a>
-                             <div id="sendBox">                                                                                             
-                                <!-- <div class="sendImgWrap">
-                                    <img src="http://des.rosewholesale.com/uploads/201211/heditor/201211191121242461.jpg" alt="">
-                                </div> -->
-                                <!-- <div style="height:100px;width:100%;overflow:hidden;">
-                                    <span class="itemTitle">Sweet Navy</span>
-                                    <img src="http://i01.i.aliimg.com/wsphoto/v0/2026196955_2/MOLE-2015-New-Fashion-Autumn-Winter-Sweater-Mohair-Cardigan-Knitted-Solid-Dress-Long-Sleeve-Knitted-Sweater.jpg" alt="">                                    
-                                </div> -->
-                                
-                               
+                      <ul class="dropdown-menu" aria-labelledby="dLabel" style="padding:0;left: -280px;">
+                        <div id="sendBox">                                                                                             
                                 <textarea placeholder="Your message here..."></textarea>
                                 <input type="text" placeholder="Search users"> 
                                 <div class="friendlist">
@@ -574,15 +493,72 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                                 
 
                             </div>
-                     </li>
-                </ul>
+                      </ul>
+                    </div> -->
+
+                   <!--  <div class="dropdown" style="float: right;margin-top: 17px;">
+                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="
+border: 1px solid #F191B5;
+background-color: #F1669B;
+padding: 2px 10px;
+top: -15px;
+left: -25px;
+border-radius: 20px;                      ">
+                        <i class="icon-paperplane"></i>                
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dLabel" style="padding:0;left: -280px;">
+                        <div id="sendBox">                                                                                             
+                           
+                                <textarea placeholder="Your message here..."></textarea>
+                                <input type="text" placeholder="Search users"> 
+                                <div class="friendlist">
+                                    <span style="    
+    color: #E8BFCE;
+    font-size: 11px;
+    margin: 0 12px;
+    display: block;
+    text-align: right;"> Send to  </span> 
+                                    <ul>
+                                        <li>
+                                            <a href="">
+                                                <div class="friendImg">                                            
+                                                    <img src="https://fbcdn-profile-a.akamaihd.net/hprofile-ak-xtp1/v/t1.0-1/p100x100/11692791_1033839559960313_372475612082020913_n.jpg?oh=0dc578c37cb4448f0ed656cf1d3b8dfd&oe=56A697B7&__gda__=1452669051_59a0ec27323dad96c80cacbeddd5e32b" alt="">                                                
+                                                </div>
+                                                <p> Alice Watermelon </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="friendImg">                                            
+                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/4765654_thumb.jpg" alt="">                                                
+                                                </div>
+                                                <p> faliha101 </p>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="">
+                                                <div class="friendImg">                                            
+                                                    <img src="http://cdn.myanimelist.net/images/userimages/thumbs/1337071_thumb.jpg" alt="">                                                
+                                                </div>
+                                                <p> littleboyorange </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                
+
+                            </div>
+                      </ul>
+                    </div> -->
                
-                <ul class="list-inline">
+                <ul class="list-inline tleft">
                     <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
                     <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
                     <li> <span> You admire this. </span></li>                   
                 </ul>
             </div>
+
+            <div class="clearfix"></div>
 
             <div class="admireComment">
                 <div class="col_three_fifth nobottommargin">
