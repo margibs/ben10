@@ -280,7 +280,7 @@
 
             <div id="url" class="modal-body">
                 {!! Form::select('rate_categories_parent',['outfit' => 'Outfit'], null) !!}
-                {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outift','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
+                {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outfit','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
                 <div>
                     <div class="fileUpload">
 
