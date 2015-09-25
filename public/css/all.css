@@ -26215,6 +26215,9 @@ body{
 body, #wrapper, #content{
     background-color: #F2F0F0;
 }
+.dropdown-menu{
+    left: -130px;
+}
 #whiteBG{
   background-color: #fff!important;
 }
@@ -26273,11 +26276,50 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     text-transform: uppercase;
     margin: 10px;
     border-radius: 2px;
+    margin-left: 30px;
  }
  .uploadBtn:hover{
     color: #fff;
     cursor: pointer;
  }
+
+.productUploadForm input[type="radio"] {
+  background-color: #F272A2;  
+  border-radius: 10px;  
+  cursor: pointer;
+  display: inline-block;
+  height: 15px;
+  margin: 0 2px 0 5px;
+  position: relative;
+  width: 15px;
+  top: 2px;
+  -webkit-appearance: none;
+}
+
+.productUploadForm input[type="radio"]:after {
+  background-color: #EF5C94;
+  border-radius: 25px;  
+  content: '';
+  display: block;
+  height: 7px;
+  left: 4px;
+  position: relative;
+  top: 4px;
+  width: 7px;
+}
+
+.productUploadForm input[type="radio"]:checked:after {
+  background-color: #F2F0F0;  
+}
+
+.productUploadForm label{
+    color: #424242;
+    text-transform: capitalize;
+    letter-spacing: 0;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
  #header, #header-wrap, #logo img, #primary-menu:not(.style-2), #primary-menu:not(.style-2) > ul, #primary-menu ul li a, 
  #header.sticky-header:not(.static-sticky){
     height: 50px;
@@ -27632,10 +27674,16 @@ color: #F36198;
 }
 .headerNotification{
     position:relative;
+    color: #fff;
+}
+.headerNotification:hover{
+    color: #fff;
+    cursor: pointer;
 }
 .headerNotification .badge{
     position: absolute;
-    top: -12px;
+    top: -8px;
+    left: 11px;
     font-size: 10px;
     padding: 4px 6px;
     background-color: #EF2F2F;
@@ -27781,8 +27829,11 @@ color: #F36198;
 #shareBox .friendlist li a p{
     margin-top: 0;
 }
+#shareBox .friendlist li a.follow{
+   background-color: #3b5998!important;
+}
 #shareBox .friendlist li a.fb{
-    background-color: #3b5998!important;
+    background-color: #E4266F!important;
 }
 #shareBox .friendlist li a.fb:hover,
 #shareBox .friendlist li a.fb:active{

@@ -3,40 +3,11 @@
 @section('content')
 
 <style>
-	.uploadModal{
-		position: fixed;
-		top: -100%;
-		left: 25%;
-		width: 100%;
-		max-width: 600px;
-	}
+	
 	.tabs{
 		margin-bottom: 0;
 	}
-	.uploadModalClose{
-		float: right;
-	    margin: 9px 10px;
-	    font-size: 15px;
-	    position: relative;
-	    z-index: 2;
-	    color: #E93376;
-	}
-	.productUploadForm span{
-		color: #B3B2B2;
-	    font-size: 14px;
-	    font-weight: 500;
-	}
 	
-	.productUploadSubmit{
-		background-color: #F45F98;
-	    border: 0;
-	    color: #fff;
-	    font-family: Roboto;
-	    font-weight: 700;
-	    padding: 6px 22px;
-	    font-size: 17px;
-	    border-radius: 20px;
-	}
 	ul.tab-nav:not(.tab-nav-lg) li a{
 		color: #fff;
 	}
@@ -129,7 +100,7 @@
 								</div>                          
 							</div>
 						@endforeach
-						<div class="outer">
+						<div class="outer" style="border:none;">
 							<div class="inner" style="transform: translate(30%,24%);">
 						<!-- <div class="col-md-3 col-sm-4 col-xs-6"> -->
 							<a id="uploadItemBtn" style="    
@@ -151,7 +122,7 @@
 	
 <div class="wrappers" style="margin-top:10px;padding: 0;">		
 			
-			 <div class="col_two_third col_last nobottommargin">
+			 <div class="col_half col_last nobottommargin">
 				<div class="productUploadForm" style="padding: 15px;">
 	                <span> Product Name </span>
 	                <input type="text" name="name" style="margin-top: 0;" required>
@@ -189,14 +160,25 @@
 	            </div>
 	        </div>
 
-	        <div class="col_one_third nobottommargin">
-				<div id="image_container">
-					<div class="outer">
-						<div class="inner">
-						<a href=""><img class="img-responsive" src="http://vps184562.ovh.net/uploads/55540_image7.jpg" /></a>
-						</div>                          
-					</div>
-				</div>
+	        <div class="col_half nobottommargin">
+				
+
+				<div style="margin-top: 30px;">
+	                 <div class="fileUpload fileUpload2" style="width:100%;padding: 15px;z-index:0;">
+	                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
+	                    <span>Upload Image</span>
+	                    <input type="file" name="file2" class="upload" style="width:auto;">
+	                </div>
+	                <div class="outer" style=" height: 300px; margin-top:20px; border-radius: 2px; overflow: hidden;">
+	                    <div class="inner" style="overflow: hidden;">
+	                        <img id="myImg2" style="width:100%;">                              
+	                    </div>
+	                </div>
+	               
+	            </div>
+
+
+
 			</div>
 
 
@@ -252,15 +234,15 @@
 
 			 $(".uploadModalClose").on("click", function() {
 			      
-			            TweenMax.to($(".uploadModal"), .3, {
-			              top: "-100%",
-			              zIndex: "-1",
-			              ease: Back.easeIn
-			            });
-			            TweenMax.to($(".modal-shade"), .6, {
-			              position: "relative",
-			              opacity: 0
-			            });
+	            TweenMax.to($(".uploadModal"), .3, {
+	              top: "-100%",
+	              zIndex: "-1",
+	              ease: Back.easeIn
+	            });
+	            TweenMax.to($(".modal-shade"), .6, {
+	              position: "relative",
+	              opacity: 0
+	            });
 			 });
 
 
