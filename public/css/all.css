@@ -27313,11 +27313,10 @@ color: #F36198;
   padding: 10px 0;
 }
 .customMyPost .entry-title{
-  width: 90%;
-    margin: 0 auto;
+    width: 90%;  
     text-align: center;
     background-color: #fff;
-    margin-top: -55px;
+    margin: -55px auto 0 auto!important;
     position: relative;
     margin: 20px 15px 20px 15px;
     padding-top: 10px;
@@ -27330,9 +27329,9 @@ color: #F36198;
 
 .customMyPost .entry-title h3 a{
     font-size: 35px;
-    font-weight: 700;
+    font-weight: 500;
     color: #000;
-    line-height: 37px;
+    line-height: 39px;
     font-family: Oswald;
     letter-spacing: -1px;
     transition: all 0.2s ease;
@@ -27358,14 +27357,14 @@ color: #F36198;
 .entry-content{
   padding: 10px 20px;
 }
-.entry-title{
-  margin: 20px 15px 20px 15px;
+.single-post .entry-title{
+  margin: 5px 15px 20px 15px;
 }
 .entry-content h1{
   margin-bottom: 10px;
   font-family: Oswald;
   color: #000;
-  font-size: 35px;
+  font-size: 27px;
   letter-spacing: -1px;
 }
 .entry-content p{
@@ -27377,21 +27376,23 @@ color: #F36198;
   line-height: 23px!important;
 }
 .entry-title h2 {
-    clear: both;
-    display: block;
-    padding-top: 25px;
-    font-size: 37px;
-    font-weight: 700;
-    line-height: 42px;    
-    letter-spacing: -1px;
-    font-family: 'Oswald', sans-serif;
-    color: #000;
-    text-transform: capitalize;
+  clear: both;
+  display: block;
+  padding-top: 10px;
+  margin-bottom: 15px;
+  font-size: 33px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: -1px;
+  font-family: 'Oswald', sans-serif;
+  color: #000;
+  width: 95%;
+  text-transform: capitalize;
 }
 .entry-title .date, .entry-title .comment, .entry-title .categ{
     font-size: 13px;
     font-family: Roboto;
-    color: #000;
+    color: #9E9E9E;
     font-weight: 400;
 }
 
@@ -27440,7 +27441,7 @@ color: #F36198;
   width: 80%;
   height: auto;
   text-align: center;
-  margin: 10px 0 0 0;
+  margin: 5px 0 0 0;
   font-size: 17px;
   text-transform: capitalize;
   letter-spacing: 0px;
@@ -27449,15 +27450,15 @@ color: #F36198;
   text-shadow: 0 0 0;
   border-radius: 2px;
   font-weight: 400;
-  border: 1px solid #F25A94;
+  border: 1px solid #121212;
   background: #f280aa;
-  background: -moz-linear-gradient(top, #f280aa 0%, #f45793 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f280aa), color-stop(100%,#f45793));
-  background: -webkit-linear-gradient(top, #f280aa 0%,#f45793 100%);
-  background: -o-linear-gradient(top, #f280aa 0%,#f45793 100%);
-  background: -ms-linear-gradient(top, #f280aa 0%,#f45793 100%);
-  background: linear-gradient(to bottom, #f280aa 0%,#f45793 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f280aa', endColorstr='#f45793',GradientType=0 );
+  background: -moz-linear-gradient(top, #282727 0%, #101010 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#282727 ), color-stop(100%,#101010));
+  background: -webkit-linear-gradient(top, #282727 0%,#101010 100%);
+  background: -o-linear-gradient(top, #282727 0%,#101010 100%);
+  background: -ms-linear-gradient(top, #282727 0%,#101010 100%);
+  background: linear-gradient(to bottom, #282727 0%,#101010 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#282727', endColorstr='#101010',GradientType=0 );
 }
 .playnowBtn:hover{
   background-color: #F25A94; 
