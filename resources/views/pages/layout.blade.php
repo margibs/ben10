@@ -25,10 +25,52 @@
     ============================================= -->
     <title> Upmire </title>
 
+<style>
+    .rateEntry{
+        margin-bottom: 30px;
+        overflow: hidden;
+    }
+     .rateMenu{
+        text-align: center;
+        background-color: #fff;
+        margin-bottom: 40px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+        border-radius: 2px;
+        border-bottom: 1px solid#DAD8D8;
+        -moz-box-shadow: 0 2px 6px 0px #ddd;
+        -webkit-box-shadow: 0 2px 6px 0px #ddd;
+        box-shadow: 0 2px 6px 0px #ddd;
+     }
+    .rateMenu li{        
+        padding-right: 3px;
+    }
+    .rateMenu li span{
+        font-size: 13px;
+        font-weight: 600;
+        /*display: block;*/
+        color: #343030;
+        /* background-color: #000; */
+        padding: 3px 8px;
+        border-radius: 3px;
+        text-transform: uppercase;
+    }
+    .rateMenu li a img{
+        display: none;
+        width: 41px;
+        padding: 2px;
+        overflow: hidden;
+        border-radius: 50%;
+        /*border: 1px solid #EBEBEB;
+        background-color: whitesmoke;*/
+        /*background: linear-gradient(to bottom, #F5F5F5 0%,#E5E5E5 100%);*/
+    }   
+
+</style>
 
 </head>
 
-<body class="stretched">
+<body class="stretched no-transition">
 
     <!-- Document Wrapper
     ============================================= -->
@@ -86,6 +128,29 @@
                         </div><!-- #top-search end -->
 
                     </nav><!-- #primary-menu end -->
+
+                </div>   
+
+                 @if(Request::is('rate*')) 
+                 <style>
+                    .content-wrap{
+                        padding-top: 70px;
+                    }
+                 </style>
+                <ul class="list-inline rateMenu">
+                    <!-- <li><span> Categories </span></li> -->
+                    <li> <a href=""> <img src="{{ asset('images/outfits.png') }}" alt=""> <span>Outfits</span> </a> </li>
+                    <li> <a href=""> <img src="{{ asset('images/shoes.png') }}" alt=""> <span>Shoes</span> </a> </li>        
+                    <li> <a href=""> <img src="{{ asset('images/cooking.png') }}" alt=""> <span>Cooking</span> </a> </li>
+                    <li> <a href=""> <img src="{{ asset('images/diet.png') }}" alt=""> <span> Diet </span></a> </li>
+                    <li> <a href=""> <img src="{{ asset('images/bedroom.png') }}" alt=""> <span> Bedroom </span> </a> </li>
+                    <li> <a href=""> <img src="{{ asset('images/garden.png') }}" alt=""> <span> Garden </span></a> </li>
+                    <li> <a href=""> <img src="{{ asset('images/jewelry.png') }}" alt=""> <span> Jewelry </span></a> </li>
+                    <li> <a href=""> <img src="{{ asset('images/holiday.png') }}" alt=""> <span> Holiday </span></a> </li>
+                    <li> <a href=""> <img src="{{ asset('images/product.png') }}" alt=""> <span> Products </span> </a> </li>
+                </ul> 
+                @endif
+                                    
 
                 </div>
 
@@ -410,7 +475,7 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                 <!-- <div class="user"><img src="http://vps184562.ovh.net/uploads/29713_cat.jpg" alt=""> <span><a href="">by Emily</a></span> </div> -->
                 <h2> Sweet Navy</h2>
             </div>
-            <img src="https://s-media-cache-ak0.pinimg.com/236x/c2/31/e0/c231e0ed77147142ed2bb9e5e9b07002.jpg" alt="">
+            <img src="http://www.hammihan.com/users/status/original/HamMihan-201510658816090181021424900436.058.jpg" alt="">
         </div>
     </div>
     <div class="col-md-5">
@@ -636,7 +701,7 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
     <!-- External JavaScripts
     ============================================= -->
     <script type="text/javascript" src="{{ asset('js/functions.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('js/simplebar.min.js') }}"></script>
+    <!-- <script type="text/javascript" src="{{ asset('js/simplebar.min.js') }}"></script> -->
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/plugins/CSSPlugin.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/easing/EasePack.min.js"></script>
@@ -659,7 +724,7 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                 $("#sendBox").css('display','none');
             });
            
-            $('#put_comments_here').simplebar();
+            //$('#put_comments_here').simplebar();
 
             $(":file").change(function () {
                 if (this.files && this.files[0]) {

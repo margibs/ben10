@@ -26330,6 +26330,14 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
  .center .contentWrapper .topBlack .admire{
     color: #F276A4;
  }
+  .center .contentWrapper .topBlack .admire span{
+      font-size: 11px!important;
+      color: #D0D0D0!important;
+      font-family: Roboto;
+      position: relative;
+      top: -4px;
+      margin-left: 2px;
+  }
  .center .contentWrapper .topBlack .send, .center .contentWrapper .topBlack .dislike{
     color: #D8D8D8;
  }
