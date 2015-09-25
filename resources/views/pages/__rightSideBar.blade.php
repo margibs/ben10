@@ -10,7 +10,7 @@
             <div class="listWrapper">
 
             <h3>POPULAR ITEMS</h3>
-
+            
            @foreach($waters as $water)
            {{$water->title}}
            @endforeach
