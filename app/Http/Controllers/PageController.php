@@ -81,6 +81,10 @@ class PageController extends Controller
 
   public function rate($category = 0,$sub_category = 0)
   {
+    if(!Auth::check())
+    {
+      return redirect('login');
+    }
     return view('pages.rate');  
   }
 
