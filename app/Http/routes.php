@@ -12,18 +12,23 @@
 */
 
 Route::get('/', 'PageController@home');
-//Route::get('home', 'PageController@home');
-Route::get('dashboard', 'PageController@dashboard');
 
+//To Delete
 Route::get('sample', 'PageController@sample');
 Route::post('ajax_sample','PageController@ajaxSample');
 
-Route::post('dashboard','PageController@addProduct');
 
+Route::group(['middleware' => 'AuthCheck'], function()
+{
+	//Dashboard
+	Route::get('dashboard', 'PageController@dashboard');
+	Route::post('dashboard','PageController@addProduct');
+	
+	//RateController
+	Route::get('rate', 'PageController@rate');
+	Route::get('rate/{category?}', 'PageController@rateCategory');
 
-
-//RateController
-Route::get('rate', 'PageController@rate');
+});
 
 
 Route::group(['middleware' => 'UserCheck'], function()

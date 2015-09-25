@@ -17,6 +17,7 @@ use App\Model\Category;
 
 use App\PluginModel\RateItem;
 use App\PluginModel\WidgetRating;
+use App\PluginModel\RateCategory;
 
 class PageController extends Controller
 {
@@ -48,7 +49,8 @@ class PageController extends Controller
   {
     // $sample = DB::table('rate_categories AS a')
     // ->join('rate_categories AS b','a.parent_id','=','b.id')
-    // ->select('a.name as child_name','a.id as child_id','a.slug as child_slug','b.name as parent_name','b.id as parent_id','b.slug as parent_slug')
+    // // ->select('a.name as child_name','a.id as child_id','a.slug as child_slug','b.name as parent_name','b.id as parent_id','b.slug as parent_slug')
+    // ->select(DB::raw())
     // ->where('a.id','2')
     // ->first();
 
@@ -88,11 +90,39 @@ class PageController extends Controller
 
   public function rate($category = 0,$sub_category = 0)
   {
-    if(!Auth::check())
-    {
-      return redirect('login');
+    $rate_items = 
+      DB::table('rate_items')
+      ->join('users','rate_items.user_id','=','users.id')
+      ->leftjoin('rate_results', 'rate_items.id','=', 
+      DB::raw('rate_results.rate_item_id AND rate_results.user_id = ' . Auth::user()->id))
+      ->select('rate_items.id as rate_item_id','rate_items.name as rate_name','rate_items.description as rate_description','rate_items.image_url as rate_image_url ','users.name as user_name','users.id as user_id','users.avatar','rate_results.result_yes as upmire','rate_results.result_no as downmire',DB::raw('(SELECT COUNT(1) FROM rate_comments WHERE rate_comments.rate_item_id = rate_items.id) as comment_count'))
+      ->get();
+
+
+    foreach ($rate_items as $rate_item) {
+
+      $rate_item->comments = 
+        DB::select("
+        SELECT * FROM 
+        ( SELECT b.id,b.name,b.avatar,a.content,a.created_at,a.id as comment_id
+       FROM rate_comments a
+       JOIN users b
+       ON a.user_id = b.id
+       WHERE a.rate_item_id = ".$rate_item->rate_item_id."
+       ORDER BY a.id DESC
+       LIMIT 5
+           ) tmp ORDER BY tmp.comment_id ASC
+        ");
     }
-    return view('pages.rate');  
+
+    $rate_categories = RateCategory::where('parent_id',0)->get();
+
+    return view('pages.rate',compact(['rate_items','rate_categories']));  
+  }
+
+  public function rateCategory($category)
+  {
+    return 'category';
   }
 
   public function dashboard()
