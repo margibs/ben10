@@ -37,10 +37,10 @@
         padding-top: 8px;
         padding-bottom: 8px;
         border-radius: 2px;
-        border-bottom: 1px solid#DAD8D8;
+      /*  border-bottom: 1px solid#DAD8D8;
         -moz-box-shadow: 0 2px 6px 0px #ddd;
         -webkit-box-shadow: 0 2px 6px 0px #ddd;
-        box-shadow: 0 2px 6px 0px #ddd;
+        box-shadow: 0 2px 6px 0px #ddd;*/
      }
     .rateMenu li{        
         padding-right: 3px;
@@ -94,6 +94,16 @@
                     </div><!-- #logo end -->
 
                     <a id="addLinkBtn" class="uploadBtn"> Upload </a>
+                    <div class="dropdown" style="    
+   float: right;
+    margin-top: 17px;">
+                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-line2-heart"></i><span class="badge"> 2</span>                     
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        ...
+                      </ul>
+                    </div>
 
                     <!-- Primary Navigation
                     ============================================= -->
@@ -119,9 +129,10 @@
                         <div id="top-search">
 
                             <a href="#" id="top-search-trigger"><i class="icon-line-search"></i><i class="icon-line-cross"></i></a>
-                            <a href=""><i class="icon-line2-heart"></i></a>
-                            <a href="" class="headerNotification"><i class="icon-bell"></i><span class="badge"> 2</span></a>
-                            <a href=""><i class="icon-line2-lock"></i></a>                            
+                          
+                                
+                        
+                            <a href="{{ url('/login')}}"><i class="icon-line2-lock"></i></a>                            
                             <form action="search.html" method="get">
                                 <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
                             </form>
@@ -131,25 +142,7 @@
 
                 </div>   
 
-                 @if(Request::is('rate*')) 
-                 <style>
-                    .content-wrap{
-                        padding-top: 70px;
-                    }
-                 </style>
-                <ul class="list-inline rateMenu">
-                    <!-- <li><span> Categories </span></li> -->
-                    <li> <a href=""> <img src="{{ asset('images/outfits.png') }}" alt=""> <span>Outfits</span> </a> </li>
-                    <li> <a href=""> <img src="{{ asset('images/shoes.png') }}" alt=""> <span>Shoes</span> </a> </li>        
-                    <li> <a href=""> <img src="{{ asset('images/cooking.png') }}" alt=""> <span>Cooking</span> </a> </li>
-                    <li> <a href=""> <img src="{{ asset('images/diet.png') }}" alt=""> <span> Diet </span></a> </li>
-                    <li> <a href=""> <img src="{{ asset('images/bedroom.png') }}" alt=""> <span> Bedroom </span> </a> </li>
-                    <li> <a href=""> <img src="{{ asset('images/garden.png') }}" alt=""> <span> Garden </span></a> </li>
-                    <li> <a href=""> <img src="{{ asset('images/jewelry.png') }}" alt=""> <span> Jewelry </span></a> </li>
-                    <li> <a href=""> <img src="{{ asset('images/holiday.png') }}" alt=""> <span> Holiday </span></a> </li>
-                    <li> <a href=""> <img src="{{ asset('images/product.png') }}" alt=""> <span> Products </span> </a> </li>
-                </ul> 
-                @endif
+                 @yield('ratemenu')
                                     
 
                 </div>
@@ -368,9 +361,10 @@
 
 
 <!--- Dashboard Uplaod Popup -->
-<div class="wrappers uploadModal" style="margin-top:10px;padding: 0;position: absolute;top: -100%;">
-    <i class="icon-line2-close uploadModalClose" title="Close Modal"></i>
-    <div class="tabs tabs-bb clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">
+<div class="wrappers uploadModal">
+    <i class="icon-line-cross uploadModalClose" title="Close Modal"></i>
+
+    <div class="tabs tabs-bb clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">    
 
         <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="    
     background-color: #F36198;">
@@ -496,6 +490,11 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                                 <div class="friendlist">
                                     <ul>
                                         <li>
+                                            <a href="" class="follow">
+                                                <p><i class="icon-star3"></i> <span> Follow Item </span></p>
+                                            </a>
+                                        </li>
+                                        <li>
                                             <a href="" class="fb">
                                                 <p> <i class='icon-facebook-sign'></i> <span> Facebook </span>  </p>
                                             </a>
@@ -514,7 +513,18 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                                 </div>
                             </div>
                     </li>
-                    <li> <a class="sendLink"> <i class="icon-paperplane"></i> </a>
+                    <li> 
+                    
+                    <div class="dropdown" style="float: right;margin-top: 17px;">
+                      <a id="dLabel" class="headerNotification" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="icon-paperplane"></i>                
+                      </a>
+                      <ul class="dropdown-menu" aria-labelledby="dLabel">
+                        ...
+                      </ul>
+                    </div>
+
+                    <a class="sendLink"> <i class="icon-paperplane"></i> </a>
                              <div id="sendBox">                                                                                             
                                 <!-- <div class="sendImgWrap">
                                     <img src="http://des.rosewholesale.com/uploads/201211/heditor/201211191121242461.jpg" alt="">
