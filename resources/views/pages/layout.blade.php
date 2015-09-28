@@ -231,11 +231,7 @@
     <div class="modal-shade"></div>
     <div class="modal">
         <div class="modal-header">
-            <h1> Upload Items  
-                <a href="{{url('dashboard')}}" style="font-size: 13px; font-family: Roboto; color: #FFAFCD; padding: 10px; position: relative; top: -2px;">
-                    Click here for product upload 
-                </a>  <i class="i"></i>  
-            </h1>
+            <h1> Upload Items </h1>
             <i class="icon-line-cross closeModalBtn" title="Close Modal"></i>
         </div>
         <div class="modal-banner">
@@ -311,66 +307,114 @@
 
 
 <div id="addLinkModal2" class="modal-container2">
-<form action="{{ url('rate/rate_upload') }}" method="POST" enctype='multipart/form-data' style="margin-bottom:0;">
+<form action="{{ url('dashboard') }}" method="POST" enctype='multipart/form-data' style="margin-bottom:0;">
 
 {!! csrf_field() !!}
     <div class="modal-shade"></div>
     <div class="modalproduct">
         <div class="modal-header">
-            <h1> Upload Items  
-                <a href="{{url('dashboard')}}" style="font-size: 13px; font-family: Roboto; color: #FFAFCD; padding: 10px; position: relative; top: -2px;">
-                    Click here for product upload 
-                </a>  <i class="i"></i>  
-            </h1>
+            <h1> Upload Product </h1>
             <i class="icon-line-cross closeModalBtnProduct" title="Close Modal"></i>
         </div>
         <div class="modal-banner">
             <input type="radio" id="urlChoice2" name="linkChoice" checked>
-            <label for="urlChoice" title="Insert as url" id="urlLabel2"> Select a category </label>
+            <label for="urlChoice" title="Insert as url" id="urlLabel2"> Upload an image </label>
         </div>
-        <div class="modal-body-container">
+        <div class="modal-body-container" style="overflow:hidden;">
 
-            <div id="url" class="modal-body">                            
-                <div style="margin-top: 20px;">
-                    <div class="fileUpload">
+            <div id="url2" class="modal-body">                            
+                
+                <div style="
+    margin-top: 30px;
+    margin:10px;
+    position: relative;
+    ">
+                     <div class="fileUpload fileUpload2" style="   
+    width: 100%;
+    padding: 15px;
+    z-index: 2;
+    height: 130px;">
+                        <i class="icon-line-upload" style="
+   display:block;
+   color: #F36198;
+   margin-top: 25px;"></i>
 
-                        <i class="icon-line-upload" style="display:block;color: #E4075B;"></i>
                         <span>Upload Image</span>
-                        <input type="file" name="file" class="upload" style="width:auto;">
-
-                        <div class="outer" style="height: 100%; width:100%; border-radius: 2px; overflow: hidden; position: absolute; top: 0; left: 0;opacity: 0.3;">
-                            <div class="inner" style="overflow: hidden;-moz-transform: translate(0%,-15%);-webkit-transform: translate(0%,-15%);transform: translate(0%,-15%);">
-                                <img id="myImg" style="width:100%;">                              
-                            </div>
+                        <input type="file" name="file2" class="upload" style="width:auto;">
+                    </div>
+                    <div class="outer" style="    
+    border-radius: 2px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.3;">
+                        <div class="inner" style="
+    overflow: hidden;
+    -moz-transform: translate(0%,-15%);
+    -webkit-transform: translate(0%,-15%);
+    transform: translate(0%,-15%);">
+                            <img id="myImg2" style="width:100%;">                              
                         </div>
-
                     </div>
                 </div>
 
-                <div style="
-                clear:both;
-                display: block;
-                margin-top: 15px;
-                ">
-                    <input type="text" id="urlText" name="name" required>
-                    <label for="urlText"> Item Title </label>
-                </div>
+                
+                <form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
+                {!! csrf_field() !!}    
+                             <div class="col_half col_last nobottommargin">
+                                <div class="productUploadForm" style="padding: 15px;">
+                                    <span> Product Name </span>
+                                    <input type="text" name="name" style="margin-top: 0;" required>
 
-                <div>
-                    <input type="text" id="urlURL" name="description" required>
-                    <label for="urlURL"> Description </label>
-                </div>           
+                                    <span> Intended application </span>
+                                    <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
+                                    <br />
+                                 
+                                    <span> Animal Tested </span>
+                                     <input type="radio" name="animal_tested" value="yes" checked> 
+                                     <label for="animal_tested"> Yes </label>
+                                     <input type="radio" name="animal_tested" value="No"> 
+                                     <label for="animal_tested"> No </label>
+                                     <br />
+                                   
+
+
+                                    <span> Eco Friendly </span>
+                                    <input type="radio" name="eco_friendly" value="yes" checked>
+                                    <label for="eco_friendly"> Yes </label>
+                                     <input type="radio" name="eco_friendly" value="No">
+                                     <label for="eco_friendly"> No </label>
+                                     <br />
+                                   <br />
+                                </div>
+                            </div>
+
+
+                            <div class="col_half nobottommargin">
+
+                                <div class="productUploadForm" style="padding: 15px;">
+                                    <span> Alternative Products </span>
+                                    <input type="text" name="alt_products" style="margin-top: 0;" required>
+
+                                    <span> Price Range </span>
+                                    <input type="text" name="price_range" style="margin-top: 0;" required>
+
+                                    <span> Available From </span>
+                                    <input type="text" name="available_from" style="margin-top: 0;" required>
+
+                                     
+                                </div>
+                                
+                            </div>
+              
+                          
             </div>
         </div>
 
-        <div class="modal-footer">
-            <!-- <div>
-            <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
-            <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
-            <span> Select an Image </span>
-            </div> -->
-            <div>                
-                <!-- <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>  -->  
+        <div class="modal-footer">          
+            <div>                              
                 <input type="submit" value="Upload Now" style="
     border: 1px solid #6D6D6D;
     background-color: #DADADA;
@@ -386,97 +430,6 @@
     </form>
 </div>
 
-<!--- Dashboard Uplaod Popup -->
-<div class="wrappers uploadModal">
-    <i class="icon-line-cross uploadModalClose" title="Close Modal"></i>
-
-    <div class="tabs tabs-bb clearfix ui-tabs ui-widget ui-widget-content ui-corner-all" id="tab-9">    
-
-        <ul class="tab-nav clearfix ui-tabs-nav ui-helper-reset ui-helper-clearfix ui-widget-header ui-corner-all" role="tablist" style="    
-    background-color: #F36198;">
-            <li class="ui-state-default ui-corner-top  ui-tabs-active ui-state-active" role="tab" tabindex="-1" aria-controls="tabs-33" aria-labelledby="ui-id-17" aria-selected="false"><a href="#tabs-33" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-17"> Item Upload </a></li>
-            <li class="ui-state-default ui-corner-top" role="tab" tabindex="-1" aria-controls="tabs-34" aria-labelledby="ui-id-18" aria-selected="false"><a href="#tabs-34" class="ui-tabs-anchor" role="presentation" tabindex="-1" id="ui-id-18"> Product Upload </a></li>           
-        </ul>
-
-        <div class="tab-container">
-
-            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-33" aria-labelledby="ui-id-17" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
-                
-        
-            </div>
-            <div class="tab-content clearfix ui-tabs-panel ui-widget-content ui-corner-bottom" id="tabs-34" aria-labelledby="ui-id-18" role="tabpanel" aria-expanded="false" aria-hidden="true" style="display: none;padding: 0 10px;">
-
-                <form action="{{url('dashboard')}}" method="POST" enctype='multipart/form-data'>
-                            {!! csrf_field() !!}
-                
-
-                        <div class="col_half">
-                            
-                             <div style="margin-bottom: 25px;">
-                                 <div class="fileUpload fileUpload2" style="width:100%;padding: 15px;">
-                                    <i class="icon-line-upload" style="display:block;color: #F36198;"></i>
-                                    <span>Upload Image</span>
-                                    <input type="file" name="file2" class="upload" style="width:auto;">
-                                </div>
-                                <div class="outer" style=" height: 300px; margin-top:20px; border-radius: 2px; overflow: hidden;">
-                                    <div class="inner" style="overflow: hidden;">
-                                        <img id="myImg2" style="width:100%;">                              
-                                    </div>
-                                </div>
-                               
-                            </div>
-
-
-                        </div>
-                        <div class="col_half col_last">
-                            
-                            <div class="productUploadForm">
-                                <span> Product Name </span>
-                                <input type="text" name="name" style="margin-top: 0;" required>
-
-                                <span> Intended application </span>
-                                <input type="text" name="intended_applicaion" style="margin-top: 0;" required>
-
-                                <span> Animal Tested </span>
-                                 <input type="radio" name="animal_tested" value="yes" checked> 
-                                 <label for="animal_tested"> Yes </label>
-                                 <input type="radio" name="animal_tested" value="No"> 
-                                 <label for="animal_tested"> No </label>
-                                 <br />
-                                 <br />
-
-
-                                <span> Eco Friendly </span>
-                                <input type="radio" name="eco_friendly" value="yes" checked>
-                                <label for="eco_friendly"> Yes </label>
-                                 <input type="radio" name="eco_friendly" value="No">
-                                 <label for="eco_friendly"> No </label>
-                                 <br />
-                                 <br />
-
-                                <span> Alternative Products </span>
-                                <input type="text" name="alt_products" style="margin-top: 0;" required>
-
-                                <span> Price Range </span>
-                                <input type="text" name="price_range" style="margin-top: 0;" required>
-
-                                <span> Available From </span>
-                                <input type="text" name="available_from" style="margin-top: 0;" required>
-
-                                <input class="productUploadSubmit" type="submit" value="Submit">  
-                            </div>
-
-                        </div>
-
-                </form>
-
-            </div>
-        
-
-        </div>
-
-    </div>
-</div>
 
 <!---Rate Item Popup -->
 <div id="rateItem">
@@ -859,16 +812,14 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
               onComplete: function() { // When modal drops, lengthen modal body height               
                   TweenMax.to($(".modal-body-container"), .5, { // Change the height of modal body
                     height: $urlHeight,
-                    ease: Expo.easeOut,
-                    // When at correct height, show url body and focus on first input
+                    ease: Expo.easeOut,                    
                     onComplete: function() { 
-                      TweenMax.to($("#url"), .3, {
-                        opacity: 1,
-                        //onComplete: function() {$("#urlText").focus();}
+                      TweenMax.to($("#url2"), .3, {
+                        opacity: 1,                        
                       })
                     }
                   });
-                  TweenMax.to($("#url"), .5, {display: "block"});                
+                  TweenMax.to($("#url2"), .5, {display: "block"});                
               }
             });
             TweenMax.to($(".modal-shade"), .7, { // Delay start the modal shade
