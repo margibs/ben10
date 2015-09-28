@@ -5277,11 +5277,11 @@ body:not(.device-touch) .entry-link {
 .ipost .entry-meta { margin-right: -10px; }
 
 .ipost .entry-meta li {
-	font-size: 13px;
+	font-size: 12px;
 	margin-right: 10px;
 }
 
-.ipost .entry-content { margin-top: 20px; }
+.ipost .entry-content { margin-top: 10px; }
 
 .ipost .entry-content p { margin-bottom: 0; }
 
@@ -10671,8 +10671,7 @@ label.error { display: none !important; }
 .fancy-title h3,
 .fancy-title h4,
 .fancy-title h5,
-.fancy-title h6 {
-	position: relative;
+.fancy-title h6 {	
 	display: inline-block;
 	background-color: #FFF;
 	padding-right: 15px;

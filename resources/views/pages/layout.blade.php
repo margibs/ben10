@@ -237,9 +237,14 @@
         <div class="modal-body-container">
 
             <div id="url" class="modal-body">
-                {!! Form::select('rate_categories_parent',['outfit' => 'Outfit'], null) !!}
-                {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outfit','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
-                <div>
+                     <div class="select-style pull-right" style="margin-right:240px">
+                        {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outfit','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
+                    </div>
+                    <div class="select-style">
+                        {!! Form::select('rate_categories_parent',['outfit' => 'Outfit'], null) !!}
+                    </div>
+                   
+                <div style="margin-top: 20px;">
                     <div class="fileUpload">
 
                         <i class="icon-line-upload" style="display:block;color: #E4075B;"></i>
@@ -490,19 +495,6 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
     <script>
        $(document).ready(function() {
 
-            $(".sendLink").click(function() {
-                $("#sendBox").toggle();
-                $("#rateItem .icon-paperplane").css('color','white');
-                $("#rateItem .icon-share-alt").css('color','#f8aac7');
-                $("#shareBox").css('display','none');
-            });
-
-            $(".shareLink").click(function() {
-                $("#shareBox").toggle();                
-                $("#rateItem .icon-share-alt").css('color','white');
-                $("#rateItem .icon-paperplane").css('color','#f8aac7');
-                $("#sendBox").css('display','none');
-            });
            
             //$('#put_comments_here').simplebar();
 

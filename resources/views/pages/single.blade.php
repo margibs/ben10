@@ -35,9 +35,10 @@
                                                 <div class="entry clearfix">
 
                                                   <div class="entry-title">
+                                                    <span class="categ"><a href=""> S {{-- $post->category_name --}} </a></span>      
                                                      <h2 >{{$post->title}}</h2>                                                        
-                                                      <span class="comment pull-right"><i class="icon-comment2"></i> 0 Comments </span>
-                                                      <span class="date">{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span> / <span class="Categ"><a href=""> Celebs </a></span>                                                        
+                                                      <span class="comment"><i class="icon-comment2"></i>&nbsp; 0 Comments </span>
+                                                      <span class="date"> <i class="icon-calendar-empty"></i> &nbsp;{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span>                                                   
                                                     </div>
      
                                                     <div class="clearfix"></div>
@@ -48,21 +49,14 @@
                                                         <a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
                                                     </div> --><!-- .entry-image end -->
 
-<div style="    
-overflow: hidden;
-padding: 5px 20px 10px 20px;
-">     
+    
 
 @if($widget_rating != null && $widget_rating->enable != 0)
                         <!-- Ratings here -->
-<div class="col_two_fifth nobottommargin">
-<div class="entry-image">
-<a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
-<a href="{{$widget_rating->slot_url}}" class="button playnowBtn"> Play Now! <i class="icon-circle-arrow-left"></i> </a>
-</div>
-</div>
 
-<div class="col_three_fifth col_last nobottommargin"  style=" background-color: #efefef;padding: 10px;">
+<div style="overflow: hidden;padding: 5px 20px 10px 20px;"> 
+
+<div class="col_three_fifth nobottommargin"  style=" background-color: #efefef;padding: 10px;">
 <p style="    
 font-weight: 700;
 font-size: 20px;
@@ -118,10 +112,19 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
 </div>
 
 </div>  
+
+<div class="col_two_fifth nobottommargin  col_last">
+<div class="entry-image">
+<a href="{{url('/uploads')}}/{{$post->feat_image_url}}"><img src="{{url('/uploads')}}/{{$post->feat_image_url}}" alt="Blog Single"></a>
+<a href="{{$widget_rating->slot_url}}" class="button playnowBtn"> Play Now! <i class="icon-circle-arrow-left"></i> </a>
+</div>
+</div>
+
 <!-- end Ratings here -->
+</div>
 @endif
 
-</div>
+
 
                                                     
                                                     <div class="clearfix"></div>

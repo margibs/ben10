@@ -11,9 +11,9 @@
 
             <h3>POPULAR ITEMS</h3>
             
-           @foreach($waters as $water)
+          <!--  @foreach($waters as $water)
            {{$water->title}}
-           @endforeach
+           @endforeach -->
 
         
             <div id="post-list-footer">
