@@ -5,6 +5,11 @@
 @endsection
 
 @section('content')
+	<style>
+	.red { color: #e90404; }
+	.green { color: #0bb20f; }
+	.grey { color: #babcba; }
+	</style>
 	<h2 class="adminTitle"> <i class="icon-line-head"></i>  Rate Categories </h2>
 	
 	<div id="contentMainWrapper">
@@ -33,9 +38,9 @@
 				<td class="subTD">{{ $product->available_from }}</td>
 				<td style="text-align: center;">
 					@if($product->approved == 0)
-					<i class="icon-line2-dislike"></i>
+					<a href=""><i class="icon-line-cross red"></i></a>
 					@else
-					<i class="icon-line2-like"></i>
+					<a href=""><i class="icon-line-check green"></i></a>
 					@endif
 				</td>
 				</tr>

@@ -721,3 +721,9 @@ h3{
     top: -2px;
     padding: 3px 5px;
 }
+
+/* ==== NOTY === */
+.noty_text a{
+    font-family: Roboto!important;
+    font-weight: 700!important;
+}

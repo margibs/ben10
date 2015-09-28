@@ -224,6 +224,9 @@ font-family: Oswald;
 <!-- Footer Scripts
 ============================================= -->
 <script type="text/javascript" src="{{ asset('nexuspress/dist/js/functions.js') }}"></script>
+<script type="text/javascript" src="{{ asset('nexuspress/dist/js/jquery.noty.packaged.js') }}"></script>
+
+
 @yield('footer_scripts')
 <script>
     $(document).ready(function(){
@@ -246,6 +249,26 @@ font-family: Oswald;
                 },
             });
         }, 3000);
+
+        function generate(type) {
+            var n = noty({
+                text        : '<a href="http://example.com"> Im a link </a>',
+                type        : type,
+                dismissQueue: false,
+                timeout     : 1000000,
+                template    : '<div class="noty_message"><span class="noty_text"> Halo </span><div class="noty_close"></div></div>',
+                closeWith   : ['click'],
+                layout      : 'topRight',
+                maxVisible  : 10
+            });
+            console.log('html: ' + n.options.id);
+        }
+
+        function generateAll() {
+            generate('alert');
+        }
+
+        generateAll();
 
     });
 </script>
