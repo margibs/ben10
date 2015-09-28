@@ -39,6 +39,10 @@ class PageController extends Controller
     return $request->all();
   }
 
+  public function ajaxGetChild(Request $request)
+  {
+    return json_encode(RateCategory::where('parent_id',$request->input('parent_id'))->get());
+  }
   public function index()
   {    	
     return view('pages.layout');

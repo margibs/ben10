@@ -63,9 +63,9 @@
 	<div id="contentMainWrapper" style="background:transparent;border:none;">
 	
 	<ul class="list-inline subMenu">
-		<li> <a href="" class="active"> All </a> </li>	
-		<li> <a href=""> Approved </a> </li>	
-		<li> <a href=""> Pending </a> </li>			
+		<li> <a href="{{ url('plugin/rate/items/4') }}" class="@if(Request::is('plugin/rate/items/4')){{'active'}}@endif"> All </a> </li>
+		<li> <a href="{{ url('plugin/rate/items/1') }}" class="@if(Request::is('plugin/rate/items/1')){{'active'}}@endif"> Approved </a> </li>	
+		<li> <a href="{{ url('plugin/rate/items/0') }}" class="@if(Request::is('plugin/rate/items/0')){{'active'}}@endif"> Pending </a> </li>			
 
 	</ul>
 
@@ -79,8 +79,10 @@
     padding: 10px;
     text-align: center;
     margin: 10px 0 0 0;">
+    			@if($product->approved == 0)
 		           <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/1" class="green"><i class="icon-line-check"></i> Approve </a>
 		           <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/2" class="red"><i class="icon-line-cross"></i> Reject </a> 
+	           @endif
 	           </div>
 	          <div class="caption">
 	            <div class="toggle">
