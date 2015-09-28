@@ -8459,8 +8459,7 @@ body:not(.device-touch) .social-icon i {
 
 .toggle {
 	display: block;
-	position: relative;
-	margin: 0 0 20px 0;
+	position: relative;	
 }
 
 .toggle .togglet,
@@ -8478,7 +8477,7 @@ body:not(.device-touch) .social-icon i {
 
 .toggle .togglet i {
 	position: absolute;
-	top: 0;
+	top: 4px;
 	left: 0;
 	width: 16px;
 	text-align: center;
@@ -8496,7 +8495,7 @@ body:not(.device-touch) .social-icon i {
 .toggle .togglec {
 	display: block;
 	position: relative;
-	padding: 10px 0 0 24px;
+	padding: 5px 0 0 24px;
 }
 
 

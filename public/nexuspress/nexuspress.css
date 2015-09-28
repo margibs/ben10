@@ -8,6 +8,9 @@
 .dark .table-striped > tbody > tr:nth-child(odd) > td, .dark .table-striped > tbody > tr:nth-child(odd) > th, .table-striped > tbody > tr:nth-child(odd){
 	background-color: rgba(95, 87, 132, 0.05)!important;
 }
+.thumbnail .caption{
+  padding: 0 9px;
+}
 .side-header #header{
 	width: 235px;
 	-moz-box-shadow: 0 0 16px -3px rgba(0, 0, 0, 0.44);

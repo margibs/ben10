@@ -65,8 +65,8 @@
 	<ul class="list-inline subMenu">
 		<li> <a href="" class="active"> All </a> </li>	
 		<li> <a href=""> Approved </a> </li>	
-		<li> <a href=""> Drafts </a> </li>	
-		<li> <a href=""> Trash </a> </li>	
+		<li> <a href=""> Pending </a> </li>			
+
 	</ul>
 
 	<div class="row">
@@ -74,17 +74,26 @@
 	      <div class="col-md-3">
 	        <div class="thumbnail productlists">
 	          <img alt="" src="{{ url('uploads')}}/{{ $product->image_url }}" style="display: block;">
+	           <div style="
+    overflow: hidden;
+    padding: 10px;
+    text-align: center;
+    margin: 10px 0 0 0;">
+		           <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/1" class="green"><i class="icon-line-check"></i> Approve </a>
+		           <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/2" class="red"><i class="icon-line-cross"></i> Reject </a> 
+	           </div>
 	          <div class="caption">
-	            <h3>{{ $product->name }}</h3>
-	            <p><span>Intended application  </span> {{ $product->intended_applicaion }}</p>
-	        	<p><span>Alternative Products</span>{{ $product->alt_products }}</p>
-				<p><span>Animal Tested</span>{{ $product->animal_tested }}</p>
-				<p><span>Eco Friendly</span>{{ $product->eco_friendly }}</p>
-				<p><span>Price Range</span>{{ $product->price_range }}</p>
-				<p><span>Available From</span>{{ $product->available_from }}</p>	            
-				<br />
-	            <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/1" class="green"><i class="icon-line-check"></i> Approve </a>
-	            <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/2" class="red"><i class="icon-line-cross"></i> Reject </a> 
+	            <div class="toggle">
+                    <div class="togglet toggleta"><i class="toggle-closed icon-angle-right"></i><i class="toggle-open icon-angle-down"></i> <h3>{{ $product->name }}</h3> </div>
+                    <div class="togglec" style="display: block;">                    	 
+			            <p><span>Intended application  </span> {{ $product->intended_applicaion }}</p>
+			        	<p><span>Alternative Products</span>{{ $product->alt_products }}</p>
+						<p><span>Animal Tested</span>{{ $product->animal_tested }}</p>
+						<p><span>Eco Friendly</span>{{ $product->eco_friendly }}</p>
+						<p><span>Price Range</span>{{ $product->price_range }}</p>
+						<p><span>Available From</span>{{ $product->available_from }}</p>	
+                    </div>
+                </div>	                      					          
 	          </div>
 	        </div>
 	      </div>
