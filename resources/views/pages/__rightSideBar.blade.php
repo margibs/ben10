@@ -1,8 +1,3 @@
-@inject('sidebar','App\SideBar')
-
-<?php 
- $waters = $sidebar->getPost();
-?>
 
 <div class="col-xs-12 col-sm-3 col-md-3 col-lg-3">
     <div class="right">
@@ -11,11 +6,6 @@
 
             <h3>POPULAR ITEMS</h3>
             
-          <!--  @foreach($waters as $water)
-           {{$water->title}}
-           @endforeach -->
-
-        
             <div id="post-list-footer">
                 <div class="spost clearfix">
                     <div class="entry-image">

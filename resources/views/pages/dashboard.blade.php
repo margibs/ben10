@@ -24,9 +24,6 @@
 	}
 </style>
 
-
-
-
 <div class="wrappers">	
 	<div class="dashLink">
 		<ul class="list-inline">

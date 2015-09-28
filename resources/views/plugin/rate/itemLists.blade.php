@@ -37,11 +37,8 @@
 				<td class="subTD">{{ $product->price_range }}</td>
 				<td class="subTD">{{ $product->available_from }}</td>
 				<td style="text-align: center;">
-					@if($product->approved == 0)
-					<a href=""><i class="icon-line-cross red"></i></a>
-					@else
-					<a href=""><i class="icon-line-check green"></i></a>
-					@endif
+					<a href="{{url('plugin/rate/items')}}/{{ $product->id }}/2"><i class="icon-line-cross red"></i></a>
+					<a href="{{url('plugin/rate/items')}}/{{ $product->id }}/1"><i class="icon-line-check green"></i></a>
 				</td>
 				</tr>
 				@endforeach

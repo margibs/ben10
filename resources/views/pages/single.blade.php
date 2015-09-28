@@ -38,7 +38,7 @@
                                                     <span class="categ"><a href=""> S {{-- $post->category_name --}} </a></span>      
                                                      <h2 >{{$post->title}}</h2>                                                        
                                                       <span class="comment"><i class="icon-comment2"></i>&nbsp; 0 Comments </span>
-                                                      <span class="date"> <i class="icon-calendar-empty"></i> &nbsp;{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span>                                                   
+                                                      <span class="date"> <i class="icon-calendar-empty"></i> &nbsp;{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span>
                                                     </div>
      
                                                     <div class="clearfix"></div>
