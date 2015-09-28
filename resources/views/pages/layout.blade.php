@@ -285,21 +285,13 @@
             <div>                
                 <!-- <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>  -->  
                 <input type="submit" value="Upload Now" style="
-    background-color: transparent;
-    border: none;
-    background-color: #F36198;
-    color: #fff;
+    border: 1px solid #6D6D6D;
+    background-color: #DADADA;
+    color: #000;
     padding: 5px 20px;
-    font-size: 15px;
-    border-radius: 20px;
-    background: #f280aa;
-    background: -moz-linear-gradient(top, #f280aa 0%, #f45793 100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f280aa), color-stop(100%,#f45793));
-    background: -webkit-linear-gradient(top, #f280aa 0%,#f45793 100%);
-    background: -o-linear-gradient(top, #f280aa 0%,#f45793 100%);
-    background: -ms-linear-gradient(top, #f280aa 0%,#f45793 100%);
-    background: linear-gradient(to bottom, #f280aa 0%,#f45793 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f280aa', endColorstr='#f45793',GradientType=0 );
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 3px;
     ">
             </div>
         </div>

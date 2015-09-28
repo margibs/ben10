@@ -3,7 +3,7 @@
 @section('ratemenu')
     <style>
     .content-wrap{
-        padding-top: 60px;
+        padding-top: 70px;
     }
     </style>
     <ul class="list-inline rateMenu">

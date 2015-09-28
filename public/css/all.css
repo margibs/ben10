@@ -26935,7 +26935,7 @@ position: relative;
 .modal .modal-footer {
 padding: 10px 20px;
 background: #F1F1F1;
-text-align: center; !important;
+text-align: right; !important;
 -ms-text-center: distribute-all-lines;
 text-center: distribute-all-lines;
 font-size: 0;
