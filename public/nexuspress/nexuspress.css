@@ -9,7 +9,7 @@
 	background-color: rgba(95, 87, 132, 0.05)!important;
 }
 .thumbnail .caption{
-  padding: 0 9px;
+  padding: 0 0 10px 9px;
 }
 .side-header #header{
 	width: 235px;

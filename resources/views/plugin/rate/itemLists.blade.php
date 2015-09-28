@@ -31,7 +31,8 @@
 		color: #000;
 		font-weight: 600;
     	font-size: 21px;
-    	margin-top: 0;
+    	margin-top: 10px;
+    	margin-bottom: 5px;
 	}
 	.productlists p span{
 		font-size: 11px;
@@ -74,16 +75,14 @@
 	      <div class="col-md-3">
 	        <div class="thumbnail productlists">
 	          <img alt="" src="{{ url('uploads')}}/{{ $product->image_url }}" style="display: block;">
-	           <div style="
-    overflow: hidden;
-    padding: 10px;
-    text-align: center;
-    margin: 10px 0 0 0;">
+	         
     			@if($product->approved == 0)
+    			  <div style="overflow: hidden; padding: 10px; text-align: center; margin: 10px 0 0 0;">
 		           <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/1" class="green"><i class="icon-line-check"></i> Approve </a>
 		           <a href="{{url('plugin/rate/items')}}/{{ $product->id }}/2" class="red"><i class="icon-line-cross"></i> Reject </a> 
+		          </div>
 	           @endif
-	           </div>
+	          
 	          <div class="caption">
 	            <div class="toggle">
                     <div class="togglet toggleta"><i class="toggle-closed icon-angle-right"></i><i class="toggle-open icon-angle-down"></i> <h3>{{ $product->name }}</h3> </div>

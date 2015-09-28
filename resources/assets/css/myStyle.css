@@ -751,24 +751,27 @@ text-align: right; !important;
 text-center: distribute-all-lines;
 font-size: 0;
 }
-.modal .modal-footer::after {
+.modal .modal-footer::after, .modalproduct .modal-footer::after {
 display: inline-block;
 width: 100%;
 content: "";
 font-size: 0;
 line-height: 0;
 }
-.modal .modal-footer #realFileUploadBtn {
+.modal .modal-footer #realFileUploadBtn, .modalproduct .modal-footer #realFileUploadBtn {
 display: none;
 }
-.modal .modal-footer div {
+.modal .modal-footer div, .modalproduct .modal-footer div{
 display: inline-block;
 width: auto;
 vertical-align: middle;
 font-size: 18px;
 }
 .modal .modal-footer div .footer-btn,
-.modal .modal-footer div .footer-icon {
+.modal .modal-footer div .footer-icon,
+.modalproduct .modal-footer div .footer-btn,
+.modalproduct .modal-footer div .footer-icon
+{
 -webkit-touch-callout: none;
 -webkit-user-select: none;
 -khtml-user-select: none;
@@ -785,15 +788,18 @@ font-family: Roboto;
 -webkit-transition: all .2s ease;
         transition: all .2s ease;
 }
-.modal .modal-footer div p i{
+.modal .modal-footer div p i, .modalproduct .modal-footer div p i{
   color: #000!important;
 }
-.modal .modal-footer div i{
+.modal .modal-footer div i, .modalproduct .modal-footer div i{
   font-size: 28px;
   color: #C6C5C5;
 }
 .modal .modal-footer div .footer-btn:hover,
-.modal .modal-footer div .footer-icon:hover {
+.modal .modal-footer div .footer-icon:hover,
+.modalproduct  .modal-footer div .footer-btn:hover,
+.modalproduct .modal-footer div .footer-icon:hover
+  {
 background: #e4e4e4;
 }
 .modal .modal-footer div .footer-btn:active,
@@ -816,29 +822,29 @@ cursor: pointer;
 margin: 0 0 0 10px;
 }
 
-#url {
+#url, #url2 {
 display: none;
 width: 100%;
 position: absolute;
 opacity: 0;
 }
 
-#file {
+#file, #file2 {
 display: none;
 width: 100%;
 position: absolute;
 opacity: 0;
 }
-#file div {
+#file div, #file2 div {
 margin-bottom: 20px;
 }
-#file table {
+#file table, #file2 table {
 width: 100%;
 }
-#file table th, #file table td {
+#file table th, #file table td, #file2 table th, #file2 table td {
 padding: 5px 10px;
 }
-#file table thead {
+#file table thead, #file table thead {
 text-align: left;
 border-bottom: 2px solid #F36198;
 }
