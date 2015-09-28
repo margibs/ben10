@@ -52,6 +52,15 @@ class RateController extends Controller
         return view('plugin.rate.itemLists',compact('products'));
     }
 
+    public function itemApprove($item_id,$approved)
+    {
+        $products = RateItem::find($item_id);
+        $products->approved = $approved;
+        $products->save();
+
+        return redirect('plugin/rate/items');
+    }
+
     public function ajaxCheckProduct()
     {
         $product_count = RateItem::where('category_id',10)->where('approved',0)->count();
