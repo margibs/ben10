@@ -51,8 +51,16 @@
                         <a href="{{url('')}}" class="standard-logo" data-dark-logo=""><img src="" alt=""></a>
                         <a href="{{url('')}}" class="retina-logo" data-dark-logo=""><img src="" alt=""></a>
                     </div><!-- #logo end -->
+                       
+                   <div class="btn-group pull-right" >
+                        <a data-toggle="dropdown" aria-expanded="false"> Upload </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a id="addLinkBtn"> Item </a></li>
+                            <li><a id="addLinkBtn2"> Product </a></li>
+                        </ul>
+                    </div>
 
-                    <a id="addLinkBtn" class="uploadBtn"> Upload </a>
+                    
                     <!-- <div class="dropdown" style="    
    float: right;
     margin-top: 17px;">
@@ -299,6 +307,82 @@
     </form>
 </div>
 
+
+<div id="addLinkModal2" class="modal-container2">
+<form action="{{ url('rate/rate_upload') }}" method="POST" enctype='multipart/form-data' style="margin-bottom:0;">
+
+{!! csrf_field() !!}
+    <div class="modal-shade"></div>
+    <div class="modalproduct">
+        <div class="modal-header">
+            <h1> Upload Items  
+                <a href="{{url('dashboard')}}" style="font-size: 13px; font-family: Roboto; color: #FFAFCD; padding: 10px; position: relative; top: -2px;">
+                    Click here for product upload 
+                </a>  <i class="i"></i>  
+            </h1>
+            <i class="icon-line-cross closeModalBtnProduct" title="Close Modal"></i>
+        </div>
+        <div class="modal-banner">
+            <input type="radio" id="urlChoice2" name="linkChoice" checked>
+            <label for="urlChoice" title="Insert as url" id="urlLabel2"> Select a category </label>
+        </div>
+        <div class="modal-body-container">
+
+            <div id="url" class="modal-body">                            
+                <div style="margin-top: 20px;">
+                    <div class="fileUpload">
+
+                        <i class="icon-line-upload" style="display:block;color: #E4075B;"></i>
+                        <span>Upload Image</span>
+                        <input type="file" name="file" class="upload" style="width:auto;">
+
+                        <div class="outer" style="height: 100%; width:100%; border-radius: 2px; overflow: hidden; position: absolute; top: 0; left: 0;opacity: 0.3;">
+                            <div class="inner" style="overflow: hidden;-moz-transform: translate(0%,-15%);-webkit-transform: translate(0%,-15%);transform: translate(0%,-15%);">
+                                <img id="myImg" style="width:100%;">                              
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div style="
+                clear:both;
+                display: block;
+                margin-top: 15px;
+                ">
+                    <input type="text" id="urlText" name="name" required>
+                    <label for="urlText"> Item Title </label>
+                </div>
+
+                <div>
+                    <input type="text" id="urlURL" name="description" required>
+                    <label for="urlURL"> Description </label>
+                </div>           
+            </div>
+        </div>
+
+        <div class="modal-footer">
+            <!-- <div>
+            <i id="fakeFileUploadBtn" class="icon-line-image" title="Upload File"></i>
+            <input type="file" id="realFileUploadBtn" name="realFileUploadBtnValue">
+            <span> Select an Image </span>
+            </div> -->
+            <div>                
+                <!-- <p id="modal-add" class="footer-btn" title="Upload Now">  <i class="icon-cloud-upload"> </i> </p>  -->  
+                <input type="submit" value="Upload Now" style="
+    border: 1px solid #6D6D6D;
+    background-color: #DADADA;
+    color: #000;
+    padding: 5px 20px;
+    font-weight: 600;
+    font-size: 12px;
+    border-radius: 3px;
+    ">
+            </div>
+        </div>
+    </div>
+    </form>
+</div>
 
 <!--- Dashboard Uplaod Popup -->
 <div class="wrappers uploadModal">
@@ -730,6 +814,70 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
             });  
 
           });
+
+          // When user clicks on add link button in top left corner
+          $("#addLinkBtn2").on("click", function() {
+            $(".modalproduct").css({'z-index':'9999'});
+            TweenMax.to($(".modalproduct"), .3, { // Drop down modal
+              top: "10%",             
+              onComplete: function() { // When modal drops, lengthen modal body height               
+                  TweenMax.to($(".modal-body-container"), .5, { // Change the height of modal body
+                    height: $urlHeight,
+                    ease: Expo.easeOut,
+                    // When at correct height, show url body and focus on first input
+                    onComplete: function() { 
+                      TweenMax.to($("#url"), .3, {
+                        opacity: 1,
+                        //onComplete: function() {$("#urlText").focus();}
+                      })
+                    }
+                  });
+                  TweenMax.to($("#url"), .5, {display: "block"});                
+              }
+            });
+            TweenMax.to($(".modal-shade"), .7, { // Delay start the modal shade
+              position: "fixed",
+              opacity: 1,
+              delay: .3
+            });
+          });
+
+          // When the user clicks on the close modal button
+          $(".closeModalBtnProduct").on("click", function() {
+      
+            TweenMax.to($(".modalproduct"), .3, {
+              top: "-100%",
+              zIndex: "-1",
+              ease: Back.easeIn
+            });
+            TweenMax.to($(".modal-shade"), .6, {
+              position: "relative",
+              opacity: 0
+            });
+
+            
+
+            // Change Modal Container Height back to auto
+            $(".modal-body-container").css("height", "auto");
+            
+            // Change the URL portion back to normal
+            $("#url").css({
+              "display": "none",
+              "opacity": 0,
+            });
+            
+            // Change radio back to url choice
+            $("#urlChoice").prop("checked", true);
+            
+            // Change the File portion back to normal
+            $("#file").css({
+              "display": "none",
+              "opacity": 0
+            });  
+
+          });
+          
+
           
           $(window).resize(function() {
             $fileHeight = $("#file").css("height");

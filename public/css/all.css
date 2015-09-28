@@ -10582,7 +10582,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 
 .entry-image iframe { display: block; }
 
-.entry-image img { border-radius: 3px; }
+.entry-image img { border-radius: 2px; }
 
 .entry-title h2 {
 	margin: 0;
@@ -26264,7 +26264,7 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     background-color: #000;
  }
  #header.sticky-header #header-wrap{
-      z-index: 2;
+      z-index: 5;
  }
  #header.full-header #logo, #header.full-header #primary-menu > ul{
     border-right: none;
@@ -26282,10 +26282,10 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
       display: block;
       box-shadow: 0 0 0 0!important;
     }
- .uploadBtn{
+ .uploadBtn, .btn-group{
     float: right;
     color: white;
-   
+    margin-top: 10px;
     
     /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#f280aa+0,f45793+100 */
     background: #f280aa; /* Old browsers */
@@ -26304,11 +26304,20 @@ body.top-search-open #top-search a i.icon-line-search, #top-search a i.icon-line
     border-radius: 2px;
     margin-left: 30px;
  }
- .uploadBtn:hover{
+ .uploadBtn:hover, .btn-group a:hover{
     color: #fff;
     cursor: pointer;
  }
-
+.btn-group a{
+  color: #fff!important;
+}
+.btn-group ul li a{
+  color: #000!important;
+}
+.dropdown-menu > li > a{
+    font-weight: 600;
+    text-align: center;
+}
 .productUploadForm input[type="radio"] {
   background-color: #F272A2;  
   border-radius: 10px;  
@@ -26833,7 +26842,7 @@ font-weight: 700;
 color: #F36198;
 }
 
-.modal{
+.modal, .modalproduct{
   position: relative;
   z-index: -1;
 }
@@ -26849,7 +26858,7 @@ opacity: 0;
 z-index: 10;
 }
 
-.modal {
+.modal , .modalproduct{
 position: fixed;
 left: 50%;
 top: -100%;
@@ -26860,12 +26869,12 @@ max-width: 600px;
         transform: translateX(-50%);
 box-shadow: 0 6px 6px rgba(0, 0, 0, 0.3);
 }
-.modal label{
+.modal label, .modalproduct label{
   color: #FBD3E2;
   font-size: 13px;
   font-family: Roboto;
 }
-.modal .modal-header {
+.modal .modal-header, .modalproduct .modal-header {
 padding: 10px 20px;
 background-color: #F36198;
 border-radius: 5px 5px 0 0;
@@ -26874,21 +26883,21 @@ text-align: justify !important;
 text-justify: distribute-all-lines;
 font-size: 0;
 }
-.modal .modal-header::after {
+.modal .modal-header::after, .modalproduct .modal-header::after  {
 display: inline-block;
 width: 100%;
 content: "";
 font-size: 0;
 line-height: 0;
 }
-.modal .modal-header h1 {
+.modal .modal-header h1, .modalproduct .modal-header h1{
   color: #FFFFFF;
   display: inline-block;
   vertical-align: middle;
   font-size: 22px;
   margin-bottom: 0;
 }
-.modal .modal-header .closeModalBtn {
+.modal .modal-header .closeModalBtn, .modalproduct .modal-header .closeModalBtnProduct {
 -webkit-transition: all .2s ease;
         transition: all .2s ease;
 -webkit-touch-callout: none;
@@ -26909,30 +26918,36 @@ text-transform: uppercase;
         transition: all .2s ease;
 }
 
-.modal .modal-header .closeModalBtn:hover, .modal .modal-header .closeModalBtn:active, .modal .modal-header .closeModalBtn:focus {
+.modal .modal-header .closeModalBtn:hover, .modal .modal-header .closeModalBtn:active, .modal .modal-header .closeModalBtn:focus,
+.modalproduct .modal-header .closeModalBtn:hover, .modalproduct .modal-header .closeModalBtn:active, 
+.modalproduct .modal-header .closeModalBtn:focus  {
 cursor: pointer;
 }
 .modal .modal-header .closeModalBtn:hover,
 .modal .modal-header .closeModalBtn:active,
-.modal .modal-header .closeModalBtn:focus {
+.modal .modal-header .closeModalBtn:focus,
+.modalproduct .modal-header .closeModalBtn:hover,
+.modalproduct .modal-header .closeModalBtn:active,
+.modalproduct .modal-header .closeModalBtn:focus,
+{
 cursor: pointer;
 }
-.modal .modal-banner {
+.modal .modal-banner, .modalproduct .modal-banner {
 padding: 10px 20px;
 background: #fff;
 }
-.modal .modal-body-container {
+.modal .modal-body-container, .modalproduct .modal-body-container{
 position: relative;
 background: #FFFFFF;
 }
-.modal .modal-body {
+.modal .modal-body, .modalproduct .modal-body {
 padding: 0 20px 10px 20px;
 background: #FFFFFF;    
 }
-.modal .modal-body div {
+.modal .modal-body div, .modalproduct .modal-body div {
 position: relative;
 }
-.modal .modal-footer {
+.modal .modal-footer, .modalproduct .modal-footer{
 padding: 10px 20px;
 background: #F1F1F1;
 text-align: right; !important;
@@ -27342,7 +27357,7 @@ color: #F36198;
     color: #fff;
 }
 .productUploadForm span{
-    color: #424253;
+    color: #7A7A7D;
     font-size: 13px;
     font-weight: 500;
 }
@@ -27382,8 +27397,8 @@ color: #F36198;
   overflow: hidden;
   float: left;
   position: relative;
-  border-right: 3px solid #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
+  border-right: 3px solid #E7E5E5;
+  border-bottom: 3px solid #E7E5E5;
 }
 #image_container .inner, #image_list .inner, #media_wrapper .inner{
   position: absolute;
@@ -27504,8 +27519,7 @@ color: #F36198;
   font-weight: 500;
   font-family: Roboto;
   font-size: 14px;
-  line-height: 20px!important;
-  width: 90%;
+  line-height: 20px!important;  
 }
 .entry-content h2{
     font-family: Roboto;

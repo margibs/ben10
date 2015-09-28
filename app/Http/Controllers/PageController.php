@@ -254,4 +254,10 @@ class PageController extends Controller
       }
     }
   }
+
+  public function item()
+  {     
+    return view('pages.item');
+  }
+
 }

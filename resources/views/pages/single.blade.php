@@ -140,7 +140,7 @@ margin-bottom: 10px;">Slot Review & Gameplay Strategy</p>
                                                     <div class="entry-content notopmargin" id="get_content_here">
 
                                                         <!-- Post Single -->
-                                                        <p>{!! $post->content !!}</p>
+                                                       {!! $post->content !!}
                                                         <!--- Content End -->
                                               
                                                     </div>

@@ -40,7 +40,7 @@
                                                         <a href="{{ $post->category_slug }}/{{ $post->slug }}"><img class="image_fade" src="{{ url('uploads') }}/{{ $post->feat_image_url }}" alt="Image"></a>
                                                     </div>
                                                     <div class="entry-content">
-                                                        <p>{{ $post->excerpt }}</p>
+                                                        <p style="width:90%;">{{ $post->excerpt }}</p>
                                                     </div>
                                                 </div>
 

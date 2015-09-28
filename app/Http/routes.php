@@ -23,6 +23,7 @@ Route::group(['middleware' => 'AuthCheck'], function()
 	//Dashboard
 	Route::get('dashboard', 'PageController@dashboard');
 	Route::post('dashboard','PageController@addProduct');
+	Route::get('item','PageController@item');
 	
 	//RateController
 	Route::get('rate', 'PageController@rate');

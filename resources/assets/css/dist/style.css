@@ -4819,7 +4819,7 @@ body.device-touch.device-xxs .portfolio-notitle .portfolio-overlay { display: no
 
 .entry-image iframe { display: block; }
 
-.entry-image img { border-radius: 3px; }
+.entry-image img { border-radius: 2px; }
 
 .entry-title h2 {
 	margin: 0;
