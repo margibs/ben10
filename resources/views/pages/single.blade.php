@@ -37,7 +37,7 @@
                                                   <div class="entry-title">
                                                      <h2 >{{$post->title}}</h2>                                                        
                                                       <span class="comment pull-right"><i class="icon-comment2"></i> 0 Comments </span>
-                                                      <span class="date">{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span> / <span class="Categ"><a href=""> Celebs </a></span>                                                        
+                                                      <span class="date">{{ date( 'jS F Y', strtotime($post->created_at) ) }}</span> / <span class="Categ"><a href=""> {{$post->category_name}} </a></span>                                                        
                                                     </div>
      
                                                     <div class="clearfix"></div>
