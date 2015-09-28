@@ -3,6 +3,7 @@
 namespace App;
 
 use App\Model\Post;
+use App\PluginModel\RateCategory;
 
 class SideBar {
 
@@ -11,8 +12,15 @@ class SideBar {
 		return Post::all();
 	}
 
-	public function watermelon($water)
+	public function getRateCategories()
 	{
-		return $water;
+		$rate_categories = RateCategory::where('parent_id',0)->get();
+
+		$category_select = ['0' => 'Select Category'];
+		foreach ($rate_categories as $category2) {
+    		$category_select[$category2->id] = $category2->name;
+    	}
+
+    	return $category_select;
 	}
 }

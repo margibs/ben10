@@ -242,14 +242,16 @@
             <input type="radio" id="urlChoice" name="linkChoice" checked>
             <label for="urlChoice" title="Insert as url" id="urlLabel"> Select a category </label>
         </div>
+        @inject('getRateCategories','App\Sidebar')
+
         <div class="modal-body-container">
 
             <div id="url" class="modal-body">
                      <div class="select-style pull-right" style="margin-right:240px">
-                        {!! Form::select('rate_categories_child',['complete-outfit' => 'Complete Outfit','shoes-2' => 'Shoes','dresses' => 'Dresses'], null) !!}
+                        {!! Form::select('rate_categories_child',['select' => 'Select Parent'], null,['disabled','id' => 'rate_categories_child']) !!}
                     </div>
                     <div class="select-style">
-                        {!! Form::select('rate_categories_parent',['outfit' => 'Outfit'], null) !!}
+                        {!! Form::select('rate_categories_parent',$getRateCategories->getRateCategories(), null,['id' => 'rate_categories_parent']) !!}
                     </div>
                    
                 <div style="margin-top: 20px;">
@@ -570,8 +572,42 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
     <script>
        $(document).ready(function() {
+        var CSRF_TOKEN = $('meta[name="csrf-token"]').attr('content');
+        $( "#rate_categories_parent" ).change(function() {
+            var parent_id = "";
+            $( "#rate_categories_parent option:selected" ).each(function() {
+              parent_id += $( this ).attr('value') + " ";
+            });
 
-           
+            if(parent_id != 0)
+            {
+                $.ajax({ 
+                    type: 'post',
+                    url: "{{url('ajax_get_child')}}",
+                    data: {_token: CSRF_TOKEN,'parent_id' : parent_id}, 
+                    success: function(response)
+                    {
+                        var option_men = '';
+                        var parsed = JSON.parse(response);
+
+                        $.each(parsed, function(idx, obj) {
+                           option_men += '<option value="'+obj.slug+'">'+obj.name+'</option>';
+                        });
+
+                        $('#rate_categories_child').html(option_men);
+                        $('#rate_categories_child').removeAttr('disabled');
+                    }
+                });
+            }
+            else
+            {
+                $('#rate_categories_child').html('<option value="select">Select Parent</option>');
+                $('#rate_categories_child').attr('disabled','disabled');
+            }
+
+
+        });
+
             //$('#put_comments_here').simplebar();
 
             $(":file").change(function () {

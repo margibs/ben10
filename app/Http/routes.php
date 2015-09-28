@@ -17,6 +17,9 @@ Route::get('/', 'PageController@home');
 Route::get('sample', 'PageController@sample');
 Route::post('ajax_sample','PageController@ajaxSample');
 
+//Ajax
+Route::post('ajax_get_child','PageController@ajaxGetChild');
+
 
 Route::group(['middleware' => 'AuthCheck'], function()
 {
@@ -75,8 +78,8 @@ Route::group(['middleware' => 'UserCheck'], function()
 	//Plugin Routes
 	Route::get('plugin/rate/categories','RateController@categories');
 	Route::post('plugin/rate/categories','RateController@addCategories');
-	Route::get('plugin/rate/items','RateController@items');
-	Route::get('plugin/rate/items/{item_id?}/{approved?}','RateController@itemApprove');
+	Route::get('plugin/rate/items/{approved}','RateController@items');
+	Route::get('plugin/rate/items/{approved?}/{item_id?}','RateController@itemApprove');
 	Route::get('plugin/rate/ajax_check_product','RateController@ajaxCheckProduct');
 
 });

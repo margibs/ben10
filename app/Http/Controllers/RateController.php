@@ -46,13 +46,25 @@ class RateController extends Controller
         return  redirect('plugin/rate/categories');
     }
 
-    public function items()
+    public function items($approved)
     {
-        $products = RateItem::where('category_id',10)->where('approved',0)->get();
+        if($approved == 4)
+        {
+            $products = RateItem::all();
+        }
+        elseif($approved == 0)
+        {
+            $products = RateItem::where('category_id',10)->where('approved',$approved)->get();
+        }
+        else
+        {
+            $products = RateItem::where('approved',$approved)->get();
+        }
+       
         return view('plugin.rate.itemLists',compact('products'));
     }
 
-    public function itemApprove($item_id,$approved)
+    public function itemApprove($approved,$item_id)
     {
         $products = RateItem::find($item_id);
         $products->approved = $approved;

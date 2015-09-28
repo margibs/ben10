@@ -125,9 +125,9 @@ font-family: Oswald;
                                  @endif"><a> <i class="icon-star3"></i> Rating <label class="badge product_count"> {{$products_count->ajaxCheckProduct() }} </label> </a>
                                     <ul>
                                         <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-link"></i> Categories </div></a> </li>                                     
-                                        <li><a href="{{ url('plugin/rate/items') }}"><div> <i class="icon-line-square-plus"></i> All Products <label class="badge product_count"> {{ $products_count->ajaxCheckProduct() }} </label></div></a> </li>
-                                            <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-line-check"></i> Approved <label class="badge product_count"> {{ $products_count->ajaxCheckProduct() }} </label></div></a> </li> 
-                                        <li><a href="{{ url('plugin/rate/categories') }}"><div> <i class="icon-line-cross"></i> Pending <label class="badge product_count"> {{ $products_count->ajaxCheckProduct() }} </label></div></a> </li>
+                                        <li><a href="{{ url('plugin/rate/items/4') }}"><div> <i class="icon-line-square-plus"></i> All Products <label class="badge"></label></div></a> </li>
+                                            <li><a href="{{ url('plugin/rate/items/1') }}"><div> <i class="icon-line-check"></i> Approved <label class="badge"></label></div></a> </li> 
+                                        <li><a href="{{ url('plugin/rate/items/0') }}"><div> <i class="icon-line-cross"></i> Pending <label class="badge product_count"> {{ $products_count->ajaxCheckProduct() }} </label></div></a> </li>
                                     </ul>
                                </li> 
                                 <li class="
