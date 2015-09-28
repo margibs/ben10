@@ -143,8 +143,8 @@
 
 
         <!-- Footer
-        ============================================= -->
-        <footer id="footer" class="dark" style="margin-top:0!important;">
+        ============================================= 
+        <footer id="footer" class="dark" style="margin-top:0!important;">-->
 
             <!-- Copyrights
             ============================================= -->
@@ -209,7 +209,7 @@
 
             </div><!-- #copyrights end -->
 
-        </footer><!-- #footer end -->
+       <!-- </footer> #footer end -->
 
     </div><!-- #wrapper end -->
 
@@ -430,7 +430,7 @@ font-weight: 600;"> <i class="icon-line-cross"></i> </a>
                     <li> <a href=""> <i class="icon-heart3 admired"></i> </a> </li>
                     <li> <a href=""><i class="icon-heart-empty dislike"></i> </a> </li>
                     <li> <span> You admire this. </span></li>                   
-                </ul>
+                </ul>                
             </div>
 
             <div class="clearfix"></div>

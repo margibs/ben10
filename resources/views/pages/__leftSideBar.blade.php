@@ -26,7 +26,7 @@
                     <h3> {{Auth::user()->coins}} </h3>
                 </div>
             </div>     
-            <div class="wrappers" style="margin-top: 10px;">
+            <div class="wrappers" style="margin-bottom: 10px;">
                 <div class="coinTotal">
                     <img src="{{ asset('images/lotto_icon.gif') }}" alt="">
                     <p style="margin-left: 57px;"> Latest Result </p>
