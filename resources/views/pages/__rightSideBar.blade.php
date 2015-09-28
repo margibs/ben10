@@ -6,8 +6,6 @@
 
             <h3>POPULAR ITEMS</h3>
             
-
-        
             <div id="post-list-footer">
                 <div class="spost clearfix">
                     <div class="entry-image">

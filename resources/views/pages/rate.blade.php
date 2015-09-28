@@ -7,6 +7,8 @@
     }
     </style>
     <ul class="list-inline rateMenu">
+        <li> <span style="font-weight: 400; text-transform: none; color: #A4A4A4;"> Select a category: </span></li>
+        <li> <a href="" class="active"> <span> All </span> </a> </li>
         @foreach($rate_categories as $rate_category)
         <li> <a href="{{url('rate')}}/{{$rate_category->slug}}"><span>{{$rate_category->name}}</span> </a> </li>
         @endforeach
@@ -31,11 +33,11 @@
                 <ul class="list-inline pull-right">
                     <li>
                         <a href="" class="admire">
-                            <i class="icon-heart3"></i>
+                            <!-- <i class="icon-heart3"></i> -->
                             <span> 100 admires </span>
                         </a>
                     </li>
-
+                    <li><a href="" class="dislike"><i class="icon-heart3"></i></a></li>
                     <li><a href="" class="dislike"><i class="icon-heart-empty"></i></a></li>
                     <li><a href="" class="send"><i class="icon-paperplane"></i></a></li>
                 </ul>

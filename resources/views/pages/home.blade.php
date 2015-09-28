@@ -11,34 +11,34 @@
 
                                     <div class="wrappers">
 
-                                        <div class="fancy-title" style="margin-bottom:0;">
-                                            <h3 style="
-    color: #000;
-    margin-bottom: 10px;
-    font-weight: 700;
-    font-size: 23px;
-    letter-spacing: -1px;
-                                            "> Latest Posts </h3>
-                                        </div>
+                                     
+                                        <h3 class="latestposttext"> Latest Posts </h3>
+                                       
 
                                         <div class="customMyPost">
 
                                             @foreach ($posts as $post)
 
                                                 <div class="ipost clearfix">
-                                                    <div class="entry-image" style="position:relative;">
-                                                        <div class="floatingCategory"> {{ $post->category_name }} </div>
-                                                        <a href="{{ $post->category_slug }}/{{ $post->slug }}"><img class="image_fade" src="{{ url('uploads') }}/{{ $post->feat_image_url }}" alt="Image"></a>
-                                                    </div>
                                                     <div class="entry-title">
+                                                        <a href="#" style="    
+    float: left;                                                    
+    background-color: #F3659B;
+    color: #fff;
+    padding: 10px;
+    border-radius: 50%;
+    margin-right: 10px;"> Ce </a>
                                                         <h3><a href="{{ $post->category_slug }}/{{ $post->slug }}">{{ $post->title }}</a></h3>
                                                     </div>
-                                                       <ul class="entry-meta clearfix">
-                                                            <li><i class="icon-calendar-empty"></i> {{ date( 'jS F Y', strtotime($post->created_at) ) }}  </li>
-                                                            <li><a href="#"><i class="icon-user3"></i> by {{ $post->user_name }} </a></li>
-                                                            <li class="fright"><a href="{{url('/blog')}}/{{$post->slug}}#comments"><i class="icon-comment2"></i> 0 </a></li>
-                                                            
-                                                        </ul>
+                                                     <ul class="entry-meta clearfix">                                                        
+                                                        <!-- <li><a href="#"><i class="icon-user3"></i> by {{ $post->user_name }} </a></li>                    -->                                                                                             
+                                                        <li><a href="{{url('/blog')}}/{{$post->slug}}#comments"><i class="icon-comment2"></i> 0 Comments</a></li>
+                                                        <li><i class="icon-calendar-empty"></i> {{ date( 'jS F Y', strtotime($post->created_at) ) }}  </li>                                                        
+                                                    </ul>
+                                                    <div class="entry-image" style="position:relative;">
+                                                        <!-- <div class="floatingCategory"> {{ $post->category_name }} </div> -->
+                                                        <a href="{{ $post->category_slug }}/{{ $post->slug }}"><img class="image_fade" src="{{ url('uploads') }}/{{ $post->feat_image_url }}" alt="Image"></a>
+                                                    </div>
                                                     <div class="entry-content">
                                                         <p>{{ $post->excerpt }}</p>
                                                     </div>
